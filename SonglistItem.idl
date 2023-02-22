@@ -1,0 +1,12 @@
+namespace DisenchantMusicPlayer
+{
+    [bindable]
+    [default_interface]
+    runtimeclass SonglistItem : Windows.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        SonglistItem(String songName, String albumName, String coverPath);
+        String SongName;
+        String AlbumName;
+        String CoverPath;
+    }
+}

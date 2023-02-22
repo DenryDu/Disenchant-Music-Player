@@ -1,0 +1,12 @@
+// Copyright (c) Microsoft Corporation and Contributors.
+// Licensed under the MIT License.
+
+namespace DisenchantMusicPlayer
+{
+    [default_interface]
+    runtimeclass AlbumlistPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        AlbumlistPage();
+        Int32 MyProperty;
+    }
+}
