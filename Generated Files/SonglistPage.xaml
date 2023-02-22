@@ -13,7 +13,7 @@
     <ListView x:ConnectionId='2' x:Name="SonglistView">
         <ListView.ItemTemplate>
             <DataTemplate                                >
-                <Grid x:ConnectionId='4' Height="100" Margin="6">
+                <Grid x:ConnectionId='4' Height="100" Margin="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>

@@ -240,6 +240,15 @@
     <None Include="Assets\Images\Statistic.svg">
       <Filter>Assets\Images</Filter>
     </None>
+    <None Include="Assets\Media\!...  - 阿鲲 - 流浪地球2 电影原声大碟.flac">
+      <Filter>Media</Filter>
+    </None>
+    <None Include="Assets\Media\97  100  - 阿鲲 - 流浪地球2 电影原声大碟.flac">
+      <Filter>Media</Filter>
+    </None>
+    <None Include="Assets\Media\最后的团聚 - 阿鲲 - 流浪地球2 电影原声大碟.flac">
+      <Filter>Media</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Assets\FontIcons\dmp-fonticon.ttf">
@@ -250,7 +259,7 @@
     <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
   <ItemGroup>
-    <Media Include="Assets\Media\15.mp4">
+    <Media Include="Assets\Media\（填翻）山渐青——记《雪中悍刀行》洛阳主题歌 - 汤锅 - （策）歌曲.mp3">
       <Filter>Media</Filter>
     </Media>
   </ItemGroup>

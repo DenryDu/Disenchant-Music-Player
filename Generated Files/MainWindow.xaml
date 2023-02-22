@@ -118,7 +118,7 @@
             <!-- Cover & Info -->
             <Grid Grid.Row="0" Grid.Column="0">
                 <!-- Cover -->
-                <Border Height="80" Width="80" CornerRadius="15">
+                <Border HorizontalAlignment="Left" Margin="20 0 0 0" Height="80" Width="80" CornerRadius="15">
                     <Image VerticalAlignment="Center" HorizontalAlignment="Left" Height="80" Width="80" Source="ms-appx:///Assets/Images/Cover.jpg"></Image>
                 </Border>
                 <!-- Info -->

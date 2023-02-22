@@ -13,7 +13,7 @@
     <ListView x:Name="SonglistView">
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="local:SonglistItem">
-                <Grid Height="100" Margin="6">
+                <Grid Height="100" Margin="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
