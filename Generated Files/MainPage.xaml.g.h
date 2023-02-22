@@ -12,13 +12,13 @@ namespace winrt::DisenchantMusicPlayer::implementation
     using IInspectable = ::winrt::Windows::Foundation::IInspectable;
 
     template <typename D, typename ... I>
-    struct MainWindowT : public ::winrt::DisenchantMusicPlayer::implementation::MainWindow_base<D,
+    struct MainPageT : public ::winrt::DisenchantMusicPlayer::implementation::MainPage_base<D,
         ::winrt::Microsoft::UI::Xaml::Markup::IComponentConnector,
         I...>
     {
-        using base_type = typename MainWindowT::base_type;
+        using base_type = typename MainPageT::base_type;
         using base_type::base_type;
-        using class_type = typename MainWindowT::class_type;
+        using class_type = typename MainPageT::class_type;
 
         void InitializeComponent();
         virtual void Connect(int32_t connectionId, IInspectable const& target);
@@ -66,7 +66,7 @@ namespace winrt::DisenchantMusicPlayer::implementation
         bool _contentLoaded{false};
 
     private:
-        struct MainWindow_obj1_Bindings;
+        struct MainPage_obj1_Bindings;
 
         ::winrt::Microsoft::UI::Xaml::Controls::Grid _RootGrid{nullptr};
         ::winrt::Microsoft::UI::Xaml::Controls::Grid _AppTitleBar{nullptr};

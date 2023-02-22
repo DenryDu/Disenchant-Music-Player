@@ -147,6 +147,9 @@
     <Image Include="Assets\Images\Cover.jpg">
       <Filter>Assets\Images</Filter>
     </Image>
+    <Image Include="Assets\Images\Snipaste_2023-02-22_17-32-19.png">
+      <Filter>Assets\Images</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">
@@ -249,6 +252,7 @@
     <None Include="Assets\Media\最后的团聚 - 阿鲲 - 流浪地球2 电影原声大碟.flac">
       <Filter>Media</Filter>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Assets\FontIcons\dmp-fonticon.ttf">

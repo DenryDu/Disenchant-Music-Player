@@ -9,6 +9,9 @@
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
+using namespace Windows::UI::ViewManagement;
+using namespace Windows::UI::Core;
+using namespace Windows::ApplicationModel::Core;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -27,26 +30,28 @@ namespace winrt::DisenchantMusicPlayer::implementation
         SonglistData.push_back(item1);
         SonglistData.push_back(item2);
         SonglistView().ItemsSource(single_threaded_observable_vector(std::move(SonglistData)));
-        //SonglistItem item1 = make<SonglistItem>();
-        //item1.Name(L"Song1");
-        //item1.Cover(L"ms-appx:///Assets/Images/Cover.jpg");
-        //item1.Album(L"Album1");
 
-        //myDataList.Append(item1);
-        //myDataList.push_back
-        //myDataList.push_back(item1);
-
-        //SonglistItem item2;
-        //item2.Name(L"Song2");
-        //item2.Cover(L"ms-appx:///Assets/Images/Cover.jpg");
-        //item2.Album(L"Album2");
-
-        //myDataList.Append(item2);
-
-        //SonglistView().ItemsSource(myDataList);
-
+        //auto view = ApplicationView::GetForCurrentView();
+        // If this size is not permitted by the system, the nearest permitted value is used.
+        //view.SetPreferredMinSize({ 600, 200 });
     }
+    void SonglistPage::OnNavigatedTo(Microsoft::UI::Xaml::Navigation::NavigationEventArgs const& e) {
 
+        //// 获取当前视图
+        //auto currentView = winrt::Windows::ApplicationModel::Core::CoreApplication::GetCurrentView();
+        //// 获取当前窗口
+        //auto currentWindow = currentView.CoreWindow();
+        //// 获取标题栏
+        //auto titleBar = winrt::Windows::ApplicationModel::Core::CoreApplication::GetCurrentView().TitleBar();
+        //// 将内容延伸到标题栏
+        //titleBar.ExtendViewIntoTitleBar(true);
+
+        // 获取当前应用程序视图
+        //auto view = ApplicationView::GetForCurrentView();
+        // 创建一个包含最小尺寸的 Size 对象 Size minSize(500, 0);
+        // 设置窗口的最小尺寸
+        //view.SetPreferredMinSize({ 300,200 });
+    }
     int32_t SonglistPage::MyProperty()
     {
         throw hresult_not_implemented();

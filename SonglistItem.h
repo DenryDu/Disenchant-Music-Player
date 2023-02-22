@@ -37,6 +37,8 @@ namespace winrt::DisenchantMusicPlayer::implementation
         winrt::event_token PropertyChanged(winrt::Windows::UI::Xaml::Data::PropertyChangedEventHandler const& handler);
         void PropertyChanged(winrt::event_token const& token) noexcept;
 
+        //winrt::single_threaded_observable_vector<SonglistItem>() GetAllSongs();
+
     private:
         // Step2: Add a private member to store the title string. Note that we have a constructor that takes a winrt::hstring value. That value is the title string.
         winrt::hstring m_songName;

@@ -278,6 +278,7 @@
     <Image Include="Assets\Images\contrast-standard\theme-light\scale-100\Sort.png" />
     <Image Include="Assets\Images\contrast-standard\theme-light\scale-100\Statistic.png" />
     <Image Include="Assets\Images\Cover.jpg" />
+    <Image Include="Assets\Images\Snipaste_2023-02-22_17-32-19.png" />
     <Image Include="Assets\LockScreenLogo.scale-200.png" />
     <Image Include="Assets\SplashScreen.scale-200.png" />
     <Image Include="Assets\Square150x150Logo.scale-200.png" />
@@ -315,6 +316,7 @@
     <None Include="Assets\Media\97  100  - 阿鲲 - 流浪地球2 电影原声大碟.flac" />
     <None Include="Assets\Media\最后的团聚 - 阿鲲 - 流浪地球2 电影原声大碟.flac" />
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Assets\FontIcons\dmp-fonticon.ttf" />

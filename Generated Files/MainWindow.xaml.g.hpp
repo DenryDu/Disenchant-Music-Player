@@ -45,6 +45,12 @@ namespace winrt::DisenchantMusicPlayer::implementation
             break;
         case 3:
             {
+                auto targetElement = target.as<::winrt::Microsoft::UI::Xaml::Controls::Grid>();
+                this->AppTitleBar(targetElement);
+            }
+            break;
+        case 4:
+            {
                 auto targetElement = target.as<::winrt::Microsoft::UI::Xaml::Controls::NavigationView>();
                 this->RNav(targetElement);
                 auto weakThis = ::winrt::make_weak<class_type>(*this);
@@ -56,7 +62,7 @@ namespace winrt::DisenchantMusicPlayer::implementation
                 });
             }
             break;
-        case 4:
+        case 5:
             {
                 auto targetElement = target.as<::winrt::Microsoft::UI::Xaml::Controls::Frame>();
                 this->RNavContentFrame(targetElement);

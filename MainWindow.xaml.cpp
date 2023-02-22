@@ -32,14 +32,14 @@ namespace winrt::DisenchantMusicPlayer::implementation
     {
         InitializeComponent();// 初始化 COM 和窗口
 
+		// Navigate to Settings.
 		Windows::UI::Xaml::Interop::TypeName pageTypeName;
 		pageTypeName.Kind = Windows::UI::Xaml::Interop::TypeKind::Primitive;
+		pageTypeName.Name = L"DisenchantMusicPlayer.SonglistPage";
+		RNavContentFrame().Navigate(pageTypeName);
 
 
-			// Navigate to Settings.
-			pageTypeName.Name = L"DisenchantMusicPlayer.SonglistPage";
-			RNavContentFrame().Navigate(pageTypeName);
-    }
+	}
 
 
 
@@ -76,6 +76,7 @@ namespace winrt::DisenchantMusicPlayer::implementation
 		}
 
 	}
+
 }
 
 

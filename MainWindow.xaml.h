@@ -33,8 +33,7 @@ namespace winrt::DisenchantMusicPlayer::implementation
 
         void RootGrid_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
         void MainWindow::SetMinWindowSize(winrt::Windows::UI::Core::CoreWindow const& window, int minWidth, int minHeight);
-
-        void MainWindow::OnActivated(Windows::ApplicationModel::Core::CoreApplicationView const& sender, Windows::ApplicationModel::Activation::IActivatedEventArgs const& args);
+       
     };
 }
 

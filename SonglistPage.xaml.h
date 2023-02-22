@@ -13,7 +13,7 @@ namespace winrt::DisenchantMusicPlayer::implementation
 
         int32_t MyProperty();
         void MyProperty(int32_t value);
-
+        void OnNavigatedTo(Microsoft::UI::Xaml::Navigation::NavigationEventArgs const& e);
     };
 }
 

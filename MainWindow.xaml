@@ -16,6 +16,8 @@
     <Grid x:Name="RootGrid" Height="auto" Width="auto"  MinWidth="300">
 
         <Grid.RowDefinitions>
+            <!--<RowDefinition Height="32"/>-->
+            <RowDefinition Height="0"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="120"/>
         </Grid.RowDefinitions>
@@ -23,9 +25,13 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+        <!-- AppTitleBar -->
+        <Grid  x:Name="AppTitleBar">
+            
+        </Grid>
         <!-- RootNav -->
         <NavigationView 
-            Grid.Row="0" Grid.Column="0" Height="auto" Width="auto"   
+            Grid.Row="1" Grid.Column="0" Height="auto" Width="auto"   
                 x:Name="RNav"
                 
                 PaneDisplayMode="Auto"
@@ -77,15 +83,6 @@
             </NavigationView.MenuItems>
 
             <NavigationView.FooterMenuItems>
-
-                <!--                
-                <NavigationViewItem Content="Scan music" Tag="SamplePage4">
-                    <NavigationViewItem.Icon>
-                        <BitmapIcon UriSource="ms-appx:///Assets/Images/Folder.png"/>
-                </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Content="Music library" Tag="SamplePage5" Icon="Library" />
-                -->
         
                 <!--Statistic-->
                 <NavigationViewItem Content="Statistic" Tag="DisenchantMusicPlayer.StatisticPage">
@@ -105,7 +102,7 @@
 
         <!-- Audio Player -->
         <!-- Player Grid -->
-        <Grid Grid.Row="1" Grid.Column="0" Height="120" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+        <Grid Grid.Row="2" Grid.Column="0" Height="120" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
