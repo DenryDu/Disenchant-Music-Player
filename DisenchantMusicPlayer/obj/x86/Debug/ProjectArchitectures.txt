@@ -1,0 +1,1 @@
+C:\Users\DenryDu\Documents\MyWork\UWP\DisenchantMusicPlayer\DisenchantMusicPlayer\DisenchantMusicPlayer.csproj;x86
