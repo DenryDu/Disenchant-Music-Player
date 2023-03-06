@@ -208,3 +208,6 @@ Tag中有好多属性可以获取
 不过Taglib-sharp对中文编码的支持不好，会出现乱码
 建议两中方法结合使用
 
+https://blog.csdn.net/qq_22033759/article/details/51968045
+
+https://blog.csdn.net/u013419838/article/details/108489023?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-108489023-blog-51968045.pc_relevant_landingrelevant&spm=1001.2101.3001.4242.1&utm_relevant_index=3

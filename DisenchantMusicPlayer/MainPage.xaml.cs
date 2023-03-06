@@ -13,6 +13,11 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using TagLib;
+using Windows.UI.Xaml.Shapes;
+using System.Diagnostics;
+using DisenchantMusicPlayer.Model;
+
 // https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x804 上介绍了“空白页”项模板
 
 namespace DisenchantMusicPlayer
@@ -25,6 +30,10 @@ namespace DisenchantMusicPlayer
         public MainPage()
         {
             this.InitializeComponent();
+            string path1 = "test.flac";
+            string path2 = "test2.flac";
+            MusicInfo music1 = new MusicInfo(path1);
+            MusicInfo music2 = new MusicInfo(path2);
         }
     }
 }

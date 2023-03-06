@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CdWF0sHjWGs5L/ffCDcRwSqn6A6WKa4ZQdDeEYspzFV4OnKbiXEpxcYGOoAG0xA6Q0wVJFRzhA6JFVqmdHr+uQ==",
+  "dgSpecHash": "+1GxeM8ZERzJ7XAwBJROzF0P2l1XS/dwRzO/0mlYY9YFelS+dbVEkMdgXEf2tfyZFHcE7CItQgjDBeldB/tiFg==",
   "success": true,
   "projectFilePath": "C:\\Users\\DenryDu\\Documents\\MyWork\\UWP\\DisenchantMusicPlayer\\DisenchantMusicPlayer\\DisenchantMusicPlayer.csproj",
   "expectedPackageFiles": [
@@ -28,7 +28,8 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.native.compiler\\2.2.12-rel-31116-00\\runtime.win10-x86.microsoft.net.native.compiler.2.2.12-rel-31116-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.native.sharedlibrary\\2.2.8-rel-31116-00\\runtime.win10-x86.microsoft.net.native.sharedlibrary.2.2.8-rel-31116-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\\2.2.14\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.2.2.14.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\\6.2.14\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.2.14.nupkg.sha512"
+    "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\\6.2.14\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.2.14.nupkg.sha512",
+    "C:\\Users\\DenryDu\\.nuget\\packages\\taglibsharp\\2.3.0\\taglibsharp.2.3.0.nupkg.sha512"
   ],
   "logs": []
 }

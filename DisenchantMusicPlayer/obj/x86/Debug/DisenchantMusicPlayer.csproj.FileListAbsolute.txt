@@ -48,3 +48,5 @@ C:\Users\DenryDu\Documents\MyWork\UWP\DisenchantMusicPlayer\DisenchantMusicPlaye
 C:\Users\DenryDu\Documents\MyWork\UWP\DisenchantMusicPlayer\DisenchantMusicPlayer\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\DenryDu\Documents\MyWork\UWP\DisenchantMusicPlayer\DisenchantMusicPlayer\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_638017577300000000.json
 C:\Users\DenryDu\Documents\MyWork\UWP\DisenchantMusicPlayer\DisenchantMusicPlayer\obj\x86\Debug\.winmd_cache\$Microsoft.Web.WebView2.Core.winmd_637920505780000000.json
+C:\Users\DenryDu\Documents\MyWork\UWP\DisenchantMusicPlayer\DisenchantMusicPlayer\bin\x86\Debug\TagLibSharp.dll
+C:\Users\DenryDu\Documents\MyWork\UWP\DisenchantMusicPlayer\DisenchantMusicPlayer\bin\x86\Debug\TagLibSharp.pdb
