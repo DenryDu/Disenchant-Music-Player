@@ -121,12 +121,16 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\UwpFileExtension.cs" />
+    <Compile Include="Extensions\UwpFileExtensionHelpers.cs" />
+    <Compile Include="Helpers\AsyncHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\AlbumInfo.cs" />
     <Compile Include="Model\ArtistInfo.cs" />
     <Compile Include="Model\MusicInfo.cs" />
+    <Compile Include="Model\MusicLibrary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +141,7 @@
   <ItemGroup>
     <Content Include="Assets\test.flac" />
     <Content Include="Assets\test2.flac" />
+    <Content Include="Assets\test3.flac" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

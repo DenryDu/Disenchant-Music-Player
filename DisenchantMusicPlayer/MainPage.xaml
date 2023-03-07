@@ -9,5 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Image Source="{x:Bind music1.Cover}"></Image>
+        <TextBlock x:Name="OutputTextBlock" TextWrapping="Wrap"/>
+        <Button Grid.Row="1" x:Name="PickFolderButton" Content="Pick folder" Click="PickFolderButton_Click" Margin="0,10,10,0"/>
     </Grid>
 </Page>

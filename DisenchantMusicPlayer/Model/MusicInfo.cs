@@ -1,33 +1,27 @@
-﻿using System;
+﻿using DisenchantMusicPlayer.Extensions;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using TagLib;
+using System.Xml.Linq;
+
+using TagLib.Matroska;
+using Windows.Storage;
+using Windows.UI.Xaml.Media.Imaging;
+
 
 namespace DisenchantMusicPlayer.Model
 {
     internal class MusicInfo : INotifyPropertyChanged
     {
-        /// <summary>
-        /// 公开静态资源
-        /// </summary>
-        //所有音乐的根目录
-        public static string folderPath = "./Assets/";
-
-        //维护一个专辑-CoverSet
-        public static List<AlbumInfo> albums;
-
-        //维护一个表演者Set
-
-        /// <summary>
-        /// 公开静态方法
-        /// </summary>
-        //刷新专辑set
-        //刷新表演者set
-
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string name)
         {
@@ -36,13 +30,38 @@ namespace DisenchantMusicPlayer.Model
         }
 
         // 构造函数
-        public MusicInfo(string path)
+        public MusicInfo(StorageFile file)
         {
-            Path = folderPath + path;
-            TagLib.File f = TagLib.File.Create(Path);
+
+            TagLib.File f = TagLib.File.Create(file.AsAbstraction());
+            Path = file.Path;
             Album = f.Tag.Album;
-            Artists = f.Tag.AlbumArtists.Concat(f.Tag.Performers).ToArray();
             Title = f.Tag.Title;
+            Artists = f.Tag.AlbumArtists.Concat(f.Tag.Performers).ToArray();
+            Format = Path.Split(".")[Path.Split('.').Length-1].ToLower();
+            Year = f.Tag.Year;
+            Copyright = f.Tag.Copyright;
+            Cover = new BitmapImage();
+            //todo cover duration size 
+            //bitrate samplerate size 
+
+            //Get Cover
+            //Save it if not ever
+            //Store path
+            if (f.Tag.Pictures != null && f.Tag.Pictures.Length != 0)
+            {
+                byte[] coverBuffer = (byte[])(f.Tag.Pictures[0].Data.Data);
+                using (var stream = new MemoryStream(coverBuffer)) { stream.Seek(0, SeekOrigin.Begin); var s2 = new MemoryStream(); stream.CopyTo(s2); s2.Position = 0; Cover.SetSource(s2.AsRandomAccessStream()); s2.Dispose(); }                
+            }
+            //Genre = f.Tag.Genres;
+            Lyric = f.Tag.Lyrics;
+            SampleRate = f.Properties.AudioSampleRate;
+            Channels = f.Properties.AudioChannels;
+            BitRate = f.Properties.AudioBitrate;
+            //f.Properties.Codecs;
+            Duration = f.Properties.Duration;
+            
+
 
         }
 
@@ -102,6 +121,41 @@ namespace DisenchantMusicPlayer.Model
             } 
         }
 
+        // 时长
+        private TimeSpan _duration;
+        public TimeSpan Duration { get { return _duration; } set { _duration = value; OnPropertyChanged(nameof(Duration)); } }
+
+        // 发行年份
+        private uint _year;
+        public uint Year { get { return _year; } set { _year = value; OnPropertyChanged(nameof(Year));} }
+
+        // 格式
+        private string _format;
+        public string Format { get { return _format; } set { _format = value; OnPropertyChanged(nameof(Format));} }
+
+        // 版权
+        private string _copyright;
+        public string Copyright { get { return _copyright; } set { _copyright = value; OnPropertyChanged(nameof(Copyright));} }
+        
+        // 封面
+        private BitmapImage _cover;
+        public BitmapImage Cover { get { return _cover; }set { _cover = value; OnPropertyChanged(nameof(Cover));} }
+
+        // 采样率
+        private int _sampleRate;
+        public int SampleRate { get { return _sampleRate; } set { _sampleRate = value; OnPropertyChanged(nameof(SampleRate));} }
+
+        // 比特率
+        private int _bitRate;
+        public int BitRate { get { return _bitRate; } set { _bitRate = value; OnPropertyChanged(nameof(BitRate));} }
+
+        // Channels
+        private int _channels;
+        public int Channels { get { return _channels; } set { _channels = value; OnPropertyChanged(nameof(Channels));} }
+
+        // 歌词
+        private string _lyric;
+        public string Lyric { get { return _lyric; } set { _lyric = value; OnPropertyChanged(nameof(Lyric));} }
     }
 }
 
