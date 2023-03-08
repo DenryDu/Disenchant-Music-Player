@@ -29,16 +29,18 @@ namespace DisenchantMusicPlayer.Model
         public StorageFolder Folder { get { return _folder; } set { _folder = value; OnPropertyChanged(nameof(Folder)); } }
 
         //维护一个专辑-CoverSet
-        public static HashSet<AlbumInfo> albums;
+        private HashSet<AlbumInfo> _albums;
+        public HashSet<AlbumInfo> Albums { get { return _albums; } set { _albums = value; OnPropertyChanged(nameof(Albums)); } }
 
-        //维护一个表演者Set
-        public static HashSet<ArtistInfo> artists;
+        private HashSet<ArtistInfo> _artists;
+        public HashSet<ArtistInfo> Artists { get { return _artists; } set { _artists = value; OnPropertyChanged(nameof(Artists)); } }   
 
-        public static ObservableCollection<MusicInfo> musics;
+        private ObservableCollection<MusicInfo> _musics;
+        public ObservableCollection<MusicInfo> Musics { get { return _musics; } set { _musics = value; OnPropertyChanged(nameof(Musics)); } }
 
         public async void InitMusics()
         {
-            musics = new ObservableCollection<MusicInfo>();
+            Musics = new ObservableCollection<MusicInfo>();
             // 从文件夹中读取
             if (Folder.Path!=null&&Folder.Path.Length>0)
             {
@@ -48,14 +50,18 @@ namespace DisenchantMusicPlayer.Model
                 {
                     if (fi.FileType.ToLower().Contains(".mp3") || fi.FileType.ToLower().Contains(".flac") || fi.FileType.ToLower().Contains(".wav") ) 
                     {
-                        musics.Add(new MusicInfo(fi));
+                        Musics.Add(new MusicInfo(fi));
                     }
                 }
 
             }
-            Debug.WriteLine(musics.ToString());
         }
-
+        public MusicLibrary() 
+        {
+            Musics = new ObservableCollection<MusicInfo>();
+            Artists = new HashSet<ArtistInfo>();
+            Albums = new HashSet<AlbumInfo>();
+        }
         /// <summary>
         /// 公开静态方法
         /// </summary>

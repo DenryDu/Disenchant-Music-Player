@@ -6,11 +6,177 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls" 
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Image Source="{x:Bind music1.Cover}"></Image>
-        <TextBlock x:Name="OutputTextBlock" TextWrapping="Wrap"/>
-        <Button Grid.Row="1" x:Name="PickFolderButton" Content="Pick folder" Click="PickFolderButton_Click" Margin="0,10,10,0"/>
+        <!--<Image Source="{x:Bind music1.Cover}"></Image>-->
+
+        <!-- RootGrid for MainWindow -->
+        <Grid x:Name="RootGrid" Height="auto" Width="auto"  MinWidth="300">
+
+            <Grid.RowDefinitions>
+                <!--<RowDefinition Height="32"/>-->
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="120"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- AppTitleBar -->
+            <Grid  x:Name="AppTitleBar">
+
+            </Grid>
+            <!-- RootNav -->
+            <muxc:NavigationView 
+            Grid.Row="1" Grid.Column="0" Height="auto" Width="auto"   
+                x:Name="RNav"
+                
+                PaneDisplayMode="Auto"
+                IsSettingsVisible="True"
+                ItemInvoked="NavView_ItemInvoked"
+                SelectedItem="DisenchantMusicPlayer.SonglistPage"
+         >
+
+                <muxc:NavigationView.MenuItems>
+
+                    <!--All Songs-->
+                    <muxc:NavigationViewItem Content="Songs" Tag="songlist">
+                        <muxc:NavigationViewItem.Icon>
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe8d6;"></FontIcon>
+
+                            <!--<BitmapIcon UriSource="ms-appx:///Assets/Images/Song.png"/>-->
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                    <!--Albums-->
+                    <muxc:NavigationViewItem Content="Albums" Tag="albumlist">
+                        <muxc:NavigationViewItem.Icon>
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe93c;"></FontIcon>
+
+                            <!--<BitmapIcon UriSource="ms-appx:///Assets/Images/Album.png"/>-->
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                    <!--Artists-->
+                    <muxc:NavigationViewItem Content="Artists" Tag="artistlist">
+                        <muxc:NavigationViewItem.Icon>
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe902;"></FontIcon>
+
+                            <!--<BitmapIcon UriSource="ms-appx:///Assets/Images/Artist.png"/>-->
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                    <!--Playlist-->
+                    <muxc:NavigationViewItem Content="Playlists" Tag="playlist">
+                        <muxc:NavigationViewItem.Icon>
+                            <!--<FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xf168;"></FontIcon>-->
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xf156;"></FontIcon>
+
+                            <!--<BitmapIcon UriSource="ms-appx:///Assets/Images/Playlist.png"/>-->
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+
+                </muxc:NavigationView.MenuItems>
+
+                <muxc:NavigationView.FooterMenuItems>
+
+                    <!--Statistic-->
+                    <muxc:NavigationViewItem Content="Statistic" Tag="DisenchantMusicPlayer.StatisticPage">
+                        <muxc:NavigationViewItem.Icon>
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xeb05;"></FontIcon>
+
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                </muxc:NavigationView.FooterMenuItems>
+
+                <Frame x:Name="ContentFrame"/>
+
+            </muxc:NavigationView>
+
+            <!-- Audio Player -->
+            <!-- Player Grid -->
+            <Grid Grid.Row="2" Grid.Column="0" Height="120" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Cover & Info -->
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <!-- Cover -->
+                    <Border HorizontalAlignment="Left" Margin="20 0 0 0" Height="80" Width="80" CornerRadius="15">
+                        <Image x:Name="ControllerCover"
+                            VerticalAlignment="Center" HorizontalAlignment="Left" Height="80" Width="80" Source="{x:Bind local:GlobalData.CurrentMusic.Cover, Mode=TwoWay}"></Image>
+                    </Border>
+                    <!-- Info -->
+                </Grid>
+
+
+                <!-- Play Control -->
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Prev -->
+                    <Grid Grid.Row="0"  Grid.Column="0">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe892;"></FontIcon>
+                    </Grid>
+
+                    <!-- Play/Pause -->
+                    <Grid Grid.Row="0"  Grid.Column="1">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe768;"></FontIcon>
+
+                    </Grid>
+
+                    <!-- Next -->
+                    <Grid Grid.Row="0"  Grid.Column="2">
+                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE893;"></FontIcon>
+                    </Grid>
+
+                </Grid>
+
+                <!-- Other Control-->
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0"  Grid.Column="0">
+                        Mode</Button>
+                    <!-- e8ed repeatonce -->
+                    <!-- e8ee repeatall -->
+                    <Button Grid.Row="0"  Grid.Column="1">SoundEffect</Button>
+                    <Button Grid.Row="0"  Grid.Column="2">Playlist</Button>
+                    <Button Grid.Row="0"  Grid.Column="3">MoreInfo</Button>
+
+                </Grid>
+
+            </Grid>
+
+
+            <StackPanel  Orientation="Horizontal" BorderBrush="AliceBlue" Padding="20 0">
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>

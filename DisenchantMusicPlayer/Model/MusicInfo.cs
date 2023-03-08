@@ -32,7 +32,6 @@ namespace DisenchantMusicPlayer.Model
         // 构造函数
         public MusicInfo(StorageFile file)
         {
-
             TagLib.File f = TagLib.File.Create(file.AsAbstraction());
             Path = file.Path;
             Album = f.Tag.Album;
@@ -42,12 +41,6 @@ namespace DisenchantMusicPlayer.Model
             Year = f.Tag.Year;
             Copyright = f.Tag.Copyright;
             Cover = new BitmapImage();
-            //todo cover duration size 
-            //bitrate samplerate size 
-
-            //Get Cover
-            //Save it if not ever
-            //Store path
             if (f.Tag.Pictures != null && f.Tag.Pictures.Length != 0)
             {
                 byte[] coverBuffer = (byte[])(f.Tag.Pictures[0].Data.Data);
@@ -60,9 +53,10 @@ namespace DisenchantMusicPlayer.Model
             BitRate = f.Properties.AudioBitrate;
             //f.Properties.Codecs;
             Duration = f.Properties.Duration;
-            
-
-
+        }
+        public MusicInfo()
+        {
+            Cover = new BitmapImage();
         }
 
         /// <summary>

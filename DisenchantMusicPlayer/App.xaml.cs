@@ -1,5 +1,9 @@
-﻿using System;
+﻿using DisenchantMusicPlayer.Helpers;
+using DisenchantMusicPlayer.Model;
+using DisenchantMusicPlayer.View;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -30,6 +34,25 @@ namespace DisenchantMusicPlayer
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            // 如果曾经指定了文件夹，就从中初始化音乐库
+            if(AsyncHelper.RunSync(async () =>
+            {
+                try
+                {
+                    GlobalData.MusicLibrary.Folder = await Windows.Storage.AccessCache.StorageApplicationPermissions.FutureAccessList.GetFolderAsync(GlobalData.MusicLibraryFolderToken);
+                    return true;
+                }
+                catch (System.ArgumentException argE)
+                {
+                    return false;
+                }
+          
+                
+            }))
+            {
+                GlobalData.MusicLibrary.InitMusics();
+                Debug.WriteLine("initok");
+            }
         }
 
         /// <summary>
@@ -39,6 +62,8 @@ namespace DisenchantMusicPlayer
         /// <param name="e">有关启动请求和过程的详细信息。</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+
+       
             Frame rootFrame = Window.Current.Content as Frame;
 
             // 不要在窗口已包含内容时重复应用程序初始化，
