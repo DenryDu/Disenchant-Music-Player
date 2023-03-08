@@ -1,4 +1,5 @@
-﻿using DisenchantMusicPlayer.View;
+﻿using DisenchantMusicPlayer.Model;
+using DisenchantMusicPlayer.View;
 using DisenchantMusicPlayer.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using muxc = Microsoft.UI.Xaml.Controls;
+using DisenchantMusicPlayer.ViewModel;
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
@@ -26,13 +28,13 @@ namespace DisenchantMusicPlayer
     /// </summary>
     public sealed partial class MainPage : Windows.UI.Xaml.Controls.Page
     {
-        private MainViewModel mainViewModel;
-        internal MainViewModel ViewModel { get { return mainViewModel; } set { mainViewModel = value; } }
+        private MainViewModel _mainViewModel;
+        internal MainViewModel MainViewModel { get; set; } = new MainViewModel();
+
         public MainPage()
         {
             this.InitializeComponent();
-            //GlobalData.CurrentMusic.Cover = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri("./Assets/StoreLogo.png"));
-            
+            SongListViewModel.mainPage = this;
             ContentFrame.Navigate(typeof(SongListPage));
         }
         // List of ValueTuple holding the Navigation Tag and the relative Navigation Page

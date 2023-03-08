@@ -17,13 +17,16 @@ namespace DisenchantMusicPlayer.ViewModel
 {
     internal class SongListViewModel : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        // MainPage 实例
+        public static MainPage mainPage;
 
+        public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string name)
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
         }
+
         private ObservableCollection<MusicInfo> _songList;
         public ObservableCollection<MusicInfo> SongList { get { return _songList;  } set { _songList = value; OnPropertyChanged(nameof(SongList)); } }
         public SongListViewModel() 
@@ -32,10 +35,7 @@ namespace DisenchantMusicPlayer.ViewModel
         }
         public void SonglistView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // 要告知MainViewModel
-            GlobalData.CurrentMusic = ((ListView)sender).SelectedItem as MusicInfo;
-            //MainPage.ControllerCover.Source = GlobalData.CurrentMusic.Cover;
-
+            mainPage.MainViewModel.CurrentMusic = ((ListView)sender).SelectedItem as MusicInfo;
         }
     }
 }

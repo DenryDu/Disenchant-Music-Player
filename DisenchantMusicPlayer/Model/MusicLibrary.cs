@@ -48,7 +48,7 @@ namespace DisenchantMusicPlayer.Model
 
                 foreach (StorageFile fi in allFile)
                 {
-                    if (fi.FileType.ToLower().Contains(".mp3") || fi.FileType.ToLower().Contains(".flac") || fi.FileType.ToLower().Contains(".wav") ) 
+                    if ( GlobalData.SupportedAudioTypes.Contains(fi.FileType.ToLower()) ) 
                     {
                         Musics.Add(new MusicInfo(fi));
                     }

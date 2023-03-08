@@ -115,7 +115,7 @@
                     <!-- Cover -->
                     <Border HorizontalAlignment="Left" Margin="20 0 0 0" Height="80" Width="80" CornerRadius="15">
                         <Image x:Name="ControllerCover"
-                            VerticalAlignment="Center" HorizontalAlignment="Left" Height="80" Width="80" Source="{x:Bind local:GlobalData.CurrentMusic.Cover, Mode=TwoWay}"></Image>
+                            VerticalAlignment="Center" HorizontalAlignment="Left" Height="80" Width="80" Source="{x:Bind MainViewModel.CurrentMusic.Cover, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Image>
                     </Border>
                     <!-- Info -->
                 </Grid>

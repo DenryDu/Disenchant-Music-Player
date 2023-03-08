@@ -20,6 +20,8 @@ namespace DisenchantMusicPlayer
         // FileTypes supported by this proj
         public static readonly string[] SupportedAudioTypes = { ".flac", ".wav", ".m4a", ".aac", ".mp3", ".wma", ".ogg", ".oga", ".opus" };
 
+
+
         ///
         /// Variable
         ///
@@ -28,7 +30,5 @@ namespace DisenchantMusicPlayer
 
         private static MusicInfo _currentMusic;
         internal static MusicInfo CurrentMusic { get; set; } = new MusicInfo();
-        //private static StorageFolder _musicLibFolder;
-        //internal static StorageFolder MusicLibFolder { get { return Storage} set; }
     }
 }
