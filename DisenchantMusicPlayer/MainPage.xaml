@@ -19,7 +19,7 @@
                 <!--<RowDefinition Height="32"/>-->
                 <RowDefinition Height="0"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="120"/>
+                <RowDefinition Height="130"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -36,7 +36,7 @@
                 
                 PaneDisplayMode="Auto"
                 IsSettingsVisible="True"
-                ItemInvoked="NavView_ItemInvoked"
+                ItemInvoked="{x:Bind MainViewModel.NavView_ItemInvoked}"
                 SelectedItem="DisenchantMusicPlayer.SonglistPage"
          >
 
@@ -102,27 +102,50 @@
             <!-- Player Grid -->
             <Grid Grid.Row="2" Grid.Column="0" Height="120" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Center">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*" MinWidth="0"/>
                     <ColumnDefinition Width="200"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" MinWidth="0"/>
                     <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- Cover & Info -->
-                <Grid Grid.Row="0" Grid.Column="0">
-                    <!-- Cover -->
-                    <Border HorizontalAlignment="Left" Margin="20 0 0 0" Height="80" Width="80" CornerRadius="15">
-                        <Image x:Name="ControllerCover"
-                            VerticalAlignment="Center" HorizontalAlignment="Left" Height="80" Width="80" Source="{x:Bind MainViewModel.CurrentMusic.Cover, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Image>
-                    </Border>
-                    <!-- Info -->
+                <!-- Row One Progress Bar -->
+                <Grid Grid.Row="0" Grid.ColumnSpan="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0"  Margin="10 0 0 0" VerticalAlignment="Center" Text="00:00"  FontSize="15"></TextBlock>
+                    <Slider Grid.Row="0" Grid.Column="1"  Value="0" VerticalAlignment="Center" Margin="5 0 5 0"/>
+                    <!--<TextBlock Grid.Row="0" Grid.Column="2"  Margin="0 0 10 0" VerticalAlignment="Center" FontSize="15" Text="{x:Bind MainViewModel.CurrentMusic.Duration, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBlock>-->
+                    <TextBlock Grid.Row="0" Grid.Column="2"  HorizontalAlignment="Right" Margin="0 0 10 0" VerticalAlignment="Center" FontSize="15" Text="01:10"></TextBlock>
                 </Grid>
+                
+                <!-- Cover -->
+                <Border Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="10 0 10 0" Height="80" Width="80" CornerRadius="15">
+                    <Image x:Name="ControllerCover"
+                        VerticalAlignment="Center" HorizontalAlignment="Left" Height="80" Width="80" Source="{x:Bind MainViewModel.CurrentMusic.Cover, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Image>
+                </Border>
+               
+
+                <!-- Info -->
+                <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock Text="{x:Bind MainViewModel.CurrentMusic.Title, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
+                    <TextBlock Text="{x:Bind MainViewModel.CurrentMusic.ArtistsAndAlbumStr, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="8,0,0,0" TextWrapping="NoWrap"/>
+                </StackPanel>
+              
 
 
                 <!-- Play Control -->
-                <Grid Grid.Row="0" Grid.Column="1">
+                <Grid Grid.Row="1" Grid.Column="2">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
@@ -134,24 +157,29 @@
 
                     <!-- Prev -->
                     <Grid Grid.Row="0"  Grid.Column="0">
-                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe892;"></FontIcon>
+                        <Button>
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe892;"></FontIcon>
+                        </Button>
                     </Grid>
 
                     <!-- Play/Pause -->
                     <Grid Grid.Row="0"  Grid.Column="1">
-                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe768;"></FontIcon>
-
+                        <Button x:Name="PlayButton" Click="{x:Bind MainViewModel.PlayButton_Click}">
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="{x:Bind MainViewModel.PlayBtnIcon, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></FontIcon>
+                        </Button>
                     </Grid>
 
                     <!-- Next -->
                     <Grid Grid.Row="0"  Grid.Column="2">
-                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE893;"></FontIcon>
+                        <Button>
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE893;"></FontIcon>
+                        </Button>
                     </Grid>
 
                 </Grid>
 
                 <!-- Other Control-->
-                <Grid Grid.Row="0" Grid.Column="2">
+                <Grid Grid.Row="1" Grid.Column="4">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>

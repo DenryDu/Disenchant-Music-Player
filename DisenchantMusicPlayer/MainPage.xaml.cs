@@ -28,6 +28,7 @@ namespace DisenchantMusicPlayer
     /// </summary>
     public sealed partial class MainPage : Windows.UI.Xaml.Controls.Page
     {
+        //public static MainPage mainPage;
         private MainViewModel _mainViewModel;
         internal MainViewModel MainViewModel { get; set; } = new MainViewModel();
 
@@ -35,54 +36,12 @@ namespace DisenchantMusicPlayer
         {
             this.InitializeComponent();
             SongListViewModel.mainPage = this;
+            MainViewModel.mainPage = this;
             ContentFrame.Navigate(typeof(SongListPage));
         }
-        // List of ValueTuple holding the Navigation Tag and the relative Navigation Page
-        private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
-        {
-            ("songlist", typeof(SongListPage)),
-            ("albumlist", typeof(AlbumListPage)),
-            ("artistlist", typeof(ArtistListPage)),
-            ("playlist", typeof(PlayListPage)),
-            ("settings", typeof(SettingsPage)),
-        };
+        
+        public Frame GetFrame() { return ContentFrame; }
 
-        private void NavView_ItemInvoked(muxc.NavigationView sender,
-                                      muxc.NavigationViewItemInvokedEventArgs args)
-        {
-            if (args.IsSettingsInvoked == true)
-            {
-                NavView_Navigate("settings", args.RecommendedNavigationTransitionInfo);
-            }
-            else if (args.InvokedItemContainer != null)
-            {
-                var navItemTag = args.InvokedItemContainer.Tag.ToString();
-                NavView_Navigate(navItemTag, args.RecommendedNavigationTransitionInfo);
-            }
-        }
-        private void NavView_Navigate(
-            string navItemTag,
-            Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo transitionInfo)
-        {
-            Type _page = null;
-            if (navItemTag == "settings")
-            {
-                _page = typeof(SettingsPage);
-            }
-            else
-            {
-                var item = _pages.FirstOrDefault(p => p.Tag.Equals(navItemTag));
-                _page = item.Page;
-            }
-            // Get the page type before navigation so you can prevent duplicate
-            // entries in the backstack.
-            var preNavPageType = ContentFrame.CurrentSourcePageType;
-
-            // Only navigate if the selected page isn't currently loaded.
-            if (!(_page is null) && !Type.Equals(preNavPageType, _page))
-            {
-                ContentFrame.Navigate(_page, null, transitionInfo);
-            }
-        }
+      
     }
 }

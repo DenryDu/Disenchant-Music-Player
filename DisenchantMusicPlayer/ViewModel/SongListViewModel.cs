@@ -1,5 +1,7 @@
 ﻿using DisenchantMusicPlayer.Helpers;
 using DisenchantMusicPlayer.Model;
+using DisenchantMusicPlayer.Player;
+using NAudio.Wave;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -35,7 +37,25 @@ namespace DisenchantMusicPlayer.ViewModel
         }
         public void SonglistView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            mainPage.MainViewModel.CurrentMusic =  ((ListView)sender).SelectedItem as MusicInfo ;
+            MusicInfo selectedMusic = ((ListView)sender).SelectedItem as MusicInfo;
+
+            // First Time Select
+            if (selectedMusic.Path != mainPage.MainViewModel.CurrentMusic.Path) 
+            {
+                // Play
+                if (mainPage.MainViewModel.CurrentMusic.Title != null)
+                {
+                    AudioPlayer.Stop();
+                }
+                mainPage.MainViewModel.CurrentMusic = ((ListView)sender).SelectedItem as MusicInfo;               
+                mainPage.MainViewModel.PlayBtnIcon = GlobalData.PauseBtnIcon;
+                AudioPlayer.Play();
+            }
+            else  // Not First Time
+            {
+                // Go To Detail
+
+            }
         }
     }
 }

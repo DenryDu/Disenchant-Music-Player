@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DisenchantMusicPlayer.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -56,6 +57,26 @@ namespace DisenchantMusicPlayer.Model
 
             }
         }
+
+        public StorageFile GetMusicFile(string path)
+        {
+            // 从文件夹中读取
+            if (GlobalData.MusicLibrary.Folder.Path != null && GlobalData.MusicLibrary.Folder.Path.Length > 0)
+            {
+                IReadOnlyList<StorageFile> allFile = AsyncHelper.RunSync(async () => { return await GlobalData.MusicLibrary.Folder.GetFilesAsync(); });
+
+                foreach (StorageFile fi in allFile)
+                {
+                    if (fi.Path == path)
+                    {
+                        return fi;
+                    }
+                }
+                return null;
+            }
+            return null;
+        }
+
         public MusicLibrary() 
         {
             Musics = new ObservableCollection<MusicInfo>();

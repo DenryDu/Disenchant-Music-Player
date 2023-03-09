@@ -1,4 +1,5 @@
-﻿using DisenchantMusicPlayer.Model;
+﻿using DisenchantMusicPlayer.Helpers;
+using DisenchantMusicPlayer.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,8 @@ namespace DisenchantMusicPlayer
         // FileTypes supported by this proj
         public static readonly string[] SupportedAudioTypes = { ".flac", ".wav", ".m4a", ".aac", ".mp3", ".wma", ".ogg", ".oga", ".opus" };
 
+        public static readonly string PlayBtnIcon = StringHelper.UnicodeToStr("&#xe768;");
+        public static readonly string PauseBtnIcon = StringHelper.UnicodeToStr("&#xe769;");
 
 
         ///

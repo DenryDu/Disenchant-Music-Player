@@ -113,12 +113,13 @@ namespace DisenchantMusicPlayer.Model
                 {
                     _artists = new string[0];
                 }
-                ArtistsStr = GetArtists();
+
+                ArtistsAndAlbumStr = GetArtistsAndAlbum();
                 OnPropertyChanged(nameof(Artists)); 
             } 
         }
-        private string _artistsStr;
-        public string ArtistsStr { get { return _artistsStr; } set { _artistsStr = value; OnPropertyChanged(nameof(ArtistsStr)); } }
+        private string _artistsAndAlbumStr;
+        public string ArtistsAndAlbumStr { get { return _artistsAndAlbumStr; } set { _artistsAndAlbumStr = value; OnPropertyChanged(nameof(ArtistsAndAlbumStr)); } }
         public string GetArtists()
         {
             string str = "";
@@ -128,6 +129,16 @@ namespace DisenchantMusicPlayer.Model
                 str += ",";
             }
             return str.Substring(0,str.Length-1);
+        }
+        public string GetArtistsAndAlbum()
+        {
+            string str = "";
+            foreach (string artist in _artists)
+            {
+                str += artist;
+                str += ",";
+            }
+            return str.Substring(0, str.Length - 1)+" - "+Album;
         }
 
         // 时长

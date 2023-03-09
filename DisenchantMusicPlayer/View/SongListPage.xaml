@@ -25,11 +25,7 @@
                     </Border>
                     <StackPanel Grid.Column="1" VerticalAlignment="Center">
                         <TextBlock Text="{x:Bind Title}" Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{x:Bind ArtistsStr}" Margin="8,0,0,0" TextWrapping="NoWrap"/>
-                            <TextBlock>-</TextBlock>
-                            <TextBlock Text="{x:Bind Album}" Margin="8,0,0,0" TextWrapping="NoWrap"/>
-                        </StackPanel>
+                        <TextBlock Text="{x:Bind ArtistsAndAlbumStr}" Margin="8,0,0,0" TextWrapping="NoWrap"/>
                     </StackPanel>
                 </Grid>
             </DataTemplate>
