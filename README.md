@@ -47,7 +47,7 @@
 - 2023/3/9-12:40：[WinUI2 C#](https://github.com/DenryDu/Disenchant-Music-Player/tree/WinUI2-CSharp) 初步解决了内存占用过大问题，下一步希望完成音乐播放功能。
 	![2023/3/9-1](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-09_12-39-26.png)
 - 2023/3/9-21:54：[WinUI2 C#](https://github.com/DenryDu/Disenchant-Music-Player/tree/WinUI2-CSharp) 使用WASAPI初步解决了播放问题，但是无法获取播放进度，下一步可能会尝试NAudio来进行播放（尝试了，但是没有安装完成，遇到了很多问题）。同时，为播放组件添加了一些元素，重新设计布局以适应屏幕的伸缩。
-	![2023/3/9-1](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-09_21-54-25.png)
+	![2023/3/9-2](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-09_21-54-25.png)
 
 
 
