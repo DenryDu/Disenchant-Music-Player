@@ -47,6 +47,10 @@
               "target": "Package",
               "version": "[2.8.2, )"
             },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
             "TagLibSharp": {
               "target": "Package",
               "version": "[2.3.0, )"

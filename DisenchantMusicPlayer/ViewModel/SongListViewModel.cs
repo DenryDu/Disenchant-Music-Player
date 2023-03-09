@@ -35,7 +35,7 @@ namespace DisenchantMusicPlayer.ViewModel
         }
         public void SonglistView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            mainPage.MainViewModel.CurrentMusic = ((ListView)sender).SelectedItem as MusicInfo;
+            mainPage.MainViewModel.CurrentMusic =  ((ListView)sender).SelectedItem as MusicInfo ;
         }
     }
 }

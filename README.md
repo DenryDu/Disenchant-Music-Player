@@ -12,3 +12,5 @@
 	![2023/3/8-4](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-08_19-36-39.png)
 - 2023/3/8-22:00：[WinUI2 C#](https://github.com/DenryDu/Disenchant-Music-Player/tree/WinUI2-CSharp) 解决了函数调用问题，找到了从一窗体中调用另一窗体受保护函数的方法。
 	![2023/3/8-5](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-08_22-00-51.png)
+- 2023/3/9-12:40：[[WinUI2 C#](https://github.com/DenryDu/Disenchant-Music-Player/tree/WinUI2-CSharp) 初步解决了内存占用过大问题，下一步希望完成音乐播放功能。
+	![2023/3/9-1](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-09_12-39-26.png)

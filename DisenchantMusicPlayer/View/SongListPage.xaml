@@ -15,17 +15,21 @@
               >
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="localModel:MusicInfo">
-                <Grid Height="100" Margin="0">
+                <Grid Height="80" Margin="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="60"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Border Grid.Column="0"  Width="80" Height="80" CornerRadius="20">
+                    <Border Grid.Column="0"  Width="60" Height="60" CornerRadius="15">
                         <Image Source="{x:Bind Cover}" Stretch="UniformToFill"/>
                     </Border>
                     <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                        <TextBlock Text="{x:Bind Title}" Margin="10,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="20"/>
-                        <TextBlock Text="{x:Bind Album}" Margin="10,0,0,0" TextWrapping="NoWrap"/>
+                        <TextBlock Text="{x:Bind Title}" Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{x:Bind ArtistsStr}" Margin="8,0,0,0" TextWrapping="NoWrap"/>
+                            <TextBlock>-</TextBlock>
+                            <TextBlock Text="{x:Bind Album}" Margin="8,0,0,0" TextWrapping="NoWrap"/>
+                        </StackPanel>
                     </StackPanel>
                 </Grid>
             </DataTemplate>

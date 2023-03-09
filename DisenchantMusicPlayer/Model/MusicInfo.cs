@@ -44,7 +44,10 @@ namespace DisenchantMusicPlayer.Model
             if (f.Tag.Pictures != null && f.Tag.Pictures.Length != 0)
             {
                 byte[] coverBuffer = (byte[])(f.Tag.Pictures[0].Data.Data);
-                using (var stream = new MemoryStream(coverBuffer)) { stream.Seek(0, SeekOrigin.Begin); var s2 = new MemoryStream(); stream.CopyTo(s2); s2.Position = 0; Cover.SetSource(s2.AsRandomAccessStream()); s2.Dispose(); }                
+                using (var stream = new MemoryStream(coverBuffer)) { stream.Seek(0, SeekOrigin.Begin); var s2 = new MemoryStream(); stream.CopyTo(s2); s2.Position = 0;
+                    Cover.DecodePixelHeight = 100; Cover.DecodePixelWidth = 100;                 
+                    Cover.SetSource(s2.AsRandomAccessStream()); s2.Dispose();
+                }                
             }
             //Genre = f.Tag.Genres;
             Lyric = f.Tag.Lyrics;
@@ -110,9 +113,21 @@ namespace DisenchantMusicPlayer.Model
                 {
                     _artists = new string[0];
                 }
-                
+                ArtistsStr = GetArtists();
                 OnPropertyChanged(nameof(Artists)); 
             } 
+        }
+        private string _artistsStr;
+        public string ArtistsStr { get { return _artistsStr; } set { _artistsStr = value; OnPropertyChanged(nameof(ArtistsStr)); } }
+        public string GetArtists()
+        {
+            string str = "";
+            foreach(string artist in _artists)
+            {
+                str += artist;
+                str += ",";
+            }
+            return str.Substring(0,str.Length-1);
         }
 
         // 时长

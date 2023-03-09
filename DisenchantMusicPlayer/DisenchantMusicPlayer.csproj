@@ -124,6 +124,7 @@
     <Compile Include="Extensions\UwpFileExtension.cs" />
     <Compile Include="GlobalData.cs" />
     <Compile Include="Helpers\AsyncHelper.cs" />
+    <Compile Include="Helpers\DeepCopyHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -206,6 +207,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.8.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Json">
+      <Version>7.0.2</Version>
     </PackageReference>
     <PackageReference Include="TagLibSharp">
       <Version>2.3.0</Version>
