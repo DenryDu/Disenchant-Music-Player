@@ -48,11 +48,15 @@ namespace DisenchantMusicPlayer.ViewModel
                 _currentMusic.Cover.DecodePixelWidth = 500; _currentMusic.Cover.DecodePixelHeight = 500;
 
                 // Set Music Source for Player
-                AudioPlayer.SetAudioSource(GlobalData.MusicLibrary.GetMusicFile(CurrentMusic.Path));
+                if(CurrentMusic.Path != null)
+                {
+                    GlobalData.AudioPlayer.SetAudioSource(GlobalData.MusicLibrary.GetMusicFile(CurrentMusic.Path));
+                }
 
                 OnPropertyChanged(nameof(CurrentMusic));
             }
         }
+
         private StorageFile _currentMusicFile;
         public StorageFile CurrentMusicFile { get { return _currentMusicFile; } set { _currentMusicFile = value; OnPropertyChanged(nameof(CurrentMusicFile)); } }
         private string _playBtnIcon;
@@ -128,7 +132,7 @@ namespace DisenchantMusicPlayer.ViewModel
                     {
                         //AudioPlayer.SetAudioSource(GlobalData.MusicLibrary.GetMusicFile(CurrentMusic.Path));
                         PlayBtnIcon = GlobalData.PauseBtnIcon;
-                        AudioPlayer.Play();
+                        GlobalData.AudioPlayer.Play();
                     }
                     catch(Exception excep)
                     {
@@ -139,7 +143,7 @@ namespace DisenchantMusicPlayer.ViewModel
                 {
                     PlayBtnIcon = GlobalData.PlayBtnIcon;
                     // TODO: Pause
-                    AudioPlayer.Pause();
+                    GlobalData.AudioPlayer.Pause();
                 }
             }          
         }

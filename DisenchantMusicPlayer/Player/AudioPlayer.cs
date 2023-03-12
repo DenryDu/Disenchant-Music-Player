@@ -4,24 +4,184 @@ using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Windows.Devices.Input;
+using Windows.Media.Audio;
+using Windows.Media.Render;
 using Windows.Storage;
 
 
 namespace DisenchantMusicPlayer.Player
 {
-    public static class AudioPlayer
+    public class AudioPlayer : INotifyPropertyChanged
     {
-        private static WasapiOutRT _audioOutput;
-        public static WasapiOutRT AudioOutput { get { return _audioOutput; } set { _audioOutput = value; } }
-        public static bool SetAudioSource(StorageFile file)
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(string name)
         {
-            if(file != null)
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+        }
+
+
+        private AudioGraph _graph;
+        public AudioGraph Graph { get { return _graph; } set { _graph = value; OnPropertyChanged(nameof(Graph));} }
+
+
+        private AudioFileInputNode _fileInputNode;
+        public AudioFileInputNode FileInputNode { get { return _fileInputNode; } set { _fileInputNode = value; OnPropertyChanged(nameof(FileInputNode)); } }
+
+
+        private AudioDeviceOutputNode _deviceOutputNode;
+        public AudioDeviceOutputNode DeviceOutputNode { get { return _deviceOutputNode; } set { _deviceOutputNode = value; } }
+
+        private CreateAudioGraphResult result;
+        private CreateAudioDeviceOutputNodeResult deviceOutputNodeResult;
+
+        public void SetAudioSource(StorageFile file)
+        {
+            CreateAudioFileInputNodeResult fileInputResult = AsyncHelper.RunSync(async () => { return await Graph.CreateFileInputNodeAsync(file); });
+            /*
+            if (AudioFileNodeCreationStatus.Success != fileInputResult.Status)
+            {
+                // Cannot read input file
+                //rootPage.NotifyUser(String.Format("Cannot read input file because {0}", fileInputResult.Status.ToString()), NotifyType.ErrorMessage);
+                return;
+            }
+            */
+            FileInputNode = fileInputResult.FileInputNode;
+            /*
+            if (FileInputNode.Duration <= TimeSpan.FromSeconds(3))
+            {
+                // Imported file is too short
+                //rootPage.NotifyUser("Please pick an audio file which is longer than 3 seconds", NotifyType.ErrorMessage);
+
+                // Reset InputNode
+                FileInputNode.Dispose();
+                FileInputNode = null;
+                return;
+            }
+            */
+
+            // Connect Input and Output
+            FileInputNode.AddOutgoingConnection(DeviceOutputNode);
+            //fileButton.Background = new SolidColorBrush(Colors.Green);
+
+            // Trim the file: set the start time to 3 seconds from the beginning
+            // fileInput.EndTime can be used to trim from the end of file
+            //FileInputNode.StartTime = TimeSpan.FromSeconds(3);
+            FileInputNode.StartTime = TimeSpan.FromSeconds(0);
+
+            // Enable buttons in UI to start graph, loop and change playback speed factor
+            //graphButton.IsEnabled = true;
+            //loopToggle.IsEnabled = true;
+            //playSpeedSlider.IsEnabled = true;
+        }
+        public async Task AsyncSetAudioSource(StorageFile file)
+        {
+            CreateAudioFileInputNodeResult fileInputResult = await Graph.CreateFileInputNodeAsync(file);
+            /*
+            if (AudioFileNodeCreationStatus.Success != fileInputResult.Status)
+            {
+                // Cannot read input file
+                //rootPage.NotifyUser(String.Format("Cannot read input file because {0}", fileInputResult.Status.ToString()), NotifyType.ErrorMessage);
+                return;
+            }
+            */
+            FileInputNode = fileInputResult.FileInputNode;
+            /*
+            if (FileInputNode.Duration <= TimeSpan.FromSeconds(3))
+            {
+                // Imported file is too short
+                //rootPage.NotifyUser("Please pick an audio file which is longer than 3 seconds", NotifyType.ErrorMessage);
+
+                // Reset InputNode
+                FileInputNode.Dispose();
+                FileInputNode = null;
+                return;
+            }
+            */
+
+            // Connect Input and Output
+            FileInputNode.AddOutgoingConnection(DeviceOutputNode);
+            //fileButton.Background = new SolidColorBrush(Colors.Green);
+
+            // Trim the file: set the start time to 3 seconds from the beginning
+            // fileInput.EndTime can be used to trim from the end of file
+            //FileInputNode.StartTime = TimeSpan.FromSeconds(3);
+            FileInputNode.StartTime = TimeSpan.FromSeconds(0);
+
+            // Enable buttons in UI to start graph, loop and change playback speed factor
+            //graphButton.IsEnabled = true;
+            //loopToggle.IsEnabled = true;
+            //playSpeedSlider.IsEnabled = true;
+            return;
+        }
+        public void Init()
+        {
+            // Create an AudioGraph with default settings
+            AudioGraphSettings settings = new AudioGraphSettings(AudioRenderCategory.Media);
+            //CreateAudioGraphResult result = AsyncHelper.RunSync(async()=> { return await AudioGraph.CreateAsync(settings); });
+            result = AsyncHelper.RunSync(async()=> { return await AudioGraph.CreateAsync(settings); });
+
+            if (result.Status != AudioGraphCreationStatus.Success)
+            {
+                // Cannot create graph
+                //rootPage.NotifyUser(String.Format("AudioGraph Creation Error because {0}", result.Status.ToString()), NotifyType.ErrorMessage);
+                return;
+            }
+
+            Graph = result.Graph;
+
+            // Create a device output node
+            //CreateAudioDeviceOutputNodeResult deviceOutputNodeResult = AsyncHelper.RunSync(async () => { return await Graph.CreateDeviceOutputNodeAsync(); });
+            deviceOutputNodeResult = AsyncHelper.RunSync(async () => { return await Graph.CreateDeviceOutputNodeAsync(); });
+
+            if (deviceOutputNodeResult.Status != AudioDeviceNodeCreationStatus.Success)
+            {
+                // Cannot create device output node
+                //rootPage.NotifyUser(String.Format("Device Output unavailable because {0}", deviceOutputNodeResult.Status.ToString()), NotifyType.ErrorMessage);
+                //speakerContainer.Background = new SolidColorBrush(Colors.Red);
+                return;
+            }
+
+            DeviceOutputNode = deviceOutputNodeResult.DeviceOutputNode;
+            //rootPage.NotifyUser("Device Output Node successfully created", NotifyType.StatusMessage);
+            //speakerContainer.Background = new SolidColorBrush(Colors.Green);
+        }
+
+        public void Play()
+        {
+            Graph.Start();
+        }
+
+        public void Pause()
+        {
+            Graph.Stop();
+        }
+
+        public void Stop()
+        {
+            Debug.WriteLine(FileInputNode.Position);
+            FileInputNode.Dispose();
+        }
+
+
+
+        /// <summary>
+        /// WasapiOutRT
+        /// </summary>
+        /*
+        private WasapiOutRT _audioOutput;
+        public WasapiOutRT AudioOutput { get { return _audioOutput; } set { _audioOutput = value; } }
+        public bool SetAudioSource1(StorageFile file)
+        {
+            if (file != null)
             {
                 try
                 {
@@ -34,42 +194,41 @@ namespace DisenchantMusicPlayer.Player
                         var mixer = new MixingSampleProvider(new ISampleProvider[] { waveChannel32.ToSampleProvider() });
                         return mixer.ToWaveProvider();
                     });
-                }catch(Exception e)
+                }
+                catch (Exception e)
                 {
                     return false;
                 }
             }
             return false;
-            
+
         }
 
-        public static void Play()
+        public void Play1()
         {
             _audioOutput.Play();
         }
-        public static void Pause()
+        public void Pause1()
         {
             _audioOutput.Pause();
         }
-        public static void Stop()
+        public void Stop1()
         {
             _audioOutput.Stop();
         }
-
-
-
+        */
 
 
         /*
 
-        private static IWavePlayer _device;
-        private static AudioFileReader _reader;
+        private IWavePlayer _device;
+        private AudioFileReader _reader;
 
-        private static VolumeSampleProvider _volumeProvider;
+        private VolumeSampleProvider _volumeProvider;
 
-        private static CancellationTokenSource _cts;
+        private CancellationTokenSource _cts;
 
-        private static bool _sliderLock; // 逻辑锁，当为true时不更新界面上的进度
+        private bool _sliderLock; // 逻辑锁，当为true时不更新界面上的进度
 
  
 

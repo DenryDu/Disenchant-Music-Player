@@ -1,5 +1,6 @@
 ﻿using DisenchantMusicPlayer.Helpers;
 using DisenchantMusicPlayer.Model;
+using DisenchantMusicPlayer.Player;
 using DisenchantMusicPlayer.View;
 using System;
 using System.Collections.Generic;
@@ -45,14 +46,14 @@ namespace DisenchantMusicPlayer
                 catch (System.ArgumentException argE)
                 {
                     return false;
-                }
-          
-                
+                }                
             }))
             {
                 GlobalData.MusicLibrary.InitMusics();
                 Debug.WriteLine("initok");
             }
+            // 初始化播放器
+            GlobalData.AudioPlayer.Init();
         }
 
         /// <summary>

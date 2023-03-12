@@ -39,9 +39,14 @@ namespace DisenchantMusicPlayer.Model
         private ObservableCollection<MusicInfo> _musics;
         public ObservableCollection<MusicInfo> Musics { get { return _musics; } set { _musics = value; OnPropertyChanged(nameof(Musics)); } }
 
+        // 资源字典：文件名-文件快速索引
+        private Dictionary<String, StorageFile> _dictionary;
+        public Dictionary<String, StorageFile> Dictionary { get { return _dictionary; } set { _dictionary = value; OnPropertyChanged(nameof(Dictionary)); } }
+
         public async void InitMusics()
         {
             Musics = new ObservableCollection<MusicInfo>();
+            Dictionary = new Dictionary<string, StorageFile>();
             // 从文件夹中读取
             if (Folder.Path!=null&&Folder.Path.Length>0)
             {
@@ -52,29 +57,25 @@ namespace DisenchantMusicPlayer.Model
                     if ( GlobalData.SupportedAudioTypes.Contains(fi.FileType.ToLower()) ) 
                     {
                         Musics.Add(new MusicInfo(fi));
+                        Dictionary.Add(fi.Path, fi);
                     }
                 }
-
             }
         }
 
+
+
         public StorageFile GetMusicFile(string path)
         {
-            // 从文件夹中读取
-            if (GlobalData.MusicLibrary.Folder.Path != null && GlobalData.MusicLibrary.Folder.Path.Length > 0)
+            try
             {
-                IReadOnlyList<StorageFile> allFile = AsyncHelper.RunSync(async () => { return await GlobalData.MusicLibrary.Folder.GetFilesAsync(); });
-
-                foreach (StorageFile fi in allFile)
-                {
-                    if (fi.Path == path)
-                    {
-                        return fi;
-                    }
-                }
-                return null;
+                return Dictionary[path];
             }
-            return null;
+            catch
+            {
+                return null;
+
+            }
         }
 
         public MusicLibrary() 

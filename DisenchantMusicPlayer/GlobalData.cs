@@ -1,5 +1,6 @@
 ﻿using DisenchantMusicPlayer.Helpers;
 using DisenchantMusicPlayer.Model;
+using DisenchantMusicPlayer.Player;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,5 +34,8 @@ namespace DisenchantMusicPlayer
 
         private static MusicInfo _currentMusic;
         internal static MusicInfo CurrentMusic { get; set; } = new MusicInfo();
+
+        private static AudioPlayer _audioPlayer;
+        internal static AudioPlayer AudioPlayer { get; set; } = new AudioPlayer();
     }
 }
