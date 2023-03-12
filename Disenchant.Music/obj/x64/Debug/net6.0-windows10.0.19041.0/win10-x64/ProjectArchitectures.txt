@@ -1,0 +1,1 @@
+C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Disenchant.Music.csproj;x64

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Disenchant.Music (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Disenchant.Music (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

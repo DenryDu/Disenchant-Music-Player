@@ -1,0 +1,66 @@
+// Copyright (c) Microsoft Corporation and Contributors.
+// Licensed under the MIT License.
+
+using Disenchant.Music.Helpers;
+using Disenchant.Music.ViewModels;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls.Primitives;
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Navigation;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+
+// To learn more about WinUI, the WinUI project structure,
+// and more about our project templates, see: http://aka.ms/winui-project-info.
+
+namespace Disenchant.Music.Views
+{
+    /// <summary>
+    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
+    public sealed partial class SongListView : Page
+    {
+        private SongListViewModel songListViewModel;
+        public SongListView()
+        {
+            this.InitializeComponent();
+            
+            /*
+            // 如果曾经指定了文件夹，就从中初始化音乐库
+            if (AsyncHelper.RunSync(async () =>
+            {
+                try
+                {
+                    GlobalData.MusicLibrary.Folder = await Windows.Storage.AccessCache.StorageApplicationPermissions.FutureAccessList.GetFolderAsync(GlobalData.MusicLibraryFolderToken);
+                    return true;
+                }
+                catch (System.ArgumentException argE)
+                {
+                    return false;
+                }
+            }))
+            {
+                GlobalData.MusicLibrary.InitMusics();
+                Debug.WriteLine("initok");
+            }
+            */
+            songListViewModel = new SongListViewModel();
+            
+            this.Loaded += (s, e) =>
+            {
+                songListViewModel.RefreshList();
+            };
+        }
+
+
+    }
+}

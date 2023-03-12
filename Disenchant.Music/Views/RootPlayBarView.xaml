@@ -1,0 +1,123 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="Disenchant.Music.Views.RootPlayBarView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Disenchant.Music.Views"
+    xmlns:localRoot="using:Disenchant.Music"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Height="130" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="*" MinWidth="0"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*" MinWidth="0"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Row One Progress Bar -->
+        <Grid Grid.Row="0" Grid.ColumnSpan="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" 
+                           Text="{x:Bind localRoot:GlobalData.AudioPlayer.TimeSpanConverter(localRoot:GlobalData.AudioPlayer.Current), Mode=OneWay}" 
+                           VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"></TextBlock>
+            <Slider Grid.Row="0" Grid.Column="1" x:Name="ProgressSlider" Orientation="Horizontal" VerticalAlignment="Center" Minimum="0" Maximum="100" Margin="20 0 8 0"
+                    Value="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentPosition ,Mode=OneWay}" 
+                    PointerReleased="{x:Bind localRoot:GlobalData.AudioPlayer.ProgressUpdate}"
+                    PointerPressed="{x:Bind localRoot:GlobalData.AudioPlayer.ProgressLock}"></Slider>
+            <TextBlock Grid.Row="0" Grid.Column="2"
+                    Text="{x:Bind localRoot:GlobalData.AudioPlayer.TimeSpanConverter(localRoot:GlobalData.AudioPlayer.Total), Mode=OneWay}" 
+                           VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"></TextBlock>
+        </Grid>
+
+        <!-- Cover -->
+        <Border Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="10 0 10 10" Height="90" Width="90" CornerRadius="10">
+            <Image x:Name="ControllerCover"
+                        VerticalAlignment="Center" HorizontalAlignment="Left" Height="90" Width="90" 
+                   Source="{x:Bind RootPlayBarViewModel.CurrentMusic.Cover, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Image>
+        </Border>
+
+
+        <!-- Info -->
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock Text="{x:Bind RootPlayBarViewModel.CurrentMusic.Title, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
+            <TextBlock Text="{x:Bind RootPlayBarViewModel.CurrentMusic.ArtistsAndAlbumStr, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="8,0,0,0" TextWrapping="NoWrap"/>
+        </StackPanel>
+
+
+
+        <!-- Play Control -->
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Prev -->
+            <Grid Grid.Row="0"  Grid.Column="0">
+                <Button Background="Transparent" BorderBrush="Transparent">
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe892;"></FontIcon>
+                </Button>
+            </Grid>
+
+            <!-- Play/Pause -->
+            <Grid Grid.Row="0"  Grid.Column="1">
+                <Button x:Name="PlayButton" Click="{x:Bind RootPlayBarViewModel.PlayButton_Click}" Background="Transparent" BorderBrush="Transparent">
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="{x:Bind RootPlayBarViewModel.PlayBtnIcon, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></FontIcon>
+                </Button>
+            </Grid>
+
+            <!-- Next -->
+            <Grid Grid.Row="0"  Grid.Column="2">
+                <Button Background="Transparent" BorderBrush="Transparent">
+                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE893;"></FontIcon>
+                </Button>
+            </Grid>
+
+        </Grid>
+
+        <!-- Other Control-->
+        <Grid Grid.Row="1" Grid.Column="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0"  Grid.Column="0">
+                Mode</Button>
+            <!-- e8ed repeatonce -->
+            <!-- e8ee repeatall -->
+            <Button Grid.Row="0"  Grid.Column="1">SoundEffect</Button>
+            <Button Grid.Row="0"  Grid.Column="2">Playlist</Button>
+            <Button Grid.Row="0"  Grid.Column="3">MoreInfo</Button>
+
+        </Grid>
+
+    </Grid>
+</Page>

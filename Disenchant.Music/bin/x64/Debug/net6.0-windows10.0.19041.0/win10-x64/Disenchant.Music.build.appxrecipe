@@ -1,0 +1,1671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-NAUPL9Q</Machine>
+    <WindowsUser>DenryDu</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>e2d6d71f-6f09-4fc8-b0e9-b57f15dc7d14</PackageIdentityName>
+    <PackageIdentityPublisher>CN=DenryDu</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.runtimeconfig.json">
+      <PackagePath>Disenchant.Music.runtimeconfig.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.dll">
+      <PackagePath>Disenchant.Music.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
+      <PackagePath>Disenchant.Music.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.deps.json">
+      <PackagePath>Disenchant.Music.deps.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
+      <PackagePath>Microsoft.CSharp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\Microsoft.VisualBasic.Core.dll">
+      <PackagePath>Microsoft.VisualBasic.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\Microsoft.Win32.Primitives.dll">
+      <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\Microsoft.Win32.Registry.dll">
+      <PackagePath>Microsoft.Win32.Registry.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.AppContext.dll">
+      <PackagePath>System.AppContext.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Buffers.dll">
+      <PackagePath>System.Buffers.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Collections.Concurrent.dll">
+      <PackagePath>System.Collections.Concurrent.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Collections.Immutable.dll">
+      <PackagePath>System.Collections.Immutable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Collections.NonGeneric.dll">
+      <PackagePath>System.Collections.NonGeneric.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Collections.Specialized.dll">
+      <PackagePath>System.Collections.Specialized.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Collections.dll">
+      <PackagePath>System.Collections.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.ComponentModel.Annotations.dll">
+      <PackagePath>System.ComponentModel.Annotations.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.ComponentModel.DataAnnotations.dll">
+      <PackagePath>System.ComponentModel.DataAnnotations.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.ComponentModel.EventBasedAsync.dll">
+      <PackagePath>System.ComponentModel.EventBasedAsync.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.ComponentModel.Primitives.dll">
+      <PackagePath>System.ComponentModel.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.ComponentModel.TypeConverter.dll">
+      <PackagePath>System.ComponentModel.TypeConverter.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.ComponentModel.dll">
+      <PackagePath>System.ComponentModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Configuration.dll">
+      <PackagePath>System.Configuration.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Console.dll">
+      <PackagePath>System.Console.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Core.dll">
+      <PackagePath>System.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Data.Common.dll">
+      <PackagePath>System.Data.Common.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Data.DataSetExtensions.dll">
+      <PackagePath>System.Data.DataSetExtensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Data.dll">
+      <PackagePath>System.Data.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.Contracts.dll">
+      <PackagePath>System.Diagnostics.Contracts.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.Debug.dll">
+      <PackagePath>System.Diagnostics.Debug.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.DiagnosticSource.dll">
+      <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.FileVersionInfo.dll">
+      <PackagePath>System.Diagnostics.FileVersionInfo.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.Process.dll">
+      <PackagePath>System.Diagnostics.Process.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.StackTrace.dll">
+      <PackagePath>System.Diagnostics.StackTrace.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.TextWriterTraceListener.dll">
+      <PackagePath>System.Diagnostics.TextWriterTraceListener.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.Tools.dll">
+      <PackagePath>System.Diagnostics.Tools.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.TraceSource.dll">
+      <PackagePath>System.Diagnostics.TraceSource.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.Tracing.dll">
+      <PackagePath>System.Diagnostics.Tracing.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Drawing.Primitives.dll">
+      <PackagePath>System.Drawing.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Dynamic.Runtime.dll">
+      <PackagePath>System.Dynamic.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Formats.Asn1.dll">
+      <PackagePath>System.Formats.Asn1.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Globalization.Calendars.dll">
+      <PackagePath>System.Globalization.Calendars.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Globalization.Extensions.dll">
+      <PackagePath>System.Globalization.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Globalization.dll">
+      <PackagePath>System.Globalization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.Compression.Brotli.dll">
+      <PackagePath>System.IO.Compression.Brotli.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.Compression.FileSystem.dll">
+      <PackagePath>System.IO.Compression.FileSystem.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.Compression.ZipFile.dll">
+      <PackagePath>System.IO.Compression.ZipFile.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.Compression.dll">
+      <PackagePath>System.IO.Compression.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.FileSystem.AccessControl.dll">
+      <PackagePath>System.IO.FileSystem.AccessControl.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.FileSystem.DriveInfo.dll">
+      <PackagePath>System.IO.FileSystem.DriveInfo.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.FileSystem.Primitives.dll">
+      <PackagePath>System.IO.FileSystem.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.FileSystem.Watcher.dll">
+      <PackagePath>System.IO.FileSystem.Watcher.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.FileSystem.dll">
+      <PackagePath>System.IO.FileSystem.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.IsolatedStorage.dll">
+      <PackagePath>System.IO.IsolatedStorage.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.MemoryMappedFiles.dll">
+      <PackagePath>System.IO.MemoryMappedFiles.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.Pipes.AccessControl.dll">
+      <PackagePath>System.IO.Pipes.AccessControl.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.Pipes.dll">
+      <PackagePath>System.IO.Pipes.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.UnmanagedMemoryStream.dll">
+      <PackagePath>System.IO.UnmanagedMemoryStream.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.dll">
+      <PackagePath>System.IO.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Linq.Expressions.dll">
+      <PackagePath>System.Linq.Expressions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Linq.Parallel.dll">
+      <PackagePath>System.Linq.Parallel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Linq.Queryable.dll">
+      <PackagePath>System.Linq.Queryable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Linq.dll">
+      <PackagePath>System.Linq.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Memory.dll">
+      <PackagePath>System.Memory.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.Http.Json.dll">
+      <PackagePath>System.Net.Http.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.Http.dll">
+      <PackagePath>System.Net.Http.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.HttpListener.dll">
+      <PackagePath>System.Net.HttpListener.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.Mail.dll">
+      <PackagePath>System.Net.Mail.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.NameResolution.dll">
+      <PackagePath>System.Net.NameResolution.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.NetworkInformation.dll">
+      <PackagePath>System.Net.NetworkInformation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.Ping.dll">
+      <PackagePath>System.Net.Ping.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.Primitives.dll">
+      <PackagePath>System.Net.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.Quic.dll">
+      <PackagePath>System.Net.Quic.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.Requests.dll">
+      <PackagePath>System.Net.Requests.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.Security.dll">
+      <PackagePath>System.Net.Security.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.ServicePoint.dll">
+      <PackagePath>System.Net.ServicePoint.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.Sockets.dll">
+      <PackagePath>System.Net.Sockets.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.WebClient.dll">
+      <PackagePath>System.Net.WebClient.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.WebHeaderCollection.dll">
+      <PackagePath>System.Net.WebHeaderCollection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.WebProxy.dll">
+      <PackagePath>System.Net.WebProxy.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.WebSockets.Client.dll">
+      <PackagePath>System.Net.WebSockets.Client.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.WebSockets.dll">
+      <PackagePath>System.Net.WebSockets.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Net.dll">
+      <PackagePath>System.Net.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Numerics.Vectors.dll">
+      <PackagePath>System.Numerics.Vectors.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Numerics.dll">
+      <PackagePath>System.Numerics.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.ObjectModel.dll">
+      <PackagePath>System.ObjectModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Private.CoreLib.dll">
+      <PackagePath>System.Private.CoreLib.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Private.DataContractSerialization.dll">
+      <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Private.Uri.dll">
+      <PackagePath>System.Private.Uri.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Private.Xml.Linq.dll">
+      <PackagePath>System.Private.Xml.Linq.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Private.Xml.dll">
+      <PackagePath>System.Private.Xml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Reflection.DispatchProxy.dll">
+      <PackagePath>System.Reflection.DispatchProxy.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Reflection.Emit.ILGeneration.dll">
+      <PackagePath>System.Reflection.Emit.ILGeneration.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Reflection.Emit.Lightweight.dll">
+      <PackagePath>System.Reflection.Emit.Lightweight.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Reflection.Emit.dll">
+      <PackagePath>System.Reflection.Emit.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Reflection.Extensions.dll">
+      <PackagePath>System.Reflection.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Reflection.Metadata.dll">
+      <PackagePath>System.Reflection.Metadata.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Reflection.Primitives.dll">
+      <PackagePath>System.Reflection.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Reflection.TypeExtensions.dll">
+      <PackagePath>System.Reflection.TypeExtensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Reflection.dll">
+      <PackagePath>System.Reflection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Resources.Reader.dll">
+      <PackagePath>System.Resources.Reader.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Resources.ResourceManager.dll">
+      <PackagePath>System.Resources.ResourceManager.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Resources.Writer.dll">
+      <PackagePath>System.Resources.Writer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.CompilerServices.VisualC.dll">
+      <PackagePath>System.Runtime.CompilerServices.VisualC.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.Extensions.dll">
+      <PackagePath>System.Runtime.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.Handles.dll">
+      <PackagePath>System.Runtime.Handles.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.InteropServices.RuntimeInformation.dll">
+      <PackagePath>System.Runtime.InteropServices.RuntimeInformation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.InteropServices.dll">
+      <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.Intrinsics.dll">
+      <PackagePath>System.Runtime.Intrinsics.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.Loader.dll">
+      <PackagePath>System.Runtime.Loader.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.Numerics.dll">
+      <PackagePath>System.Runtime.Numerics.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.Serialization.Formatters.dll">
+      <PackagePath>System.Runtime.Serialization.Formatters.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.Serialization.Json.dll">
+      <PackagePath>System.Runtime.Serialization.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.Serialization.Primitives.dll">
+      <PackagePath>System.Runtime.Serialization.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.Serialization.Xml.dll">
+      <PackagePath>System.Runtime.Serialization.Xml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.Serialization.dll">
+      <PackagePath>System.Runtime.Serialization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Runtime.dll">
+      <PackagePath>System.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.AccessControl.dll">
+      <PackagePath>System.Security.AccessControl.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Claims.dll">
+      <PackagePath>System.Security.Claims.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Cryptography.Algorithms.dll">
+      <PackagePath>System.Security.Cryptography.Algorithms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Cryptography.Cng.dll">
+      <PackagePath>System.Security.Cryptography.Cng.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Cryptography.Csp.dll">
+      <PackagePath>System.Security.Cryptography.Csp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Cryptography.Encoding.dll">
+      <PackagePath>System.Security.Cryptography.Encoding.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Cryptography.OpenSsl.dll">
+      <PackagePath>System.Security.Cryptography.OpenSsl.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Cryptography.Primitives.dll">
+      <PackagePath>System.Security.Cryptography.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Cryptography.X509Certificates.dll">
+      <PackagePath>System.Security.Cryptography.X509Certificates.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Principal.Windows.dll">
+      <PackagePath>System.Security.Principal.Windows.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Principal.dll">
+      <PackagePath>System.Security.Principal.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.SecureString.dll">
+      <PackagePath>System.Security.SecureString.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.dll">
+      <PackagePath>System.Security.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.ServiceModel.Web.dll">
+      <PackagePath>System.ServiceModel.Web.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.ServiceProcess.dll">
+      <PackagePath>System.ServiceProcess.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Text.Encoding.CodePages.dll">
+      <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Text.Encoding.Extensions.dll">
+      <PackagePath>System.Text.Encoding.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Text.Encoding.dll">
+      <PackagePath>System.Text.Encoding.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Text.Encodings.Web.dll">
+      <PackagePath>System.Text.Encodings.Web.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Text.Json.dll">
+      <PackagePath>System.Text.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Text.RegularExpressions.dll">
+      <PackagePath>System.Text.RegularExpressions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Threading.Channels.dll">
+      <PackagePath>System.Threading.Channels.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Threading.Overlapped.dll">
+      <PackagePath>System.Threading.Overlapped.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Threading.Tasks.Dataflow.dll">
+      <PackagePath>System.Threading.Tasks.Dataflow.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Threading.Tasks.Extensions.dll">
+      <PackagePath>System.Threading.Tasks.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Threading.Tasks.Parallel.dll">
+      <PackagePath>System.Threading.Tasks.Parallel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Threading.Tasks.dll">
+      <PackagePath>System.Threading.Tasks.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Threading.Thread.dll">
+      <PackagePath>System.Threading.Thread.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Threading.ThreadPool.dll">
+      <PackagePath>System.Threading.ThreadPool.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Threading.Timer.dll">
+      <PackagePath>System.Threading.Timer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Threading.dll">
+      <PackagePath>System.Threading.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Transactions.Local.dll">
+      <PackagePath>System.Transactions.Local.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Transactions.dll">
+      <PackagePath>System.Transactions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.ValueTuple.dll">
+      <PackagePath>System.ValueTuple.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Web.HttpUtility.dll">
+      <PackagePath>System.Web.HttpUtility.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Web.dll">
+      <PackagePath>System.Web.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Windows.dll">
+      <PackagePath>System.Windows.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Xml.Linq.dll">
+      <PackagePath>System.Xml.Linq.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Xml.ReaderWriter.dll">
+      <PackagePath>System.Xml.ReaderWriter.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Xml.Serialization.dll">
+      <PackagePath>System.Xml.Serialization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Xml.XDocument.dll">
+      <PackagePath>System.Xml.XDocument.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Xml.XPath.XDocument.dll">
+      <PackagePath>System.Xml.XPath.XDocument.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Xml.XPath.dll">
+      <PackagePath>System.Xml.XPath.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Xml.XmlDocument.dll">
+      <PackagePath>System.Xml.XmlDocument.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Xml.XmlSerializer.dll">
+      <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Xml.dll">
+      <PackagePath>System.Xml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.dll">
+      <PackagePath>System.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\mscorlib.dll">
+      <PackagePath>mscorlib.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\netstandard.dll">
+      <PackagePath>netstandard.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\Accessibility.dll">
+      <PackagePath>Accessibility.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\DirectWriteForwarder.dll">
+      <PackagePath>DirectWriteForwarder.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\Microsoft.VisualBasic.Forms.dll">
+      <PackagePath>Microsoft.VisualBasic.Forms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\Microsoft.VisualBasic.dll">
+      <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\Microsoft.Win32.Registry.AccessControl.dll">
+      <PackagePath>Microsoft.Win32.Registry.AccessControl.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\Microsoft.Win32.SystemEvents.dll">
+      <PackagePath>Microsoft.Win32.SystemEvents.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationCore.dll">
+      <PackagePath>PresentationCore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationFramework-SystemCore.dll">
+      <PackagePath>PresentationFramework-SystemCore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationFramework-SystemData.dll">
+      <PackagePath>PresentationFramework-SystemData.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationFramework-SystemDrawing.dll">
+      <PackagePath>PresentationFramework-SystemDrawing.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationFramework-SystemXml.dll">
+      <PackagePath>PresentationFramework-SystemXml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationFramework-SystemXmlLinq.dll">
+      <PackagePath>PresentationFramework-SystemXmlLinq.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationFramework.Aero.dll">
+      <PackagePath>PresentationFramework.Aero.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationFramework.Aero2.dll">
+      <PackagePath>PresentationFramework.Aero2.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationFramework.AeroLite.dll">
+      <PackagePath>PresentationFramework.AeroLite.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationFramework.Classic.dll">
+      <PackagePath>PresentationFramework.Classic.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationFramework.Luna.dll">
+      <PackagePath>PresentationFramework.Luna.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationFramework.Royale.dll">
+      <PackagePath>PresentationFramework.Royale.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationFramework.dll">
+      <PackagePath>PresentationFramework.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\PresentationUI.dll">
+      <PackagePath>PresentationUI.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ReachFramework.dll">
+      <PackagePath>ReachFramework.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.CodeDom.dll">
+      <PackagePath>System.CodeDom.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Configuration.ConfigurationManager.dll">
+      <PackagePath>System.Configuration.ConfigurationManager.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Design.dll">
+      <PackagePath>System.Design.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.EventLog.Messages.dll">
+      <PackagePath>System.Diagnostics.EventLog.Messages.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.EventLog.dll">
+      <PackagePath>System.Diagnostics.EventLog.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Diagnostics.PerformanceCounter.dll">
+      <PackagePath>System.Diagnostics.PerformanceCounter.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.DirectoryServices.dll">
+      <PackagePath>System.DirectoryServices.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Drawing.Common.dll">
+      <PackagePath>System.Drawing.Common.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Drawing.Design.dll">
+      <PackagePath>System.Drawing.Design.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Drawing.dll">
+      <PackagePath>System.Drawing.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.IO.Packaging.dll">
+      <PackagePath>System.IO.Packaging.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Printing.dll">
+      <PackagePath>System.Printing.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Resources.Extensions.dll">
+      <PackagePath>System.Resources.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Cryptography.Pkcs.dll">
+      <PackagePath>System.Security.Cryptography.Pkcs.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Cryptography.ProtectedData.dll">
+      <PackagePath>System.Security.Cryptography.ProtectedData.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Cryptography.Xml.dll">
+      <PackagePath>System.Security.Cryptography.Xml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Security.Permissions.dll">
+      <PackagePath>System.Security.Permissions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Threading.AccessControl.dll">
+      <PackagePath>System.Threading.AccessControl.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Windows.Controls.Ribbon.dll">
+      <PackagePath>System.Windows.Controls.Ribbon.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Windows.Extensions.dll">
+      <PackagePath>System.Windows.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Windows.Forms.Design.Editors.dll">
+      <PackagePath>System.Windows.Forms.Design.Editors.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Windows.Forms.Design.dll">
+      <PackagePath>System.Windows.Forms.Design.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Windows.Forms.Primitives.dll">
+      <PackagePath>System.Windows.Forms.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Windows.Forms.dll">
+      <PackagePath>System.Windows.Forms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Windows.Input.Manipulations.dll">
+      <PackagePath>System.Windows.Input.Manipulations.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Windows.Presentation.dll">
+      <PackagePath>System.Windows.Presentation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\System.Xaml.dll">
+      <PackagePath>System.Xaml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\UIAutomationClient.dll">
+      <PackagePath>UIAutomationClient.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\UIAutomationClientSideProviders.dll">
+      <PackagePath>UIAutomationClientSideProviders.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\UIAutomationProvider.dll">
+      <PackagePath>UIAutomationProvider.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\UIAutomationTypes.dll">
+      <PackagePath>UIAutomationTypes.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\WindowsBase.dll">
+      <PackagePath>WindowsBase.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\WindowsFormsIntegration.dll">
+      <PackagePath>WindowsFormsIntegration.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\Microsoft.DiaSymReader.Native.amd64.dll">
+      <PackagePath>Microsoft.DiaSymReader.Native.amd64.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\System.IO.Compression.Native.dll">
+      <PackagePath>System.IO.Compression.Native.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-console-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-console-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-console-l1-2-0.dll">
+      <PackagePath>api-ms-win-core-console-l1-2-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-datetime-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-datetime-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-debug-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-debug-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-errorhandling-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-errorhandling-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-fibers-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-fibers-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-file-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-file-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-file-l1-2-0.dll">
+      <PackagePath>api-ms-win-core-file-l1-2-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-file-l2-1-0.dll">
+      <PackagePath>api-ms-win-core-file-l2-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-handle-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-handle-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-heap-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-heap-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-interlocked-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-interlocked-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-libraryloader-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-libraryloader-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-localization-l1-2-0.dll">
+      <PackagePath>api-ms-win-core-localization-l1-2-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-memory-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-memory-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-namedpipe-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-namedpipe-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-processenvironment-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-processenvironment-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-processthreads-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-processthreads-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-processthreads-l1-1-1.dll">
+      <PackagePath>api-ms-win-core-processthreads-l1-1-1.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-profile-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-profile-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-rtlsupport-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-rtlsupport-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-string-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-string-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-synch-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-synch-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-synch-l1-2-0.dll">
+      <PackagePath>api-ms-win-core-synch-l1-2-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-sysinfo-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-sysinfo-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-timezone-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-timezone-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-core-util-l1-1-0.dll">
+      <PackagePath>api-ms-win-core-util-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-conio-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-conio-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-convert-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-convert-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-environment-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-environment-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-filesystem-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-filesystem-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-heap-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-heap-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-locale-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-locale-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-math-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-math-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-multibyte-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-multibyte-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-private-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-private-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-process-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-process-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-runtime-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-runtime-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-stdio-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-stdio-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-string-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-string-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-time-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-time-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\api-ms-win-crt-utility-l1-1-0.dll">
+      <PackagePath>api-ms-win-crt-utility-l1-1-0.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\clretwrc.dll">
+      <PackagePath>clretwrc.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\clrjit.dll">
+      <PackagePath>clrjit.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\coreclr.dll">
+      <PackagePath>coreclr.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\createdump.exe">
+      <PackagePath>createdump.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\dbgshim.dll">
+      <PackagePath>dbgshim.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\hostfxr.dll">
+      <PackagePath>hostfxr.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\hostpolicy.dll">
+      <PackagePath>hostpolicy.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\mscordaccore.dll">
+      <PackagePath>mscordaccore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\mscordaccore_amd64_amd64_6.0.1423.7309.dll">
+      <PackagePath>mscordaccore_amd64_amd64_6.0.1423.7309.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\mscordbi.dll">
+      <PackagePath>mscordbi.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\mscorrc.dll">
+      <PackagePath>mscorrc.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\msquic.dll">
+      <PackagePath>msquic.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\ucrtbase.dll">
+      <PackagePath>ucrtbase.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\D3DCompiler_47_cor3.dll">
+      <PackagePath>D3DCompiler_47_cor3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\PenImc_cor3.dll">
+      <PackagePath>PenImc_cor3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\PresentationNative_cor3.dll">
+      <PackagePath>PresentationNative_cor3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\vcruntime140_cor3.dll">
+      <PackagePath>vcruntime140_cor3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\wpfgfx_cor3.dll">
+      <PackagePath>wpfgfx_cor3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>cs\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\PresentationCore.resources.dll">
+      <PackagePath>cs\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\PresentationFramework.resources.dll">
+      <PackagePath>cs\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\PresentationUI.resources.dll">
+      <PackagePath>cs\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\ReachFramework.resources.dll">
+      <PackagePath>cs\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>cs\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>cs\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>cs\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\System.Windows.Forms.resources.dll">
+      <PackagePath>cs\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>cs\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\System.Xaml.resources.dll">
+      <PackagePath>cs\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\UIAutomationClient.resources.dll">
+      <PackagePath>cs\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>cs\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\UIAutomationProvider.resources.dll">
+      <PackagePath>cs\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\UIAutomationTypes.resources.dll">
+      <PackagePath>cs\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\WindowsBase.resources.dll">
+      <PackagePath>cs\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\cs\WindowsFormsIntegration.resources.dll">
+      <PackagePath>cs\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>de\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\PresentationCore.resources.dll">
+      <PackagePath>de\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\PresentationFramework.resources.dll">
+      <PackagePath>de\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\PresentationUI.resources.dll">
+      <PackagePath>de\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\ReachFramework.resources.dll">
+      <PackagePath>de\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>de\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>de\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>de\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\System.Windows.Forms.resources.dll">
+      <PackagePath>de\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>de\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\System.Xaml.resources.dll">
+      <PackagePath>de\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\UIAutomationClient.resources.dll">
+      <PackagePath>de\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>de\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\UIAutomationProvider.resources.dll">
+      <PackagePath>de\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\UIAutomationTypes.resources.dll">
+      <PackagePath>de\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\WindowsBase.resources.dll">
+      <PackagePath>de\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\de\WindowsFormsIntegration.resources.dll">
+      <PackagePath>de\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>es\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\PresentationCore.resources.dll">
+      <PackagePath>es\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\PresentationFramework.resources.dll">
+      <PackagePath>es\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\PresentationUI.resources.dll">
+      <PackagePath>es\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\ReachFramework.resources.dll">
+      <PackagePath>es\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>es\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>es\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>es\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\System.Windows.Forms.resources.dll">
+      <PackagePath>es\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>es\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\System.Xaml.resources.dll">
+      <PackagePath>es\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\UIAutomationClient.resources.dll">
+      <PackagePath>es\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>es\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\UIAutomationProvider.resources.dll">
+      <PackagePath>es\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\UIAutomationTypes.resources.dll">
+      <PackagePath>es\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\WindowsBase.resources.dll">
+      <PackagePath>es\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\es\WindowsFormsIntegration.resources.dll">
+      <PackagePath>es\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>fr\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\PresentationCore.resources.dll">
+      <PackagePath>fr\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\PresentationFramework.resources.dll">
+      <PackagePath>fr\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\PresentationUI.resources.dll">
+      <PackagePath>fr\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\ReachFramework.resources.dll">
+      <PackagePath>fr\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>fr\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>fr\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>fr\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\System.Windows.Forms.resources.dll">
+      <PackagePath>fr\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>fr\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\System.Xaml.resources.dll">
+      <PackagePath>fr\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\UIAutomationClient.resources.dll">
+      <PackagePath>fr\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>fr\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\UIAutomationProvider.resources.dll">
+      <PackagePath>fr\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\UIAutomationTypes.resources.dll">
+      <PackagePath>fr\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\WindowsBase.resources.dll">
+      <PackagePath>fr\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\fr\WindowsFormsIntegration.resources.dll">
+      <PackagePath>fr\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>it\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\PresentationCore.resources.dll">
+      <PackagePath>it\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\PresentationFramework.resources.dll">
+      <PackagePath>it\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\PresentationUI.resources.dll">
+      <PackagePath>it\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\ReachFramework.resources.dll">
+      <PackagePath>it\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>it\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>it\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>it\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\System.Windows.Forms.resources.dll">
+      <PackagePath>it\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>it\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\System.Xaml.resources.dll">
+      <PackagePath>it\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\UIAutomationClient.resources.dll">
+      <PackagePath>it\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>it\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\UIAutomationProvider.resources.dll">
+      <PackagePath>it\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\UIAutomationTypes.resources.dll">
+      <PackagePath>it\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\WindowsBase.resources.dll">
+      <PackagePath>it\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\it\WindowsFormsIntegration.resources.dll">
+      <PackagePath>it\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>ja\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\PresentationCore.resources.dll">
+      <PackagePath>ja\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\PresentationFramework.resources.dll">
+      <PackagePath>ja\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\PresentationUI.resources.dll">
+      <PackagePath>ja\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\ReachFramework.resources.dll">
+      <PackagePath>ja\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>ja\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>ja\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>ja\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\System.Windows.Forms.resources.dll">
+      <PackagePath>ja\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>ja\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\System.Xaml.resources.dll">
+      <PackagePath>ja\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\UIAutomationClient.resources.dll">
+      <PackagePath>ja\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>ja\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\UIAutomationProvider.resources.dll">
+      <PackagePath>ja\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\UIAutomationTypes.resources.dll">
+      <PackagePath>ja\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\WindowsBase.resources.dll">
+      <PackagePath>ja\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ja\WindowsFormsIntegration.resources.dll">
+      <PackagePath>ja\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>ko\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\PresentationCore.resources.dll">
+      <PackagePath>ko\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\PresentationFramework.resources.dll">
+      <PackagePath>ko\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\PresentationUI.resources.dll">
+      <PackagePath>ko\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\ReachFramework.resources.dll">
+      <PackagePath>ko\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>ko\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>ko\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>ko\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\System.Windows.Forms.resources.dll">
+      <PackagePath>ko\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>ko\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\System.Xaml.resources.dll">
+      <PackagePath>ko\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\UIAutomationClient.resources.dll">
+      <PackagePath>ko\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>ko\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\UIAutomationProvider.resources.dll">
+      <PackagePath>ko\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\UIAutomationTypes.resources.dll">
+      <PackagePath>ko\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\WindowsBase.resources.dll">
+      <PackagePath>ko\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ko\WindowsFormsIntegration.resources.dll">
+      <PackagePath>ko\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>pl\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\PresentationCore.resources.dll">
+      <PackagePath>pl\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\PresentationFramework.resources.dll">
+      <PackagePath>pl\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\PresentationUI.resources.dll">
+      <PackagePath>pl\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\ReachFramework.resources.dll">
+      <PackagePath>pl\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>pl\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>pl\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>pl\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\System.Windows.Forms.resources.dll">
+      <PackagePath>pl\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>pl\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\System.Xaml.resources.dll">
+      <PackagePath>pl\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\UIAutomationClient.resources.dll">
+      <PackagePath>pl\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>pl\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\UIAutomationProvider.resources.dll">
+      <PackagePath>pl\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\UIAutomationTypes.resources.dll">
+      <PackagePath>pl\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\WindowsBase.resources.dll">
+      <PackagePath>pl\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pl\WindowsFormsIntegration.resources.dll">
+      <PackagePath>pl\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>pt-BR\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\PresentationCore.resources.dll">
+      <PackagePath>pt-BR\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\PresentationFramework.resources.dll">
+      <PackagePath>pt-BR\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\PresentationUI.resources.dll">
+      <PackagePath>pt-BR\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\ReachFramework.resources.dll">
+      <PackagePath>pt-BR\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>pt-BR\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>pt-BR\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>pt-BR\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\System.Windows.Forms.resources.dll">
+      <PackagePath>pt-BR\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>pt-BR\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\System.Xaml.resources.dll">
+      <PackagePath>pt-BR\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\UIAutomationClient.resources.dll">
+      <PackagePath>pt-BR\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>pt-BR\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\UIAutomationProvider.resources.dll">
+      <PackagePath>pt-BR\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\UIAutomationTypes.resources.dll">
+      <PackagePath>pt-BR\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\WindowsBase.resources.dll">
+      <PackagePath>pt-BR\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\pt-BR\WindowsFormsIntegration.resources.dll">
+      <PackagePath>pt-BR\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>ru\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\PresentationCore.resources.dll">
+      <PackagePath>ru\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\PresentationFramework.resources.dll">
+      <PackagePath>ru\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\PresentationUI.resources.dll">
+      <PackagePath>ru\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\ReachFramework.resources.dll">
+      <PackagePath>ru\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>ru\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>ru\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>ru\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\System.Windows.Forms.resources.dll">
+      <PackagePath>ru\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>ru\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\System.Xaml.resources.dll">
+      <PackagePath>ru\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\UIAutomationClient.resources.dll">
+      <PackagePath>ru\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>ru\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\UIAutomationProvider.resources.dll">
+      <PackagePath>ru\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\UIAutomationTypes.resources.dll">
+      <PackagePath>ru\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\WindowsBase.resources.dll">
+      <PackagePath>ru\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\ru\WindowsFormsIntegration.resources.dll">
+      <PackagePath>ru\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>tr\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\PresentationCore.resources.dll">
+      <PackagePath>tr\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\PresentationFramework.resources.dll">
+      <PackagePath>tr\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\PresentationUI.resources.dll">
+      <PackagePath>tr\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\ReachFramework.resources.dll">
+      <PackagePath>tr\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>tr\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>tr\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>tr\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\System.Windows.Forms.resources.dll">
+      <PackagePath>tr\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>tr\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\System.Xaml.resources.dll">
+      <PackagePath>tr\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\UIAutomationClient.resources.dll">
+      <PackagePath>tr\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>tr\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\UIAutomationProvider.resources.dll">
+      <PackagePath>tr\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\UIAutomationTypes.resources.dll">
+      <PackagePath>tr\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\WindowsBase.resources.dll">
+      <PackagePath>tr\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\tr\WindowsFormsIntegration.resources.dll">
+      <PackagePath>tr\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\PresentationCore.resources.dll">
+      <PackagePath>zh-Hans\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\PresentationFramework.resources.dll">
+      <PackagePath>zh-Hans\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\PresentationUI.resources.dll">
+      <PackagePath>zh-Hans\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\ReachFramework.resources.dll">
+      <PackagePath>zh-Hans\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>zh-Hans\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>zh-Hans\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>zh-Hans\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\System.Windows.Forms.resources.dll">
+      <PackagePath>zh-Hans\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>zh-Hans\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\System.Xaml.resources.dll">
+      <PackagePath>zh-Hans\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\UIAutomationClient.resources.dll">
+      <PackagePath>zh-Hans\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>zh-Hans\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\UIAutomationProvider.resources.dll">
+      <PackagePath>zh-Hans\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\UIAutomationTypes.resources.dll">
+      <PackagePath>zh-Hans\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\WindowsBase.resources.dll">
+      <PackagePath>zh-Hans\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hans\WindowsFormsIntegration.resources.dll">
+      <PackagePath>zh-Hans\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\Microsoft.VisualBasic.Forms.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.VisualBasic.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\PresentationCore.resources.dll">
+      <PackagePath>zh-Hant\PresentationCore.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\PresentationFramework.resources.dll">
+      <PackagePath>zh-Hant\PresentationFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\PresentationUI.resources.dll">
+      <PackagePath>zh-Hant\PresentationUI.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\ReachFramework.resources.dll">
+      <PackagePath>zh-Hant\ReachFramework.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\System.Windows.Controls.Ribbon.resources.dll">
+      <PackagePath>zh-Hant\System.Windows.Controls.Ribbon.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\System.Windows.Forms.Design.resources.dll">
+      <PackagePath>zh-Hant\System.Windows.Forms.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\System.Windows.Forms.Primitives.resources.dll">
+      <PackagePath>zh-Hant\System.Windows.Forms.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\System.Windows.Forms.resources.dll">
+      <PackagePath>zh-Hant\System.Windows.Forms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\System.Windows.Input.Manipulations.resources.dll">
+      <PackagePath>zh-Hant\System.Windows.Input.Manipulations.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\System.Xaml.resources.dll">
+      <PackagePath>zh-Hant\System.Xaml.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\UIAutomationClient.resources.dll">
+      <PackagePath>zh-Hant\UIAutomationClient.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\UIAutomationClientSideProviders.resources.dll">
+      <PackagePath>zh-Hant\UIAutomationClientSideProviders.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\UIAutomationProvider.resources.dll">
+      <PackagePath>zh-Hant\UIAutomationProvider.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\UIAutomationTypes.resources.dll">
+      <PackagePath>zh-Hant\UIAutomationTypes.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\WindowsBase.resources.dll">
+      <PackagePath>zh-Hant\WindowsBase.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsdesktop.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\zh-Hant\WindowsFormsIntegration.resources.dll">
+      <PackagePath>zh-Hant\WindowsFormsIntegration.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.28\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
+      <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.28\lib\net6.0\WinRT.Runtime.dll">
+      <PackagePath>WinRT.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.InteractiveExperiences.Projection.dll">
+      <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.WinUI.dll">
+      <PackagePath>Microsoft.WinUI.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppLifecycle.Projection.dll">
+      <PackagePath>Microsoft.Windows.AppLifecycle.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Builder.Projection.dll">
+      <PackagePath>Microsoft.Windows.AppNotifications.Builder.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Projection.dll">
+      <PackagePath>Microsoft.Windows.AppNotifications.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.Resources.Projection.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.Resources.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.PushNotifications.Projection.dll">
+      <PackagePath>Microsoft.Windows.PushNotifications.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Security.AccessControl.Projection.dll">
+      <PackagePath>Microsoft.Windows.Security.AccessControl.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Power.Projection.dll">
+      <PackagePath>Microsoft.Windows.System.Power.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Projection.dll">
+      <PackagePath>Microsoft.Windows.System.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Widgets.Projection.dll">
+      <PackagePath>Microsoft.Windows.Widgets.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
+      <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\naudio\2.1.0\lib\net6.0-windows7.0\NAudio.dll">
+      <PackagePath>NAudio.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\naudio.asio\2.1.0\lib\netstandard2.0\NAudio.Asio.dll">
+      <PackagePath>NAudio.Asio.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\naudio.core\2.1.0\lib\netstandard2.0\NAudio.Core.dll">
+      <PackagePath>NAudio.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\naudio.midi\2.1.0\lib\netstandard2.0\NAudio.Midi.dll">
+      <PackagePath>NAudio.Midi.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\naudio.wasapi\2.1.0\lib\netstandard2.0\NAudio.Wasapi.dll">
+      <PackagePath>NAudio.Wasapi.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\naudio.winforms\2.1.0\lib\netcoreapp3.1\NAudio.WinForms.dll">
+      <PackagePath>NAudio.WinForms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\naudio.winmm\2.1.0\lib\netstandard2.0\NAudio.WinMM.dll">
+      <PackagePath>NAudio.WinMM.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\taglibsharp\2.3.0\lib\netstandard2.0\TagLibSharp.dll">
+      <PackagePath>TagLibSharp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.2.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.2</Name>
+      <Version>2000.777.2143.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.2, MinVersion = 2000.777.2143.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.2.msix</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.2.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.2</Name>
+      <Version>2000.777.2143.0</Version>
+      <Architecture>win32</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.2, MinVersion = 2000.777.2143.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.2.msix</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.2.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.2</Name>
+      <Version>2000.777.2143.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.2, MinVersion = 2000.777.2143.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.2.msix</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.2.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.2</Name>
+      <Version>2000.777.2143.0</Version>
+      <Architecture>arm64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.2, MinVersion = 2000.777.2143.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\DenryDu\.nuget\packages\microsoft.windowsappsdk\1.2.230217.4\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.2.msix</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

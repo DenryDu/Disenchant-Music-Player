@@ -1,0 +1,45 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="Disenchant.Music.Views.SongListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Disenchant.Music.Views"
+    xmlns:localModel="using:Disenchant.Music.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ListView x:Name="SonglistView" 
+              ItemsSource="{x:Bind songListViewModel.SongList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+              SelectionChanged="{x:Bind songListViewModel.SonglistView_SelectionChanged}" CacheMode="BitmapCache"
+              >
+        <ListView.ItemContainerTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition IsStaggeringEnabled="True" />
+            </TransitionCollection>
+        </ListView.ItemContainerTransitions>
+
+        
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="localModel:MusicInfo">
+                <Grid Height="80" Margin="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0"  Width="60" Height="60" CornerRadius="15">
+                        <Image x:Name="itemCover" Source="{x:Bind Cover}" Stretch="UniformToFill" x:Phase="2"/>
+                    </Border>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Text="{x:Bind Title}" Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
+                        <TextBlock Text="{x:Bind ArtistsAndAlbumStr}" Margin="8,0,0,0" TextWrapping="NoWrap" x:Phase="1"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+</Page>
