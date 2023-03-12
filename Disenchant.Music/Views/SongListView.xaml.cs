@@ -33,34 +33,7 @@ namespace Disenchant.Music.Views
         public SongListView()
         {
             this.InitializeComponent();
-            
-            /*
-            // 如果曾经指定了文件夹，就从中初始化音乐库
-            if (AsyncHelper.RunSync(async () =>
-            {
-                try
-                {
-                    GlobalData.MusicLibrary.Folder = await Windows.Storage.AccessCache.StorageApplicationPermissions.FutureAccessList.GetFolderAsync(GlobalData.MusicLibraryFolderToken);
-                    return true;
-                }
-                catch (System.ArgumentException argE)
-                {
-                    return false;
-                }
-            }))
-            {
-                GlobalData.MusicLibrary.InitMusics();
-                Debug.WriteLine("initok");
-            }
-            */
             songListViewModel = new SongListViewModel();
-            
-            this.Loaded += (s, e) =>
-            {
-                songListViewModel.RefreshList();
-            };
         }
-
-
     }
 }

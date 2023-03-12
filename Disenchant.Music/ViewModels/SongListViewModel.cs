@@ -37,33 +37,19 @@ namespace Disenchant.Music.ViewModels
         public SongListViewModel()
         {
             SongList = new ObservableCollection<MusicInfo>();
-            //SongList = GlobalData.MusicLibrary.Musics;
+            SongList = GlobalData.MusicLibrary.Musics;
         }
+        /*
         public void RefreshList()
         {
-            //Thread.Sleep(5000);
-            if (AsyncHelper.RunSync(async () =>
-            {
-                try
-                {
-                    GlobalData.MusicLibrary.Folder = await Windows.Storage.AccessCache.StorageApplicationPermissions.FutureAccessList.GetFolderAsync(GlobalData.MusicLibraryFolderToken);
-                    return true;
-                }
-                catch (System.ArgumentException argE)
-                {
-                    return false;
-                }
-            }))
-            {
-                pathList = GlobalData.MusicLibrary.InitMusicsFast();
-            }
+            
             foreach (string path in pathList)
             {
                 SongList.Add(new MusicInfo(path));
                 //OnPropertyChanged(nameof(SongList));
             }
         }
-
+        */
 
 
         public void SonglistView_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -1,1 +1,1 @@
-C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Disenchant.Music.csproj;x64
+C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\Disenchant.Music.csproj;x64

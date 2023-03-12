@@ -53,33 +53,13 @@ namespace Disenchant.Music.Models
                 {
                     if (GlobalData.SupportedAudioTypes.Contains(fi.FileType.ToLower()))
                     {
-                        Musics.Add(new MusicInfo(fi));
-                        Dictionary.Add(fi.Path, fi);
+                        Musics.Add(new MusicInfo(fi.Path));
+                        //Dictionary.Add(fi.Path, fi);
                     }
                 }
             }
         }
-        public List<string> InitMusicsFast()
-        {
-            List<string> pathList = new List<string>();
-            // 从文件夹中读取
-            if (Folder.Path != null && Folder.Path.Length > 0)
-            {
-                IReadOnlyList<StorageFile> allFile = AsyncHelper.RunSync(async () => { return await Folder.GetFilesAsync(); });
-
-                foreach (StorageFile fi in allFile)
-                {
-                    if (GlobalData.SupportedAudioTypes.Contains(fi.FileType.ToLower()))
-                    {
-                        pathList.Add(fi.Path);
-                    }
-                }
-            }
-            return pathList;
-        }
-
-
-
+        /*
         public StorageFile GetMusicFile(string path)
         {
             try
@@ -91,6 +71,7 @@ namespace Disenchant.Music.Models
                 return null;
             }
         }
+        */
 
         public MusicLibrary()
         {

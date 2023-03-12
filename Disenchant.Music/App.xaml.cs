@@ -38,7 +38,22 @@ namespace Disenchant.Music
         public App()
         {
             this.InitializeComponent();
-      
+
+            if (AsyncHelper.RunSync(async () =>
+            {
+                try
+                {
+                    GlobalData.MusicLibrary.Folder = await Windows.Storage.AccessCache.StorageApplicationPermissions.FutureAccessList.GetFolderAsync(GlobalData.MusicLibraryFolderToken);
+                    return true;
+                }
+                catch (System.ArgumentException argE)
+                {
+                    return false;
+                }
+            }))
+            {
+                GlobalData.MusicLibrary.InitMusics();
+            }
         }
 
         /// <summary>

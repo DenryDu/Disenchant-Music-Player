@@ -10,14 +10,14 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>e2d6d71f-6f09-4fc8-b0e9-b57f15dc7d14</PackageIdentityName>
     <PackageIdentityPublisher>CN=DenryDu</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>343CB33FF35120E7BF825FF1737722998D301D807C0D441F8061D4A0F8EDEF69</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>e2d6d71f-6f09-4fc8-b0e9-b57f15dc7d14_1.0.0.0_x64__a1d2vqxp4mkxe</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>e2d6d71f-6f09-4fc8-b0e9-b57f15dc7d14_a1d2vqxp4mkxe!App</RegisteredUserModeAppID>
@@ -26,32 +26,32 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-03-12T13:09:53.697</Modified>
+      <Modified>2023-03-12T13:36:18.424</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-03-12T13:09:52.713</Modified>
+      <Modified>2023-03-12T13:36:17.427</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.runtimeconfig.json">
       <PackagePath>Disenchant.Music.runtimeconfig.json</PackagePath>
-      <Modified>2023-03-12T12:55:51.813</Modified>
+      <Modified>2023-03-12T13:36:17.136</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.dll">
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.dll">
       <PackagePath>Disenchant.Music.dll</PackagePath>
-      <Modified>2023-03-12T13:09:52.450</Modified>
+      <Modified>2023-03-12T13:36:16.588</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Disenchant.Music.exe</PackagePath>
-      <Modified>2023-03-12T13:09:52.462</Modified>
+      <Modified>2023-03-12T13:36:16.622</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.deps.json">
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.deps.json">
       <PackagePath>Disenchant.Music.deps.json</PackagePath>
-      <Modified>2023-03-12T12:55:51.746</Modified>
+      <Modified>2023-03-12T13:36:16.993</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -2149,31 +2149,31 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2023-02-10T22:55:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2023-02-14T08:29:10.333</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <Modified>2023-02-14T08:29:10.334</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <Modified>2023-02-14T08:29:10.335</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <Modified>2023-02-14T08:29:10.336</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <Modified>2023-02-14T08:29:10.337</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <Modified>2023-02-14T08:29:10.338</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\新建文件夹\Disenchant.Music\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <Modified>2023-02-14T08:29:10.339</Modified>
     </AppxPackagedFile>
