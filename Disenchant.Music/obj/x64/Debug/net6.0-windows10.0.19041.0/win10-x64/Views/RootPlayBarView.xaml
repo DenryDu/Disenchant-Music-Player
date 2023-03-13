@@ -35,21 +35,19 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
-            <TextBlock x:ConnectionId='7' Grid.Row="0" Grid.Column="0" 
+            <TextBlock x:ConnectionId='8' Grid.Row="0" Grid.Column="0" 
                                                                                                                                                      
                            VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"></TextBlock>
-            <Slider x:ConnectionId='8' Grid.Row="0" Grid.Column="1" x:Name="ProgressSlider" Orientation="Horizontal" VerticalAlignment="Center" Minimum="0" Maximum="100" Margin="20 0 8 0"
-                                                                                                   
-                                                                                              
-                                                                                           ></Slider>
-            <TextBlock x:ConnectionId='9' Grid.Row="0" Grid.Column="2"
+            <Slider x:ConnectionId='9' Grid.Row="0" Grid.Column="1" x:Name="ProgressSlider" Orientation="Horizontal" VerticalAlignment="Center" Minimum="0" Maximum="100" Margin="20 0 8 0"
+                                                                                                  ></Slider>
+            <TextBlock x:ConnectionId='10' Grid.Row="0" Grid.Column="2"
                                                                                                                                             
                            VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"></TextBlock>
         </Grid>
 
         <!-- Cover -->
         <Border Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="10 0 10 10" Height="90" Width="90" CornerRadius="10">
-            <Image x:ConnectionId='6' x:Name="ControllerCover"
+            <Image x:ConnectionId='7' x:Name="ControllerCover"
                         VerticalAlignment="Center" HorizontalAlignment="Left" Height="90" Width="90" 
                                                                                                                               ></Image>
         </Border>
@@ -57,8 +55,8 @@
 
         <!-- Info -->
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
-            <TextBlock x:ConnectionId='4'                                                                                                           Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
-            <TextBlock x:ConnectionId='5'                                                                                                                        Margin="8,0,0,0" TextWrapping="NoWrap"/>
+            <TextBlock x:ConnectionId='5'                                                                                                           Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
+            <TextBlock x:ConnectionId='6'                                                                                                                        Margin="8,0,0,0" TextWrapping="NoWrap"/>
         </StackPanel>
 
 
@@ -83,8 +81,8 @@
 
             <!-- Play/Pause -->
             <Grid Grid.Row="0"  Grid.Column="1">
-                <Button x:ConnectionId='2' x:Name="PlayButton"                                                        Background="Transparent" BorderBrush="Transparent">
-                    <FontIcon x:ConnectionId='3' FontFamily="Segoe Fluent Icons"                                                                                                    ></FontIcon>
+                <Button x:ConnectionId='3' x:Name="PlayButton"                                                        Background="Transparent" BorderBrush="Transparent">
+                    <FontIcon x:ConnectionId='4' FontFamily="Segoe Fluent Icons"                                                                                                    ></FontIcon>
                 </Button>
             </Grid>
 
@@ -109,11 +107,25 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="0"  Grid.Column="0">
-                Mode</Button>
+            <Button  Grid.Row="0"  Grid.Column="0" Background="Transparent" BorderBrush="Transparent">
+                <FontIcon  FontFamily="Segoe Fluent Icons" Glyph="&#xE15D;"></FontIcon>
+                <Button.Flyout>
+                    <Flyout>
+                        <StackPanel>
+                            <Slider x:ConnectionId='2' x:Name="VolumeSlider" 
+                                Width="200" Minimum="0" Maximum="100"
+                                                                                                            
+                                                                                                     ></Slider>
+                        </StackPanel>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+            <Button Grid.Row="0"  Grid.Column="1" Background="Transparent" BorderBrush="Transparent">
+                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE14B;"></FontIcon>
+            </Button>
             <!-- e8ed repeatonce -->
             <!-- e8ee repeatall -->
-            <Button Grid.Row="0"  Grid.Column="1">SoundEffect</Button>
+            <!--<Button Grid.Row="0"  Grid.Column="1">SoundEffect</Button>-->
             <Button Grid.Row="0"  Grid.Column="2">Playlist</Button>
             <Button Grid.Row="0"  Grid.Column="3">MoreInfo</Button>
 

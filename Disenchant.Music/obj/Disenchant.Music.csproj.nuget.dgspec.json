@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\新建文件夹\\Disenchant.Music\\Disenchant.Music.csproj": {}
+    "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\Disenchant.Music\\Disenchant.Music\\Disenchant.Music.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\新建文件夹\\Disenchant.Music\\Disenchant.Music.csproj": {
+    "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\Disenchant.Music\\Disenchant.Music\\Disenchant.Music.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\新建文件夹\\Disenchant.Music\\Disenchant.Music.csproj",
+        "projectUniqueName": "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\Disenchant.Music\\Disenchant.Music\\Disenchant.Music.csproj",
         "projectName": "Disenchant.Music",
-        "projectPath": "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\新建文件夹\\Disenchant.Music\\Disenchant.Music.csproj",
+        "projectPath": "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\Disenchant.Music\\Disenchant.Music\\Disenchant.Music.csproj",
         "packagesPath": "C:\\Users\\DenryDu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\新建文件夹\\Disenchant.Music\\obj\\",
+        "outputPath": "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\Disenchant.Music\\Disenchant.Music\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

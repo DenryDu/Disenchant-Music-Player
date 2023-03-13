@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rQq3SYcSGcztxGPWv6nMd0S19CsOOkeBo85f9i97fo44Ur3QyvCa9Ur9ByTQgm4z1lj3x7Vqp6R/pJAfKLaBHA==",
+  "dgSpecHash": "ZA+EzVk0JCAwaR/iJS7sLAPjpZLRvawKcBtUfX1bFOJTAmyLSBjdmT0nvBMpgbbQzwPlFf6JnUuTOxune9N8bw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\新建文件夹\\Disenchant.Music\\Disenchant.Music.csproj",
+  "projectFilePath": "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\Disenchant.Music\\Disenchant.Music\\Disenchant.Music.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DenryDu\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\DenryDu\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -23,7 +23,14 @@ namespace Disenchant.Music.ViewModels
         }
 
 
-  
+        public RootPlayBarViewModel()
+        {
+            CurrentMusic = new MusicInfo();
+            PlayBtnIcon = GlobalData.PlayBtnIcon;
+            RootPlayBarView.GetProgressSlider().AddHandler(UIElement.PointerPressedEvent, new PointerEventHandler(GlobalData.AudioPlayer.ProgressLock), true);
+            RootPlayBarView.GetProgressSlider().AddHandler(UIElement.PointerReleasedEvent, new PointerEventHandler(GlobalData.AudioPlayer.ProgressUpdate), true);
+        }
+
         public static RootPlayBarView RootPlayBarView;
 
         private MusicInfo _currentMusic;
@@ -49,20 +56,11 @@ namespace Disenchant.Music.ViewModels
             }
         }
 
-        private StorageFile _currentMusicFile;
-        public StorageFile CurrentMusicFile { get { return _currentMusicFile; } set { _currentMusicFile = value; OnPropertyChanged(nameof(CurrentMusicFile)); } }
-
         // BtnPlay
         private string _playBtnIcon;
         public string PlayBtnIcon { get { return _playBtnIcon; } set { _playBtnIcon = value; OnPropertyChanged(nameof(PlayBtnIcon)); } }
 
-        public RootPlayBarViewModel() 
-        {
-            CurrentMusic = new MusicInfo();
-            PlayBtnIcon = GlobalData.PlayBtnIcon;
-            RootPlayBarView.GetProgressSlider().AddHandler(UIElement.PointerPressedEvent, new PointerEventHandler(GlobalData.AudioPlayer.ProgressLock), true);
-            RootPlayBarView.GetProgressSlider().AddHandler(UIElement.PointerReleasedEvent, new PointerEventHandler(GlobalData.AudioPlayer.ProgressUpdate), true);
-        }
+   
         internal void PlayButton_Click(object sender, RoutedEventArgs e)
         {
             if (CurrentMusic.Title != null)

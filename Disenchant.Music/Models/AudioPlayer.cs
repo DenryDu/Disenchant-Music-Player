@@ -1,10 +1,12 @@
 ﻿using Disenchant.Music.Views;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Input;
 using NAudio.CoreAudioApi;
 using NAudio.Utils;
 using NAudio.Wave;
+using NAudio.Wave.SampleProviders;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +31,16 @@ namespace Disenchant.Music.Model
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
         }
 
+
+        public AudioPlayer() 
+        {
+            // Init Volume
+            CurrentVolume = 100;
+
+            // Init Timer
+            positionUpdateTimer = ThreadPoolTimer.CreatePeriodicTimer(UpdatTimerHandler, TimeSpan.FromMilliseconds(100), UpdateTimerDestoyed);
+        }
+
         public static RootPlayBarView PlayBarUI;
 
         /// <summary>
@@ -37,24 +49,48 @@ namespace Disenchant.Music.Model
         private WaveOutEvent _outputDevice;
 
         /// <summary>
-        /// _audioFileReader: To load an audio file.This is a good choice as it supports several common audio file formats including WAV and MP3.
+        /// VolumeSampleProvider: Help Set the Volume
+        /// </summary>
+        private VolumeSampleProvider _volumeProvider;
+
+        /// <summary>
+        /// AudioFileReader: To load an audio file.This is a good choice as it supports several common audio file formats including WAV and MP3.
         /// </summary>
         private AudioFileReader _audioFile;
 
-        private bool lockable = false;
-
+        /// <summary>
+        /// Timer Thread to Update Progress Position
+        /// </summary>
         private ThreadPoolTimer positionUpdateTimer;
 
+        /// <summary>
+        /// Block Timer Thread when Set True
+        /// </summary>
+        private bool lockable = false;
 
-        // test
+        /// <summary>
+        /// Audio Play Positon
+        /// </summary>
         private TimeSpan _current;
         public TimeSpan Current { get { return _current; } set { _current = value; OnPropertyChanged(nameof(Current)); } }
 
+        /// <summary>
+        /// Audio Play Duration
+        /// </summary>
         private TimeSpan _total;
         public TimeSpan Total { get { return _total; } set { _total = value; OnPropertyChanged(nameof(Total)); } }
 
+        /// <summary>
+        /// Audio Play Position Value (Percent 100f)
+        /// </summary>
         private double _currentPosition;
         public double CurrentPosition { get { return _currentPosition; } set { _currentPosition = value; OnPropertyChanged(nameof(CurrentPosition)); } }
+
+        /// <summary>
+        /// Audio Play Volume Value (Percent 100f)
+        /// </summary>
+        private double _currentVolume;
+        public double CurrentVolume { get { return _currentVolume; } set { _currentVolume = value; OnPropertyChanged(nameof(CurrentVolume)); } }
 
         /// <summary>
         /// Setting Audio Source, and init _outputDevice and _audioFile if neccessary.
@@ -72,12 +108,24 @@ namespace Disenchant.Music.Model
                 // We then tell the output device to play audio from the audio file by using the Init method.
                 // Finally, if all that is done, we can call Play on the output device.This method starts playback but won't wait for it to stop.
                 _audioFile = new AudioFileReader(path);
-                _outputDevice.Init(_audioFile);
+
+                // dsp start
+                _volumeProvider = new VolumeSampleProvider(_audioFile)
+                {
+                    Volume = (float)CurrentVolume/100f
+                };
+                // dsp end
+
+                // Connect
+                _outputDevice.Init(_volumeProvider);
             }
             Total = _audioFile.TotalTime;
-            positionUpdateTimer = ThreadPoolTimer.CreatePeriodicTimer(UpdatTimerHandler, TimeSpan.FromMilliseconds(100), UpdateTimerDestoyed);
         }
 
+
+
+
+        /////////////////////////////////////////////////////////////////////   Play Control Start  /////////////////////////////////////////////////////////////////////////////
         /// <summary>
         /// 播放
         /// </summary>
@@ -99,8 +147,17 @@ namespace Disenchant.Music.Model
             _outputDevice?.Stop();
             this.Destory();
         }
+        /////////////////////////////////////////////////////////////////////    Play Control End    ///////////////////////////////////////////////////////////////////////////////
 
 
+
+
+
+        /////////////////////////////////////////////////////////////////////   Event Handler Start   //////////////////////////////////////////////////////////////////////////////
+        
+        ///                 ///
+        /// Progress Slider ///
+        ///                 ///
         /// <summary>
         /// 堵塞更新计时器，为更新进度做准备
         /// </summary>
@@ -126,6 +183,24 @@ namespace Disenchant.Music.Model
             lockable = false;
         }
 
+        ///               ///
+        /// Volume Slider ///
+        ///                ///   
+        // 
+        public void VolumeUpdate(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            CurrentVolume = ((Slider)sender).Value;
+            if(_volumeProvider != null)
+            {
+                _volumeProvider.Volume = (float)CurrentVolume/100f;
+            }
+        }
+        /////////////////////////////////////////////////////////////////////    Event Handler End   //////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
         private void UpdateProgress()
         {
             if (_outputDevice != null && !lockable && _outputDevice.PlaybackState == PlaybackState.Playing && _audioFile != null && PlayBarUI != null)
@@ -138,9 +213,8 @@ namespace Disenchant.Music.Model
                 });
             }
         }
-        public AudioPlayer() {}
-  
-        
+
+        // Timer Updater
         private void UpdatTimerHandler(ThreadPoolTimer timer) { UpdateProgress(); }
   
         private void UpdateTimerDestoyed(ThreadPoolTimer timer)
@@ -170,13 +244,6 @@ namespace Disenchant.Music.Model
                 _audioFile.Dispose();
                 _audioFile = null;
             }
-            /*
-            positionUpdateTimer?.Cancel();
-            positionUpdateTimer = null;
-            Current = TimeSpan.Zero;
-            Total = TimeSpan.Zero;
-            CurrentPosition = 0;
-            */
         }
 
         public string TimeSpanConverter(TimeSpan value)

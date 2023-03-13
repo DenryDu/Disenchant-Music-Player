@@ -39,9 +39,7 @@
                            Text="{x:Bind localRoot:GlobalData.AudioPlayer.TimeSpanConverter(localRoot:GlobalData.AudioPlayer.Current), Mode=OneWay}" 
                            VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"></TextBlock>
             <Slider Grid.Row="0" Grid.Column="1" x:Name="ProgressSlider" Orientation="Horizontal" VerticalAlignment="Center" Minimum="0" Maximum="100" Margin="20 0 8 0"
-                    Value="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentPosition ,Mode=OneWay}" 
-                    PointerReleased="{x:Bind localRoot:GlobalData.AudioPlayer.ProgressUpdate}"
-                    PointerPressed="{x:Bind localRoot:GlobalData.AudioPlayer.ProgressLock}"></Slider>
+                    Value="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentPosition ,Mode=OneWay}"></Slider>
             <TextBlock Grid.Row="0" Grid.Column="2"
                     Text="{x:Bind localRoot:GlobalData.AudioPlayer.TimeSpanConverter(localRoot:GlobalData.AudioPlayer.Total), Mode=OneWay}" 
                            VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"></TextBlock>
@@ -109,11 +107,25 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="0"  Grid.Column="0">
-                Mode</Button>
+            <Button  Grid.Row="0"  Grid.Column="0" Background="Transparent" BorderBrush="Transparent">
+                <FontIcon  FontFamily="Segoe Fluent Icons" Glyph="&#xE15D;"></FontIcon>
+                <Button.Flyout>
+                    <Flyout>
+                        <StackPanel>
+                            <Slider x:Name="VolumeSlider" 
+                                Width="200" Minimum="0" Maximum="100"
+                                Value="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentVolume, Mode=OneWay}"
+                                ValueChanged="{x:Bind localRoot:GlobalData.AudioPlayer.VolumeUpdate}"></Slider>
+                        </StackPanel>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+            <Button Grid.Row="0"  Grid.Column="1" Background="Transparent" BorderBrush="Transparent">
+                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE14B;"></FontIcon>
+            </Button>
             <!-- e8ed repeatonce -->
             <!-- e8ee repeatall -->
-            <Button Grid.Row="0"  Grid.Column="1">SoundEffect</Button>
+            <!--<Button Grid.Row="0"  Grid.Column="1">SoundEffect</Button>-->
             <Button Grid.Row="0"  Grid.Column="2">Playlist</Button>
             <Button Grid.Row="0"  Grid.Column="3">MoreInfo</Button>
 

@@ -20,19 +20,6 @@ namespace Disenchant.Music.ViewModel
     {
         public static MainWindow MainWindow;
   
-        public MainViewModel() {
-            AudioPlayer.SetSource(@"C:\Users\DenryDu\OneDrive\音频\Music\97  100  - 阿鲲 - 流浪地球2 电影原声大碟.flac");
-
-  
-
-        }
-
-        internal AudioPlayer AudioPlayer = new AudioPlayer();
-        //private RoutedEvent PointerPressedEvent; 
-        //private RoutedEvent PointerReleasedEvent;
-    
-
-
-
+        public MainViewModel() {}
     }
 }

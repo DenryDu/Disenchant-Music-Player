@@ -1,0 +1,9 @@
+App.xbf
+MainWindow.xbf
+Views\AlbumListView.xbf
+Views\ArtistListView.xbf
+Views\PlayListView.xbf
+Views\RootNavView.xbf
+Views\RootPlayBarView.xbf
+Views\SettingsView.xbf
+Views\SongListView.xbf
