@@ -49,14 +49,14 @@
         <Border Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="10 0 10 10" Height="90" Width="90" CornerRadius="10">
             <Image x:Name="ControllerCover"
                         VerticalAlignment="Center" HorizontalAlignment="Left" Height="90" Width="90" 
-                   Source="{x:Bind RootPlayBarViewModel.CurrentMusic.Cover, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Image>
+                   Source="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.Cover, Mode=OneWay}"></Image>
         </Border>
 
 
         <!-- Info -->
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
-            <TextBlock Text="{x:Bind RootPlayBarViewModel.CurrentMusic.Title, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
-            <TextBlock Text="{x:Bind RootPlayBarViewModel.CurrentMusic.ArtistsAndAlbumStr, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="8,0,0,0" TextWrapping="NoWrap"/>
+            <TextBlock Text="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.Title, Mode=OneWay}" Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
+            <TextBlock Text="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.ArtistsAndAlbumStr, Mode=OneWay}" Margin="8,0,0,0" TextWrapping="NoWrap"/>
         </StackPanel>
 
 
@@ -74,21 +74,24 @@
 
             <!-- Prev -->
             <Grid Grid.Row="0"  Grid.Column="0">
-                <Button Background="Transparent" BorderBrush="Transparent">
+                <Button Background="Transparent" BorderBrush="Transparent"
+                        Click="{x:Bind localRoot:GlobalData.AudioPlayer.PlayPreviousSong}">
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe892;"></FontIcon>
                 </Button>
             </Grid>
 
             <!-- Play/Pause -->
             <Grid Grid.Row="0"  Grid.Column="1">
-                <Button x:Name="PlayButton" Click="{x:Bind RootPlayBarViewModel.PlayButton_Click}" Background="Transparent" BorderBrush="Transparent">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="{x:Bind RootPlayBarViewModel.PlayBtnIcon, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></FontIcon>
+                <Button x:Name="PlayButton" Click="{x:Bind localRoot:GlobalData.AudioPlayer.PlayPauseUpdate}" Background="Transparent" BorderBrush="Transparent">
+                    <FontIcon FontFamily="Segoe Fluent Icons" 
+                              Glyph="{x:Bind localRoot:GlobalData.AudioPlayer.GetPlayPauseBtn(localRoot:GlobalData.AudioPlayer.PlayState), Mode=OneWay}"></FontIcon>
                 </Button>
             </Grid>
 
             <!-- Next -->
             <Grid Grid.Row="0"  Grid.Column="2">
-                <Button Background="Transparent" BorderBrush="Transparent">
+                <Button Background="Transparent" BorderBrush="Transparent"
+                        Click="{x:Bind localRoot:GlobalData.AudioPlayer.PlayNextSong}">
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE893;"></FontIcon>
                 </Button>
             </Grid>
@@ -120,8 +123,10 @@
                     </Flyout>
                 </Button.Flyout>
             </Button>
-            <Button Grid.Row="0"  Grid.Column="1" Background="Transparent" BorderBrush="Transparent">
-                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE14B;"></FontIcon>
+            <Button Grid.Row="0"  Grid.Column="1" Background="Transparent" BorderBrush="Transparent"
+                    Click="{x:Bind localRoot:GlobalData.AudioPlayer.PlayListModeUpdate}">
+                <FontIcon FontFamily="Segoe Fluent Icons" 
+                          Glyph="{x:Bind localRoot:GlobalData.AudioPlayer.GetPlayModeBtn(localRoot:GlobalData.AudioPlayer.PlayListMode), Mode=OneWay}"></FontIcon>
             </Button>
             <!-- e8ed repeatonce -->
             <!-- e8ee repeatall -->

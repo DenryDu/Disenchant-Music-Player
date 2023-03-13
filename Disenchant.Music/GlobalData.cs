@@ -24,8 +24,18 @@ namespace Disenchant.Music
         // FileTypes supported by this proj
         public static readonly string[] SupportedAudioTypes = { ".flac", ".wav", ".m4a", ".aac", ".mp3", ".wma", ".ogg", ".oga", ".opus" };
 
-        public static readonly string PlayBtnIcon = StringHelper.UnicodeToStr("&#xe768;");
-        public static readonly string PauseBtnIcon = StringHelper.UnicodeToStr("&#xe769;");
+        // Play Btn
+        public static readonly string[] PlayPauseIcon = {
+            StringHelper.UnicodeToStr("&#xe768;"),
+            StringHelper.UnicodeToStr("&#xe769;")
+        };
+
+        // PlayMode Btn
+        public static readonly string[] PlayModeIcon = { 
+            StringHelper.UnicodeToStr("&#xE14B;"),
+            StringHelper.UnicodeToStr("&#xE1CD;"),
+            StringHelper.UnicodeToStr("&#xE1CC;")
+        };
 
 
         ///

@@ -14,15 +14,15 @@
 
     <ListView x:Name="SonglistView" 
               ItemsSource="{x:Bind songListViewModel.SongList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
-              SelectionChanged="{x:Bind songListViewModel.SonglistView_SelectionChanged}" CacheMode="BitmapCache"
-              >
+              CacheMode="BitmapCache"
+              ItemClick="{x:Bind songListViewModel.SonglistView_ItemClick}"
+              IsItemClickEnabled="True" SelectionMode="None" >
         <ListView.ItemContainerTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition IsStaggeringEnabled="True" />
             </TransitionCollection>
         </ListView.ItemContainerTransitions>
 
-        
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="localModel:MusicInfo">
                 <Grid Height="80" Margin="0">
@@ -40,6 +40,5 @@
                 </Grid>
             </DataTemplate>
         </ListView.ItemTemplate>
-
     </ListView>
 </Page>

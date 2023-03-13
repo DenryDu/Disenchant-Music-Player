@@ -35,28 +35,28 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
-            <TextBlock x:ConnectionId='8' Grid.Row="0" Grid.Column="0" 
+            <TextBlock x:ConnectionId='12' Grid.Row="0" Grid.Column="0" 
                                                                                                                                                      
                            VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"></TextBlock>
-            <Slider x:ConnectionId='9' Grid.Row="0" Grid.Column="1" x:Name="ProgressSlider" Orientation="Horizontal" VerticalAlignment="Center" Minimum="0" Maximum="100" Margin="20 0 8 0"
+            <Slider x:ConnectionId='13' Grid.Row="0" Grid.Column="1" x:Name="ProgressSlider" Orientation="Horizontal" VerticalAlignment="Center" Minimum="0" Maximum="100" Margin="20 0 8 0"
                                                                                                   ></Slider>
-            <TextBlock x:ConnectionId='10' Grid.Row="0" Grid.Column="2"
+            <TextBlock x:ConnectionId='14' Grid.Row="0" Grid.Column="2"
                                                                                                                                             
                            VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"></TextBlock>
         </Grid>
 
         <!-- Cover -->
         <Border Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="10 0 10 10" Height="90" Width="90" CornerRadius="10">
-            <Image x:ConnectionId='7' x:Name="ControllerCover"
+            <Image x:ConnectionId='11' x:Name="ControllerCover"
                         VerticalAlignment="Center" HorizontalAlignment="Left" Height="90" Width="90" 
-                                                                                                                              ></Image>
+                                                                                                     ></Image>
         </Border>
 
 
         <!-- Info -->
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
-            <TextBlock x:ConnectionId='5'                                                                                                           Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
-            <TextBlock x:ConnectionId='6'                                                                                                                        Margin="8,0,0,0" TextWrapping="NoWrap"/>
+            <TextBlock x:ConnectionId='9'                                                                                  Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
+            <TextBlock x:ConnectionId='10'                                                                                               Margin="8,0,0,0" TextWrapping="NoWrap"/>
         </StackPanel>
 
 
@@ -74,21 +74,24 @@
 
             <!-- Prev -->
             <Grid Grid.Row="0"  Grid.Column="0">
-                <Button Background="Transparent" BorderBrush="Transparent">
+                <Button x:ConnectionId='8' Background="Transparent" BorderBrush="Transparent"
+                                                                                          >
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe892;"></FontIcon>
                 </Button>
             </Grid>
 
             <!-- Play/Pause -->
             <Grid Grid.Row="0"  Grid.Column="1">
-                <Button x:ConnectionId='3' x:Name="PlayButton"                                                        Background="Transparent" BorderBrush="Transparent">
-                    <FontIcon x:ConnectionId='4' FontFamily="Segoe Fluent Icons"                                                                                                    ></FontIcon>
+                <Button x:ConnectionId='6' x:Name="PlayButton"                                                                   Background="Transparent" BorderBrush="Transparent">
+                    <FontIcon x:ConnectionId='7' FontFamily="Segoe Fluent Icons" 
+                                                                                                                                                        ></FontIcon>
                 </Button>
             </Grid>
 
             <!-- Next -->
             <Grid Grid.Row="0"  Grid.Column="2">
-                <Button Background="Transparent" BorderBrush="Transparent">
+                <Button x:ConnectionId='5' Background="Transparent" BorderBrush="Transparent"
+                                                                                      >
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE893;"></FontIcon>
                 </Button>
             </Grid>
@@ -112,15 +115,18 @@
                 <Button.Flyout>
                     <Flyout>
                         <StackPanel>
-                            <Slider x:ConnectionId='2' x:Name="VolumeSlider" 
+                            <Slider x:ConnectionId='4' x:Name="VolumeSlider" 
                                 Width="200" Minimum="0" Maximum="100"
-                                                                                               ></Slider>
+                                                                                                            
+                                                                                                     ></Slider>
                         </StackPanel>
                     </Flyout>
                 </Button.Flyout>
             </Button>
-            <Button Grid.Row="0"  Grid.Column="1" Background="Transparent" BorderBrush="Transparent">
-                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE14B;"></FontIcon>
+            <Button x:ConnectionId='2' Grid.Row="0"  Grid.Column="1" Background="Transparent" BorderBrush="Transparent"
+                                                                                        >
+                <FontIcon x:ConnectionId='3' FontFamily="Segoe Fluent Icons" 
+                                                                                                                                                      ></FontIcon>
             </Button>
             <!-- e8ed repeatonce -->
             <!-- e8ee repeatall -->

@@ -35,5 +35,7 @@ namespace Disenchant.Music.Views
             this.InitializeComponent();
             songListViewModel = new SongListViewModel();
         }
+
+       
     }
 }

@@ -14,15 +14,15 @@
 
     <ListView x:ConnectionId='2' x:Name="SonglistView" 
                                                                                                                   
-                                                                                          CacheMode="BitmapCache"
-              >
+              CacheMode="BitmapCache"
+                                                                           
+              IsItemClickEnabled="True" SelectionMode="None" >
         <ListView.ItemContainerTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition IsStaggeringEnabled="True" />
             </TransitionCollection>
         </ListView.ItemContainerTransitions>
 
-        
         <ListView.ItemTemplate>
             <DataTemplate                                  >
                 <Grid x:ConnectionId='4' Height="80" Margin="0">
@@ -40,7 +40,6 @@
                 </Grid>
             </DataTemplate>
         </ListView.ItemTemplate>
-
     </ListView>
 </Page>
 

@@ -31,56 +31,37 @@ namespace Disenchant.Music.ViewModels
         public static RootPlayBarView RootPlayBarView;
 
         private ObservableCollection<MusicInfo> _songList;
-        public ObservableCollection<MusicInfo> SongList { get { return _songList; } set { _songList = value; OnPropertyChanged(nameof(SongList)); } }
+        public ObservableCollection<MusicInfo> SongList { get { return _songList; } set { 
+                _songList = value;
+                if (IsChoosed)
+                {
+                    GlobalData.AudioPlayer.SetPlayList(SongList.ToList());
+                }
+                OnPropertyChanged(nameof(SongList)); } }
 
-        private List<string> pathList = new List<string>();
+        /// <summary>
+        /// Songlist 是否被选为 PlayList
+        /// </summary>
+        private bool _isChoosed;
+        public bool IsChoosed { get { return _isChoosed; } set { _isChoosed = value; OnPropertyChanged(nameof(IsChoosed)); } }
         public SongListViewModel()
         {
             SongList = new ObservableCollection<MusicInfo>();
             SongList = GlobalData.MusicLibrary.Musics;
+            IsChoosed = false;
         }
-        /*
-        public void RefreshList()
+
+        public void SonglistView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
-            foreach (string path in pathList)
+            MusicInfo musicInfo = e.ClickedItem as MusicInfo;
+            // 如果未进歌单，则进歌单
+            if (!IsChoosed)
             {
-                SongList.Add(new MusicInfo(path));
-                //OnPropertyChanged(nameof(SongList));
+                GlobalData.AudioPlayer.SetPlayList(SongList.ToList());
+                IsChoosed = true;
             }
-        }
-        */
-
-
-        public void SonglistView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-                MusicInfo selectedMusic = ((ListView)sender).SelectedItem as MusicInfo;
-
-            // First Time Select
-            if (selectedMusic.Path != RootPlayBarView.RootPlayBarViewModel.CurrentMusic.Path)
-            {
-
-                Stopwatch stopwatch = new Stopwatch();
-                Debug.WriteLine("new start:");
-
-                // Play
-                if (RootPlayBarView.RootPlayBarViewModel.CurrentMusic.Title != null)
-                {
-                    GlobalData.AudioPlayer.Stop();// Stop Before: 0.5254845 ==》 ？
-                }
-
-                RootPlayBarView.RootPlayBarViewModel.CurrentMusic = selectedMusic; // Set Current: 0.4373912 ==》 0.017505
-
-
-                RootPlayBarView.RootPlayBarViewModel.PlayBtnIcon = GlobalData.PauseBtnIcon;
-          
-                GlobalData.AudioPlayer.Play(); // Play: 0.0000052 ==》
-            }
-            else  // Not First Time
-            {
-                //return;
-            }
-            //return;
+            GlobalData.AudioPlayer.UpdateShuffle();
+            GlobalData.AudioPlayer.PlayListSongByPath(musicInfo.Path);
 
         }
     }

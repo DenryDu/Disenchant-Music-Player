@@ -46,10 +46,5 @@ namespace Disenchant.Music.Views
         }
         private RootPlayBarViewModel _rootPlayBarViewModel;
         internal RootPlayBarViewModel RootPlayBarViewModel;
-
-        private void VolumeSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
-        {
-
-        }
     }
 }

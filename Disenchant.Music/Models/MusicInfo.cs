@@ -82,6 +82,37 @@ namespace Disenchant.Music.Models
             Duration = f.Properties.Duration;
         }
 
+        /*
+        public MusicInfo(MusicInfo music)
+        {
+            Path = music.Path;
+            Album = music.Album;
+            Title = music.Title;
+            Artists = music.Artists;
+            Format = music.Format;
+            Year = music.Year;
+            Copyright = music.Copyright;
+            Cover = new BitmapImage();
+            if (f.Tag.Pictures != null && music.Cover.Length != 0)
+            {
+                byte[] coverBuffer = (byte[])(f.Tag.Pictures[0].Data.Data);
+                using (var stream = new MemoryStream(coverBuffer))
+                {
+                    stream.Seek(0, SeekOrigin.Begin); var s2 = new MemoryStream(); stream.CopyTo(s2); s2.Position = 0;
+                    Cover.DecodePixelHeight = 100; Cover.DecodePixelWidth = 100;
+                    Cover.SetSource(s2.AsRandomAccessStream()); s2.Dispose();
+                }
+            }
+            //Genre = f.Tag.Genres;
+            Lyric = f.Tag.Lyrics;
+            SampleRate = f.Properties.AudioSampleRate;
+            Channels = f.Properties.AudioChannels;
+            BitRate = f.Properties.AudioBitrate;
+            //f.Properties.Codecs;
+            Duration = f.Properties.Duration;
+        }
+        */
+
         public MusicInfo()
         {
             Cover = new BitmapImage();
