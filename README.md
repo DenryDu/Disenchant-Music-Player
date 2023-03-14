@@ -30,7 +30,9 @@
     - 控件大小采用偏大式样方便手指操控
     
 ##### 现有功能介绍
-- 播放页：支持单曲循环、随机(Shuffle, not Random)播放、列表循环，支持音量调节，支持进度条拖拽，支持歌词滚动特效，支持上一首、下一首
+- 播放页：
+	
+	支持单曲循环、随机(Shuffle, not Random)播放、列表循环，支持音量调节，支持进度条拖拽，支持歌词滚动特效，支持上一首、下一首
 	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-14_21-44-47.png)
 - 歌曲列表
 	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-14_21-44-57.png)
