@@ -1,28 +1,29 @@
-﻿using Disenchant.Music.Models;
-using Disenchant.Music.Views;
-using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
+﻿using Disenchant.Music.Views;
 using Microsoft.UI.Xaml.Controls.Primitives;
+using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
-using NAudio.CoreAudioApi;
-using NAudio.Utils;
-using NAudio.Wave;
+using Microsoft.UI.Xaml;
 using NAudio.Wave.SampleProviders;
+using NAudio.Wave;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Xml.Linq;
-using Windows.Media.Playback;
 using Windows.System.Threading;
-//using System.Web.UI;
-namespace Disenchant.Music.Model
+using Windows.Media.Playback;
+using Windows.Devices.Enumeration;
+using Windows.Foundation.Collections;
+using Windows.Media.Audio;
+using Windows.Media.Devices;
+using Windows.Media.Core;
+using Disenchant.Music.Helpers;
+using Windows.Storage;
+
+namespace Disenchant.Music.Models
 {
-    internal class AudioPlayer : INotifyPropertyChanged
+    internal class MAudioPlayer : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -34,7 +35,11 @@ namespace Disenchant.Music.Model
 
         public bool CanPlay;
 
-        public AudioPlayer() 
+ 
+
+        public static RootPlayBarView PlayBarUI;
+
+        public MAudioPlayer()
         {
             // Init PlayList
             PlayList = new List<string>();
@@ -48,11 +53,8 @@ namespace Disenchant.Music.Model
             // Init Volume
             CurrentVolume = 100;
 
-            // Init Timer
-            positionUpdateTimer = ThreadPoolTimer.CreatePeriodicTimer(UpdatTimerHandler, TimeSpan.FromMilliseconds(100), UpdateTimerDestoyed);
+            InitMediaPlayer();
         }
-
-        public static RootPlayBarView PlayBarUI;
 
         /// <summary>
         /// PlayList: List of Music Path
@@ -113,6 +115,23 @@ namespace Disenchant.Music.Model
             }
         }
 
+        //
+        public MediaPlayer MediaPlayer { get; private set; }
+
+        private DeviceInformation _autoDevice;
+
+        private void InitMediaPlayer()
+        {
+            MediaPlayer = new MediaPlayer
+            {
+                AudioCategory = MediaPlayerAudioCategory.Media,
+            };
+
+            _autoDevice = MediaPlayer.AudioDevice;
+            var type = MediaPlayer.AudioDeviceType;
+            var mgr = MediaPlayer.CommandManager;
+            mgr.IsEnabled = true;
+        }
         /// <summary>
         /// WaveOutEvent: Sending audio to the soundcard, ease of use and broad platform support.
         /// </summary>
@@ -163,67 +182,60 @@ namespace Disenchant.Music.Model
         private double _currentVolume;
         public double CurrentVolume { get { return _currentVolume; } set { _currentVolume = value; OnPropertyChanged(nameof(CurrentVolume)); } }
 
+        // Lock to Restrict Access to MediaPlayer
+        private readonly object mediaLock = new object();
+
         /// <summary>
         /// Setting Audio Source, and init _outputDevice and _audioFile if neccessary.
         /// </summary>
         /// <param name="path"></param>
         internal void SetSource(string path)
         {
-            /*
-            if (_outputDevice == null)
+            lock(mediaLock)
             {
-                _outputDevice = new WaveOutEvent();
-                _wasapiOut = new WasapiOut();
-                _outputDevice.NumberOfBuffers = 20;
-                _outputDevice.DesiredLatency = 1000;
-                _outputDevice.PlaybackStopped += OnPlaybackStopped;
-            }
-            if (_audioFile == null)
-            {
-                // We then tell the output device to play audio from the audio file by using the Init method.
-                // Finally, if all that is done, we can call Play on the output device.This method starts playback but won't wait for it to stop.
-                _audioFile = new AudioFileReader(path);
-                //_audioFile.Buff
-                // dsp start
-                _volumeProvider = new VolumeSampleProvider(_audioFile)
+                MediaPlayer = new MediaPlayer
                 {
-                    Volume = (float)CurrentVolume/100f
+                    AudioCategory = MediaPlayerAudioCategory.Media,
                 };
-                // dsp end
-
-                // Connect
-                _outputDevice.Init(_volumeProvider);
-                _wasapiOut.Init(_volumeProvider);
+                MediaPlayer.Source = MediaSource.CreateFromStorageFile(AsyncHelper.RunSync(async () => { return await StorageFile.GetFileFromPathAsync(path); }));
+                Total = MediaPlayer.PlaybackSession.NaturalDuration;
+                //MediaPlayer.Volume
+                MediaPlayer.Volume = CurrentVolume / 100d;
+                positionUpdateTimer = ThreadPoolTimer.CreatePeriodicTimer(UpdatTimerHandler, TimeSpan.FromMilliseconds(100), UpdateTimerDestoyed);
+                //MediaPlayer.PlaybackSession.PlaybackStateChanged += PlaybackSession_PlaybackStateChanged;
+                MediaPlayer.MediaEnded += OnPlaybackStopped;
             }
-            Total = _audioFile.TotalTime;
-            */
-            if (_wasapiOut == null)
+        }
+        private void PlaybackSession_PlaybackStateChanged(MediaPlaybackSession sender, object args)
+        {
+            // TODO: When error, restore
+            
+            if (MediaPlayer != null)
             {
-                _wasapiOut = new WasapiOut();
-                _wasapiOut.PlaybackStopped += OnPlaybackStopped;
-            }
-            if (_audioFile == null)
-            {
-                // We then tell the output device to play audio from the audio file by using the Init method.
-                // Finally, if all that is done, we can call Play on the output device.This method starts playback but won't wait for it to stop.
-                _audioFile = new AudioFileReader(path);
-                //_audioFile.Buff
-                // dsp start
-                _volumeProvider = new VolumeSampleProvider(_audioFile)
+                switch (MediaPlayer.PlaybackSession.PlaybackState)
                 {
-                    Volume = (float)CurrentVolume / 100f
-                };
-                // dsp end
+                    case MediaPlaybackState.None:
+                        break;
+                    case MediaPlaybackState.Opening:
+                        break;
+                    case MediaPlaybackState.Buffering:
+                        break;
+                    case MediaPlaybackState.Playing:
+                        break;
+                    case MediaPlaybackState.Paused: 
+                        break;
+                default:
+                    break;
 
-                // Connect
-                _wasapiOut.Init(_volumeProvider);
+                }
             }
-            Total = _audioFile.TotalTime;
+           
+
         }
         internal void SetPlayList(List<MusicInfo> list)
         {
             PlayList = new List<string>();
-            foreach(MusicInfo info in list)
+            foreach (MusicInfo info in list)
             {
                 PlayList.Add(info.Path);
             }
@@ -235,22 +247,26 @@ namespace Disenchant.Music.Model
         }
         public void PlayListSongByPath(string path, bool forced = false)
         {
-            // First Time Select
-            if (CurrentMusic.Path != path && CurrentMusic.Path != null)
+            lock (mediaLock)
             {
-                // Stop
-                Stop();// Stop Before: 0.5254845 ==》 ？
+                if (CurrentMusic.Path != null)
+                {
+                    if (CurrentMusic.Path != path || forced)
+                    {
+                        Stop();
+                        CurrentMusic = new MusicInfo(path); // Set Current: 0.4373912 ==》 0.017505
+                        PlayListIdx = PlayList.FindIndex(p => p == path);
+                        Play();
+                    }
+                }
+                else
+                {
+                    CurrentMusic = new MusicInfo(path); // Set Current: 0.4373912 ==》 0.017505
+                    PlayListIdx = PlayList.FindIndex(p => p == path);
+                    Play();
+                }
             }
-            // 如果强制重复当前歌曲
-            if (forced)
-                Stop();
-
-            // Set
-            CurrentMusic = new MusicInfo(path); // Set Current: 0.4373912 ==》 0.017505
-            PlayListIdx = PlayList.FindIndex(p => p == path);
-
-            // Play
-            Play();
+            
         }
 
 
@@ -260,8 +276,7 @@ namespace Disenchant.Music.Model
         /// </summary>
         internal void Play()
         {
-            //_outputDevice.Play();
-            _wasapiOut.Play();
+            MediaPlayer.Play();
             PlayState = 1;
         }
         /// <summary>
@@ -269,18 +284,19 @@ namespace Disenchant.Music.Model
         /// </summary>
         internal void Pause()
         {
-            //_outputDevice.Pause();
-            _wasapiOut.Pause();
+            MediaPlayer.Pause();
             PlayState = 0;
         }
         /// <summary>
         /// 停止
         /// </summary>
-        internal void Stop() {
-            //_outputDevice?.Stop();
-            _wasapiOut?.Stop();
-            this.Destory();
-            PlayState = 0;
+        internal void Stop()
+        {
+            MediaPlayer.Pause();
+            MediaPlayer.Dispose();
+            positionUpdateTimer?.Cancel();
+            positionUpdateTimer = null;
+            //PlayState = 0;
         }
         /////////////////////////////////////////////////////////////////////    Play Control End    ///////////////////////////////////////////////////////////////////////////////
 
@@ -310,12 +326,10 @@ namespace Disenchant.Music.Model
         /// <param name="e"></param>
         public void ProgressUpdate(object sender, PointerRoutedEventArgs e)
         {
-            
+
             Pause();
-            //RePositionSongByPath(CurrentMusic.Path, TimeSpan.FromMilliseconds((double)((Slider)sender).Value * Total.TotalMilliseconds / 100d), true);
-            //_audioFile.CurrentTime = TimeSpan.FromMilliseconds((double)((Slider)sender).Value * Total.TotalMilliseconds / 100d);
-            _audioFile.SetPosition(TimeSpan.FromMilliseconds((double)((Slider)sender).Value * Total.TotalMilliseconds / 100d).TotalSeconds);
-            //UpdateProgressWhenLocked();
+            MediaPlayer.PlaybackSession.Position = TimeSpan.FromMilliseconds((double)((Slider)sender).Value * Total.TotalMilliseconds / 100d);
+            UpdateProgressWhenLocked();
             lockable = false;
             Play();
         }
@@ -327,10 +341,7 @@ namespace Disenchant.Music.Model
         public void VolumeUpdate(object sender, RangeBaseValueChangedEventArgs e)
         {
             CurrentVolume = ((Slider)sender).Value;
-            if(_volumeProvider != null)
-            {
-                _volumeProvider.Volume = (float)CurrentVolume/100f;
-            }
+            MediaPlayer.Volume = CurrentVolume / 100d;
         }
 
         ///                   ///
@@ -350,7 +361,7 @@ namespace Disenchant.Music.Model
         // 
         public void PlayPauseUpdate(object sender, RoutedEventArgs e)
         {
-            if(PlayState == 1)
+            if (PlayState == 1)
             {
                 Pause();
             }
@@ -371,7 +382,7 @@ namespace Disenchant.Music.Model
                     return;
                 case 1:
                     // Repeat All
-                    PlayListSongByPath(PlayList[(PlayListIdx + PlayListLength - 1)%PlayListLength]);
+                    PlayListSongByPath(PlayList[(PlayListIdx + PlayListLength - 1) % PlayListLength]);
                     return;
                 case 2:
                     // Repeat One
@@ -387,7 +398,7 @@ namespace Disenchant.Music.Model
                 case 0:
                     int currentIdxInShuffle = ShuffleList.FindIndex(p => p == PlayListIdx);
                     // Shuffle
-                    PlayListSongByPath(PlayList[ShuffleList[(currentIdxInShuffle+1)%PlayListLength]]);
+                    PlayListSongByPath(PlayList[ShuffleList[(currentIdxInShuffle + 1) % PlayListLength]]);
                     return;
                 case 1:
                     // Repeat All
@@ -407,98 +418,69 @@ namespace Disenchant.Music.Model
 
         private void UpdateProgress()
         {
-            //if (_outputDevice != null && !lockable && _outputDevice.PlaybackState == PlaybackState.Playing && _audioFile != null && PlayBarUI != null)
-            if (_wasapiOut != null && !lockable && _wasapiOut.PlaybackState == PlaybackState.Playing && _audioFile != null && PlayBarUI != null)
+            lock (mediaLock)
             {
-                PlayBarUI.DispatcherQueue.TryEnqueue(Microsoft.UI.Dispatching.DispatcherQueuePriority.Low, () =>
+                if (MediaPlayer != null && !lockable && MediaPlayer.PlaybackSession.PlaybackState != MediaPlaybackState.None && MediaPlayer.PlaybackSession.PlaybackState == MediaPlaybackState.Playing && MediaPlayer.Source != null && PlayBarUI != null)
                 {
-                    Current = _audioFile?.CurrentTime ?? TimeSpan.Zero;
-                    Total = _audioFile.TotalTime;
-                    CurrentPosition = 100 * (Current.TotalMilliseconds / Total.TotalMilliseconds);
-                });
+                    PlayBarUI.DispatcherQueue.TryEnqueue(Microsoft.UI.Dispatching.DispatcherQueuePriority.Low, () =>
+                    {
+                        Current = MediaPlayer.PlaybackSession?.Position ?? TimeSpan.Zero;
+                        Total = MediaPlayer.PlaybackSession.NaturalDuration;
+                        CurrentPosition = 100 * (Current.TotalMilliseconds / Total.TotalMilliseconds);
+                    });
+                }
             }
         }
         private void UpdateProgressWhenLocked()
         {
-            //if (_outputDevice != null && _outputDevice.PlaybackState == PlaybackState.Playing && _audioFile != null && PlayBarUI != null)
-            //{
-            //    PlayBarUI.DispatcherQueue.TryEnqueue(Microsoft.UI.Dispatching.DispatcherQueuePriority.High, () =>
-            //    {
-                    Current = _audioFile?.CurrentTime ?? TimeSpan.Zero;
-                    Total = _audioFile.TotalTime;
-                    CurrentPosition = 100 * (Current.TotalMilliseconds / Total.TotalMilliseconds);
-            //    });
-            //}
+            Current = MediaPlayer.PlaybackSession?.Position ?? TimeSpan.Zero;
+            Total = MediaPlayer.PlaybackSession.NaturalDuration;
+            CurrentPosition = 100 * (Current.TotalMilliseconds / Total.TotalMilliseconds);
         }
 
         // Timer Updater
-        private void UpdatTimerHandler(ThreadPoolTimer timer) { 
+        private void UpdatTimerHandler(ThreadPoolTimer timer)
+        {
             UpdateProgress();
         }
-  
+
         private void UpdateTimerDestoyed(ThreadPoolTimer timer)
         {
             timer.Cancel();
             timer = null;
             positionUpdateTimer?.Cancel();
             positionUpdateTimer = null;
-            //positionUpdateTimer = ThreadPoolTimer.CreatePeriodicTimer(UpdatTimerHandler, TimeSpan.FromMilliseconds(100), UpdateTimerDestoyed);
         }
 
-        private void OnPlaybackStopped(object sender, StoppedEventArgs args)
+        private void OnPlaybackStopped(MediaPlayer sender, Object args)
         {
-            
-            //if(_outputDevice.PlaybackState == PlaybackState.Stopped && !lockable)
-            if(_wasapiOut.PlaybackState == PlaybackState.Stopped && !lockable)
-            {
-                switch (PlayListMode)
+            PlayBarUI.DispatcherQueue.TryEnqueue(Microsoft.UI.Dispatching.DispatcherQueuePriority.High, () =>
                 {
-                    case 0:
-                        int currentIdxInShuffle = ShuffleList.FindIndex(p => p == PlayListIdx);
-                        // Shuffle
-                        PlayListSongByPath(PlayList[ShuffleList[(currentIdxInShuffle + 1) % PlayListLength]]);
-                        return;
-                    case 1:
-                        // Repeat All
-                        PlayListSongByPath(PlayList[(PlayListIdx + 1) % PlayListLength]);
-                        return;
-                    case 2:
-                        // Repeat One
-                        PlayListSongByPath(PlayList[PlayListIdx], true);
-                        return;
-                }
-            }
-            //this.Destory();   
-        }
-        private void Destory()
-        {
-            /*
-            if (_outputDevice != null)
-            {
-                _outputDevice.Dispose();
-                _outputDevice = null;
-            }
-            if (_audioFile != null)
-            {
-                _audioFile.Dispose();
-                _audioFile = null;
-            }
-            */
-            if (_wasapiOut != null)
-            {
-                _wasapiOut.Dispose();
-                _wasapiOut = null;
-            }
-            if (_audioFile != null)
-            {
-                _audioFile.Dispose();
-                _audioFile = null;
-            }
+                    if (MediaPlayer.PlaybackSession.PlaybackState == MediaPlaybackState.Paused && !lockable)
+                    {
+                        switch (PlayListMode)
+                        {
+                            case 0:
+                                int currentIdxInShuffle = ShuffleList.FindIndex(p => p == PlayListIdx);
+                                // Shuffle
+                                PlayListSongByPath(PlayList[ShuffleList[(currentIdxInShuffle + 1) % PlayListLength]]);
+                                return;
+                            case 1:
+                                // Repeat All
+                                PlayListSongByPath(PlayList[(PlayListIdx + 1) % PlayListLength]);
+                                return;
+                            case 2:
+                                // Repeat One
+                                PlayListSongByPath(PlayList[PlayListIdx], true);
+                                return;
+                        }
+                    }
+                });
         }
 
         internal void UpdateShuffle()
         {
-            if(PlayList != null && PlayList.Count > 0)
+            if (PlayList != null && PlayList.Count > 0)
             {
                 ShuffleList = Enumerable.Range(0, PlayListLength).ToList().OrderBy(n => Guid.NewGuid()).ToList();
             }
@@ -535,36 +517,5 @@ namespace Disenchant.Music.Model
 
     }
 
-    // new
-    public static class WaveStreamExtensions
-    {
-        // Set position of WaveStream to nearest block to supplied position
-        public static void SetPosition(this WaveStream strm, long position)
-        {
-            // distance from block boundary (may be 0)
-            long adj = position % strm.WaveFormat.BlockAlign;
-            // adjust position to boundary and clamp to valid range
-            long newPos = Math.Max(0, Math.Min(strm.Length, position - adj));
-            // set playback position
-            strm.Position = newPos;
-        }
-
-        // Set playback position of WaveStream by seconds
-        public static void SetPosition(this WaveStream strm, double seconds)
-        {
-            strm.SetPosition((long)(seconds * strm.WaveFormat.AverageBytesPerSecond));
-        }
-
-        // Set playback position of WaveStream by time (as a TimeSpan)
-        public static void SetPosition(this WaveStream strm, TimeSpan time)
-        {
-            strm.SetPosition(time.TotalSeconds);
-        }
-
-        // Set playback position of WaveStream relative to current position
-        public static void Seek(this WaveStream strm, double offset)
-        {
-            strm.SetPosition(strm.Position + (long)(offset * strm.WaveFormat.AverageBytesPerSecond));
-        }
-    }
+    
 }

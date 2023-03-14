@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 using Disenchant.Music.Model;
+using Disenchant.Music.Models;
 using Disenchant.Music.ViewModels;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -35,7 +36,7 @@ namespace Disenchant.Music.Views
             RootPlayBarViewModel.RootPlayBarView = this;
             RootPlayBarViewModel = new RootPlayBarViewModel();
             // 绑定播放器
-            AudioPlayer.PlayBarUI = this;
+            MAudioPlayer.PlayBarUI = this;
 
             // 往SongListPage外送一个对象
             SongListViewModel.RootPlayBarView = this;

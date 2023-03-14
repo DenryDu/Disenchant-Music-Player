@@ -45,8 +45,8 @@ namespace Disenchant.Music
         internal static MusicLibrary MusicLibrary { get; set; } = new MusicLibrary();
 
 
-        private static AudioPlayer _audioPlayer;
-        internal static AudioPlayer AudioPlayer { get; set; } = new AudioPlayer();
+        private static MAudioPlayer _audioPlayer;
+        internal static MAudioPlayer AudioPlayer { get; set; } = new MAudioPlayer();
 
         public static Window CurrentWindow;
     }

@@ -304,7 +304,7 @@ namespace Disenchant.Music.Views
 
             private bool TryGet_Disenchant_Music_GlobalData_AudioPlayer_PlayListMode(out global::System.Int32 val)
             {
-                global::Disenchant.Music.Model.AudioPlayer obj;
+                global::Disenchant.Music.Models.MAudioPlayer obj;
                 if (TryGet_Disenchant_Music_GlobalData_AudioPlayer(out obj) && obj != null)
                 {
                     val = obj.PlayListMode;
@@ -317,7 +317,7 @@ namespace Disenchant.Music.Views
                 }
             }
 
-            private bool TryGet_Disenchant_Music_GlobalData_AudioPlayer(out global::Disenchant.Music.Model.AudioPlayer val)
+            private bool TryGet_Disenchant_Music_GlobalData_AudioPlayer(out global::Disenchant.Music.Models.MAudioPlayer val)
             {
                 val = global::Disenchant.Music.GlobalData.AudioPlayer;
                 return true;
@@ -325,7 +325,7 @@ namespace Disenchant.Music.Views
 
             private bool TryGet_Disenchant_Music_GlobalData_AudioPlayer_PlayState(out global::System.Int32 val)
             {
-                global::Disenchant.Music.Model.AudioPlayer obj;
+                global::Disenchant.Music.Models.MAudioPlayer obj;
                 if (TryGet_Disenchant_Music_GlobalData_AudioPlayer(out obj) && obj != null)
                 {
                     val = obj.PlayState;
@@ -340,7 +340,7 @@ namespace Disenchant.Music.Views
 
             private bool TryGet_Disenchant_Music_GlobalData_AudioPlayer_Current(out global::System.TimeSpan val)
             {
-                global::Disenchant.Music.Model.AudioPlayer obj;
+                global::Disenchant.Music.Models.MAudioPlayer obj;
                 if (TryGet_Disenchant_Music_GlobalData_AudioPlayer(out obj) && obj != null)
                 {
                     val = obj.Current;
@@ -355,7 +355,7 @@ namespace Disenchant.Music.Views
 
             private bool TryGet_Disenchant_Music_GlobalData_AudioPlayer_Total(out global::System.TimeSpan val)
             {
-                global::Disenchant.Music.Model.AudioPlayer obj;
+                global::Disenchant.Music.Models.MAudioPlayer obj;
                 if (TryGet_Disenchant_Music_GlobalData_AudioPlayer(out obj) && obj != null)
                 {
                     val = obj.Total;
@@ -447,7 +447,7 @@ namespace Disenchant.Music.Views
                 this.Update_Disenchant_Music_GlobalData_AudioPlayer(global::Disenchant.Music.GlobalData.AudioPlayer, phase);
                 this.CompleteUpdate(phase);
             }
-            private void Update_Disenchant_Music_GlobalData_AudioPlayer(global::Disenchant.Music.Model.AudioPlayer obj, int phase)
+            private void Update_Disenchant_Music_GlobalData_AudioPlayer(global::Disenchant.Music.Models.MAudioPlayer obj, int phase)
             {
                 this.bindingsTracking.UpdateChildListeners_Disenchant_Music_GlobalData_AudioPlayer(obj);
                 if (obj != null)
@@ -631,7 +631,7 @@ namespace Disenchant.Music.Views
                     if (bindings != null)
                     {
                         string propName = e.PropertyName;
-                        global::Disenchant.Music.Model.AudioPlayer obj = sender as global::Disenchant.Music.Model.AudioPlayer;
+                        global::Disenchant.Music.Models.MAudioPlayer obj = sender as global::Disenchant.Music.Models.MAudioPlayer;
                         if (global::System.String.IsNullOrEmpty(propName))
                         {
                             if (obj != null)
@@ -741,8 +741,8 @@ namespace Disenchant.Music.Views
                         bindings.CompleteUpdate(DATA_CHANGED);
                     }
                 }
-                private global::Disenchant.Music.Model.AudioPlayer cache_Disenchant_Music_GlobalData_AudioPlayer = null;
-                public void UpdateChildListeners_Disenchant_Music_GlobalData_AudioPlayer(global::Disenchant.Music.Model.AudioPlayer obj)
+                private global::Disenchant.Music.Models.MAudioPlayer cache_Disenchant_Music_GlobalData_AudioPlayer = null;
+                public void UpdateChildListeners_Disenchant_Music_GlobalData_AudioPlayer(global::Disenchant.Music.Models.MAudioPlayer obj)
                 {
                     if (obj != cache_Disenchant_Music_GlobalData_AudioPlayer)
                     {
