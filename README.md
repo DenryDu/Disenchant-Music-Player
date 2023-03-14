@@ -58,6 +58,7 @@
 	上述问题在使用NAudio官网上的WpfDemo时也有发生，同时我也进行了细致的Debug，确信不是我编程中可能出现的参数精度、线程同步所导致的，所以使用NAudio完成音乐播放的全程控制，是具有天生缺陷的，遂放弃。
 - 2023/3/14-10:50: [WinUI3 C#](https://github.com/DenryDu/Disenchant-Music-Player/tree/WinUI3-CSharp) 使用MediaPlayer编写MAudioPlayer类，重新实现了进度条更新、音量更新、暂停、播放、上一曲、下一曲、Shuffle播放、列表循环播放、单曲循环播放等功能，无昨天那些缺陷，窗口最小化后仍然能够播放，目前很满意。由于不需要使用NAudio，甚至有考虑将目前进度重新移植回UWP。
 	![2023/3/14-1](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-14_10-45-30.png)	
-
+- 2023/3/14-21:12: [WinUI3 C#](https://github.com/DenryDu/Disenchant-Music-Player/tree/WinUI3-CSharp) 编写了歌曲详情（展开）页，处理了一些页面跳转逻辑和动效，手动实现了歌词滚动特效，对今天的工作非常满意。实现了我所需要的最基础的功能，接下来的更新可能会放缓。
+	![2023/3/14-2](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-14_21-12-21.png)	
 
 
