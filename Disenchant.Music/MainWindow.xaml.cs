@@ -53,8 +53,13 @@ namespace Disenchant.Music
 
             mainViewModel = new MainViewModel();
             MainViewModel.MainWindow = this;
+            GlobalData.MainWindow = this;
         }
 
         internal MainViewModel mainViewModel;
+        public Frame GetRootNavFrame()
+        {
+            return RootNavFrame;
+        }
     }
 }

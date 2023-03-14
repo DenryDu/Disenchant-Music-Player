@@ -17,7 +17,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="130"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -32,7 +32,7 @@
                 x:Name="RootNavFrame"></Frame>
 
         <!-- Audio Player -->
-        <Frame  Grid.Row="2" Grid.Column="0" Height="130" Width="auto" 
+        <Frame  Grid.Row="2" Grid.Column="0" Height="auto" Width="auto" 
             x:Name="RootPlayBarFrame"></Frame>
 
     </Grid>

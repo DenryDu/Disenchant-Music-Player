@@ -6,4 +6,5 @@ Views\PlayListView.xbf
 Views\RootNavView.xbf
 Views\RootPlayBarView.xbf
 Views\SettingsView.xbf
+Views\SongDetailView.xbf
 Views\SongListView.xbf

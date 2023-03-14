@@ -12,13 +12,13 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Height="130" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+    <Grid Height="152" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Center">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*" MinWidth="0"/>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*" MinWidth="0"/>
@@ -28,34 +28,36 @@
         <!-- Row One Progress Bar -->
         <Grid Grid.Row="0" Grid.ColumnSpan="5">
             <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="0" 
+            <TextBlock Grid.Row="0" Grid.Column="0"  Margin="16 0 0 0"
                            Text="{x:Bind localRoot:GlobalData.AudioPlayer.TimeSpanConverter(localRoot:GlobalData.AudioPlayer.Current), Mode=OneWay}" 
-                           VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"></TextBlock>
-            <Slider Grid.Row="0" Grid.Column="1" x:Name="ProgressSlider" Orientation="Horizontal" VerticalAlignment="Center" Minimum="0" Maximum="100" Margin="20 0 8 0"
+                           VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="15"></TextBlock>
+            <Slider Grid.Row="0" Grid.Column="1" x:Name="ProgressSlider" Orientation="Horizontal" VerticalAlignment="Center" Minimum="0" Maximum="100" Margin="16 0 0 0"
                     Value="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentPosition ,Mode=OneWay}"></Slider>
-            <TextBlock Grid.Row="0" Grid.Column="2"
+            <TextBlock Grid.Row="0" Grid.Column="2" Margin="16 0 16 0"
                     Text="{x:Bind localRoot:GlobalData.AudioPlayer.TimeSpanConverter(localRoot:GlobalData.AudioPlayer.Total), Mode=OneWay}" 
-                           VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"></TextBlock>
+                           VerticalAlignment="Center"  HorizontalAlignment="Right" FontSize="15"></TextBlock>
         </Grid>
 
         <!-- Cover -->
-        <Border Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="10 0 10 10" Height="90" Width="90" CornerRadius="10">
-            <Image x:Name="ControllerCover"
-                        VerticalAlignment="Center" HorizontalAlignment="Left" Height="90" Width="90" 
+        <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="14 8 14 16" Height="95" Width="95" Background="Transparent" BorderBrush="Transparent" Padding="0" Click="{x:Bind localRoot:GlobalData.AudioPlayer.CoverBtnClickToDetail}">
+            <Border CornerRadius="10" Height="90" Width="90">
+                <Image x:Name="ControllerCover"
+                        VerticalAlignment="Center" HorizontalAlignment="Center" Height="90" Width="90" 
                    Source="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.Cover, Mode=OneWay}"></Image>
-        </Border>
+            </Border>
+        </Button>
 
 
         <!-- Info -->
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
-            <TextBlock Text="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.Title, Mode=OneWay}" Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
+            <TextBlock Text="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.Title, Mode=OneWay}" Margin="8,0,0,5" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
             <TextBlock Text="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.ArtistsAndAlbumStr, Mode=OneWay}" Margin="8,0,0,0" TextWrapping="NoWrap"/>
         </StackPanel>
 

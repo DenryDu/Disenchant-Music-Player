@@ -29,29 +29,29 @@
     <AppXManifest Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-03-14T02:43:52.587</Modified>
+      <Modified>2023-03-14T13:11:49.810</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-03-14T02:40:23.602</Modified>
+      <Modified>2023-03-14T13:11:48.686</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.runtimeconfig.json">
       <PackagePath>Disenchant.Music.runtimeconfig.json</PackagePath>
-      <Modified>2023-03-13T10:34:51.164</Modified>
+      <Modified>2023-03-14T04:26:29.230</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.dll">
       <PackagePath>Disenchant.Music.dll</PackagePath>
-      <Modified>2023-03-14T02:43:51.421</Modified>
+      <Modified>2023-03-14T13:11:48.376</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Disenchant.Music.exe</PackagePath>
-      <Modified>2023-03-14T02:43:51.442</Modified>
+      <Modified>2023-03-14T13:11:48.388</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.deps.json">
       <PackagePath>Disenchant.Music.deps.json</PackagePath>
-      <Modified>2023-03-13T10:34:50.619</Modified>
+      <Modified>2023-03-14T04:26:29.176</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

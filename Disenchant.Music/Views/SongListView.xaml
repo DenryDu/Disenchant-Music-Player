@@ -17,11 +17,7 @@
               CacheMode="BitmapCache"
               ItemClick="{x:Bind songListViewModel.SonglistView_ItemClick}"
               IsItemClickEnabled="True" SelectionMode="None" >
-        <ListView.ItemContainerTransitions>
-            <TransitionCollection>
-                <EntranceThemeTransition IsStaggeringEnabled="True" />
-            </TransitionCollection>
-        </ListView.ItemContainerTransitions>
+
 
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="localModel:MusicInfo">

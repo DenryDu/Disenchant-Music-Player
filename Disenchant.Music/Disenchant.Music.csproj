@@ -18,6 +18,7 @@
     <None Remove="Views\RootNavView.xaml" />
     <None Remove="Views\RootPlayBarView.xaml" />
     <None Remove="Views\SettingsView.xaml" />
+    <None Remove="Views\SongDetailView.xaml" />
     <None Remove="Views\SongListView.xaml" />
   </ItemGroup>
 
@@ -49,6 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tutorials\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\SongDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\ArtistListView.xaml">

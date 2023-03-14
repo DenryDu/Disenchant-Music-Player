@@ -22,7 +22,14 @@ namespace Disenchant.Music.ViewModels
         };
         public RootNavViewModel()
         {
-            RootNavView.GetFrame().Navigate(typeof(SongListView));
+            if(GlobalData.RootNavStatus == null || GlobalData.RootNavStatus == "")
+            {
+                RootNavView.GetFrame().Navigate(typeof(SongListView));
+            }
+            else
+            {
+                RootNavView.GetFrame().Navigate(_pages.FirstOrDefault(x => x.Tag.Equals(GlobalData.RootNavStatus)).Page);
+            }
         }
         // Navigation
         internal void NavView_ItemInvoked(NavigationView sender,
@@ -31,11 +38,13 @@ namespace Disenchant.Music.ViewModels
             if (args.IsSettingsInvoked == true)
             {
                 NavView_Navigate("settings", args.RecommendedNavigationTransitionInfo);
+                GlobalData.RootNavStatus = "settings";
             }
             else if (args.InvokedItemContainer != null)
             {
                 var navItemTag = args.InvokedItemContainer.Tag.ToString();
                 NavView_Navigate(navItemTag, args.RecommendedNavigationTransitionInfo);
+                GlobalData.RootNavStatus = navItemTag;
             }
         }
         internal void NavView_Navigate(

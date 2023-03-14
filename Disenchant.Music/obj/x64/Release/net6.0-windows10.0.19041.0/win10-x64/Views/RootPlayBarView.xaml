@@ -46,11 +46,13 @@
         </Grid>
 
         <!-- Cover -->
-        <Border Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="10 0 10 10" Height="90" Width="90" CornerRadius="10">
-            <Image x:ConnectionId='11' x:Name="ControllerCover"
+        <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="10 0 10 10" Height="90" Width="90">
+            <Border CornerRadius="10" Height="90" Width="90">
+                <Image x:ConnectionId='11' x:Name="ControllerCover"
                         VerticalAlignment="Center" HorizontalAlignment="Left" Height="90" Width="90" 
                                                                                                      ></Image>
-        </Border>
+            </Border>
+        </Button>
 
 
         <!-- Info -->

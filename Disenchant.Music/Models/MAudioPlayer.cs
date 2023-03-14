@@ -20,6 +20,12 @@ using Windows.Media.Devices;
 using Windows.Media.Core;
 using Disenchant.Music.Helpers;
 using Windows.Storage;
+using System.Collections.ObjectModel;
+using Windows.UI.Input;
+using System.Text.RegularExpressions;
+using WinRT;
+using System.Diagnostics;
+using Windows.Foundation;
 
 namespace Disenchant.Music.Models
 {
@@ -33,11 +39,8 @@ namespace Disenchant.Music.Models
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
         }
 
-        public bool CanPlay;
-
- 
-
         public static RootPlayBarView PlayBarUI;
+        public static SongDetailView songDetailUI;
 
         public MAudioPlayer()
         {
@@ -53,6 +56,9 @@ namespace Disenchant.Music.Models
             // Init Volume
             CurrentVolume = 100;
 
+            // Init
+            CurrentLyric = new ObservableCollection<LyricSlice>();
+            CurrentLyricIndex = 0;
             InitMediaPlayer();
         }
 
@@ -110,11 +116,17 @@ namespace Disenchant.Music.Models
                 if (_currentMusic.Path != null)
                 {
                     SetSource(_currentMusic.Path);
+                    CurrentLyric = LyricSlice.GetLyricSlices(CurrentMusic.Lyric);
                 }
+
                 OnPropertyChanged(nameof(CurrentMusic));
             }
         }
-
+        private ObservableCollection<LyricSlice> _currentLyric;
+        public ObservableCollection<LyricSlice> CurrentLyric { get { return _currentLyric; } set { _currentLyric = value; try { OnPropertyChanged(nameof(CurrentLyric)); } catch { } } }
+        private int _currentLyricIndex;
+        public int CurrentLyricIndex { get { return _currentLyricIndex; } set { _currentLyricIndex = value; OnPropertyChanged(nameof(CurrentLyricIndex)); } }
+        
         //
         public MediaPlayer MediaPlayer { get; private set; }
 
@@ -132,6 +144,20 @@ namespace Disenchant.Music.Models
             var mgr = MediaPlayer.CommandManager;
             mgr.IsEnabled = true;
         }
+        public int GetCurrentLyricIndex(double currentTime)
+        {
+            var index = CurrentLyric.ToList().FindIndex(x => x.Time > currentTime);
+            if (index > 0)
+            {
+                index--;
+            }
+            if (index < 0)
+            {
+                index = CurrentLyric.Count - 1;
+            }
+            return index;
+        }
+        /*
         /// <summary>
         /// WaveOutEvent: Sending audio to the soundcard, ease of use and broad platform support.
         /// </summary>
@@ -147,6 +173,8 @@ namespace Disenchant.Music.Models
         /// AudioFileReader: To load an audio file.This is a good choice as it supports several common audio file formats including WAV and MP3.
         /// </summary>
         private AudioFileReader _audioFile;
+
+        */
 
         /// <summary>
         /// Timer Thread to Update Progress Position
@@ -206,6 +234,7 @@ namespace Disenchant.Music.Models
                 MediaPlayer.MediaEnded += OnPlaybackStopped;
             }
         }
+        /*
         private void PlaybackSession_PlaybackStateChanged(MediaPlaybackSession sender, object args)
         {
             // TODO: When error, restore
@@ -229,9 +258,8 @@ namespace Disenchant.Music.Models
 
                 }
             }
-           
-
         }
+        */
         internal void SetPlayList(List<MusicInfo> list)
         {
             PlayList = new List<string>();
@@ -410,6 +438,21 @@ namespace Disenchant.Music.Models
                     return;
             }
         }
+
+
+        internal void CoverBtnClickToDetail(object sender, RoutedEventArgs e)
+        {
+            if (!GlobalData.IsDetail)
+            {
+                GlobalData.MainWindow.GetRootNavFrame().Navigate(typeof(SongDetailView));
+                GlobalData.IsDetail = true;
+            }
+            else
+            {
+                GlobalData.MainWindow.GetRootNavFrame().GoBack();
+                GlobalData.IsDetail = false;
+            }
+        }
         /////////////////////////////////////////////////////////////////////    Event Handler End   //////////////////////////////////////////////////////////////////////////////
 
 
@@ -428,8 +471,83 @@ namespace Disenchant.Music.Models
                         Total = MediaPlayer.PlaybackSession.NaturalDuration;
                         CurrentPosition = 100 * (Current.TotalMilliseconds / Total.TotalMilliseconds);
                     });
+                    if(songDetailUI != null) {
+                        songDetailUI.DispatcherQueue.TryEnqueue(Microsoft.UI.Dispatching.DispatcherQueuePriority.Low, () =>
+                        {
+                            CurrentLyricIndex = GetCurrentLyricIndex((MediaPlayer.PlaybackSession?.Position ?? TimeSpan.Zero).TotalMilliseconds);
+                            //songDetailUI.GetLyricViewer().
+                            //Debug.WriteLine(songDetailUI.GetLyricStackPanel().Items[0].GetType());
+
+                            /*
+                            // 获取要定位之前 ScrollViewer 目前的滚动位置
+                            var currentScrollPosition = songDetailUI.GetLyricViewer().VerticalOffset;
+                            var point = new Point(0, currentScrollPosition);
+
+                            // 计算出目标位置并滚动
+                            var targetPosition = songDetailUI.GetCurrentLyricItem(CurrentLyricIndex).TransformToVisual(songDetailUI.GetLyricViewer()).TransformPoint(point);
+                            songDetailUI.GetLyricViewer().ScrollToVerticalOffset(targetPosition.Y);
+                            */
+                        });
+                    }    
+                    
                 }
             }
+        }
+        public double GetLyricFont(double itemTime, int CurrentLyricIdx)
+        {
+            try
+            {
+                if (itemTime == CurrentLyric[CurrentLyricIdx].Time)
+                {
+                    return 50d;
+                }
+                else
+                {
+                    return 20d;
+                }
+            }
+            catch
+            {
+                return 20d;
+            }
+           
+        }
+        public Thickness GetLyricMargin(double itemTime, int CurrentLyricIdx)
+        {
+            try
+            {
+                if (itemTime == CurrentLyric[CurrentLyricIdx].Time)
+                {
+                    return new Thickness(0, 40, 0, 40);
+                }
+                else
+                {
+                    return new Thickness(0, 20, 0, 20);
+                }
+            }
+            catch 
+            { 
+                return new Thickness(0, 20, 0, 20);
+            }
+        }
+        public double GetLyricOpacity(double itemTime, int CurrentLyricIdx)
+        {
+            try
+            {
+                if (itemTime == CurrentLyric[CurrentLyricIdx].Time)
+                {
+                    return 1d;
+                }
+                else
+                {
+                    return .5d;
+                }
+            }
+            catch
+            {
+                return .5d;
+            }
+         
         }
         private void UpdateProgressWhenLocked()
         {

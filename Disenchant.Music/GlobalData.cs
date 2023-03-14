@@ -49,5 +49,11 @@ namespace Disenchant.Music
         internal static MAudioPlayer AudioPlayer { get; set; } = new MAudioPlayer();
 
         public static Window CurrentWindow;
+
+        public static MainWindow MainWindow;
+
+        public static bool IsDetail = false;
+
+        public static string RootNavStatus;
     }
 }
