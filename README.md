@@ -33,23 +33,19 @@
 - 播放页：
 	
 	支持单曲循环、随机(Shuffle, not Random)播放、列表循环，支持音量调节，支持进度条拖拽，支持歌词滚动特效，支持上一首、下一首
-	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-08-31.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-30-13.png)
 - 歌曲列表
-	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-14_21-44-57.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-28-34.png)
 - 专辑列表
-	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-06-43.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-28-46.png)
 - 专辑详情
-	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-09.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-29-09.png)
 - 艺术家列表
-	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-27.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-29-46.png)
 - 艺术家详情
-	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-55.png)
-
-
-
-
-- 指定音乐文件夹
-	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-14_21-45-23.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-30-57.png)
+- 设置页
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-31-12.png)
 
 
 ##### 当前进度
