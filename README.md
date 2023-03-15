@@ -33,9 +33,21 @@
 - 播放页：
 	
 	支持单曲循环、随机(Shuffle, not Random)播放、列表循环，支持音量调节，支持进度条拖拽，支持歌词滚动特效，支持上一首、下一首
-	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-14_21-44-47.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-08-31.png)
 - 歌曲列表
 	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-14_21-44-57.png)
+- 专辑列表
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-06-43.png)
+- 专辑详情
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-09.png)
+- 艺术家列表
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-27.png)
+- 艺术家详情
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-55.png)
+
+
+
+
 - 指定音乐文件夹
 	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-14_21-45-23.png)
 
@@ -70,5 +82,17 @@
 	![2023/3/14-1](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-14_10-45-30.png)	
 - 2023/3/14-21:12: [WinUI3 C#](https://github.com/DenryDu/Disenchant-Music-Player/tree/WinUI3-CSharp) 编写了歌曲详情（展开）页，处理了一些页面跳转逻辑和动效，手动实现了歌词滚动特效，对今天的工作非常满意。实现了我所需要的最基础的功能，接下来的更新可能会放缓。
 	![2023/3/14-2](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-14_21-12-21.png)	
+- 2023/3/15-21:15: [WinUI3 C#](https://github.com/DenryDu/Disenchant-Music-Player/tree/WinUI3-CSharp) 
+	
+	更新播放详情页，增加一个小按钮方便下滑：
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-08-31.png)
+	
+	新增专辑列表页、新增专辑详情页，并做了左滑右滑的页面导航效果，以及两个页面间相同元素的连贯动画：
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-06-43.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-09.png)	
+	
+	新增艺术家列表页、新增艺术家详情页，并做了左滑右滑的页面导航效果，以及两个页面间相同元素的连贯动画：
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-27.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-55.png)
 
 
