@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Release\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-03-14T04:26:04.359</Modified>
+      <Modified>2023-03-15T13:03:58.223</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Release\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-03-14T04:25:08.615</Modified>
+      <Modified>2023-03-15T13:02:59.973</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Release\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.runtimeconfig.json">
       <PackagePath>Disenchant.Music.runtimeconfig.json</PackagePath>
-      <Modified>2023-03-14T03:07:33.824</Modified>
+      <Modified>2023-03-15T13:02:59.848</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Disenchant.Music.exe</PackagePath>
-      <Modified>2023-03-14T04:25:07.811</Modified>
+      <Modified>2023-03-15T13:02:59.550</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Release\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.deps.json">
       <PackagePath>Disenchant.Music.deps.json</PackagePath>
-      <Modified>2023-03-14T04:25:08.305</Modified>
+      <Modified>2023-03-15T13:02:59.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\Microsoft.DiaSymReader.Native.amd64.dll">
       <PackagePath>Microsoft.DiaSymReader.Native.amd64.dll</PackagePath>
@@ -2051,103 +2051,103 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.InteractiveExperiences.Projection.dll">
       <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
-      <Modified>2023-03-14T04:25:11.853</Modified>
+      <Modified>2023-03-15T13:03:04.049</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.WinUI.dll">
       <PackagePath>Microsoft.WinUI.dll</PackagePath>
-      <Modified>2023-03-14T04:25:19.890</Modified>
+      <Modified>2023-03-15T13:03:13.174</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.AppLifecycle.Projection.dll">
       <PackagePath>Microsoft.Windows.AppLifecycle.Projection.dll</PackagePath>
-      <Modified>2023-03-14T04:25:20.454</Modified>
+      <Modified>2023-03-15T13:03:13.755</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.AppNotifications.Builder.Projection.dll">
       <PackagePath>Microsoft.Windows.AppNotifications.Builder.Projection.dll</PackagePath>
-      <Modified>2023-03-14T04:25:20.979</Modified>
+      <Modified>2023-03-15T13:03:14.304</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.AppNotifications.Projection.dll">
       <PackagePath>Microsoft.Windows.AppNotifications.Projection.dll</PackagePath>
-      <Modified>2023-03-14T04:25:21.523</Modified>
+      <Modified>2023-03-15T13:03:14.932</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll">
       <PackagePath>Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll</PackagePath>
-      <Modified>2023-03-14T04:25:22.065</Modified>
+      <Modified>2023-03-15T13:03:15.551</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.ApplicationModel.Resources.Projection.dll">
       <PackagePath>Microsoft.Windows.ApplicationModel.Resources.Projection.dll</PackagePath>
-      <Modified>2023-03-14T04:25:22.642</Modified>
+      <Modified>2023-03-15T13:03:16.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll">
       <PackagePath>Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll</PackagePath>
-      <Modified>2023-03-14T04:25:23.118</Modified>
+      <Modified>2023-03-15T13:03:16.710</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.PushNotifications.Projection.dll">
       <PackagePath>Microsoft.Windows.PushNotifications.Projection.dll</PackagePath>
-      <Modified>2023-03-14T04:25:23.696</Modified>
+      <Modified>2023-03-15T13:03:17.323</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.Security.AccessControl.Projection.dll">
       <PackagePath>Microsoft.Windows.Security.AccessControl.Projection.dll</PackagePath>
-      <Modified>2023-03-14T04:25:24.158</Modified>
+      <Modified>2023-03-15T13:03:17.855</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.System.Power.Projection.dll">
       <PackagePath>Microsoft.Windows.System.Power.Projection.dll</PackagePath>
-      <Modified>2023-03-14T04:25:24.642</Modified>
+      <Modified>2023-03-15T13:03:18.374</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.System.Projection.dll">
       <PackagePath>Microsoft.Windows.System.Projection.dll</PackagePath>
-      <Modified>2023-03-14T04:25:25.102</Modified>
+      <Modified>2023-03-15T13:03:18.877</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.Widgets.Projection.dll">
       <PackagePath>Microsoft.Windows.Widgets.Projection.dll</PackagePath>
-      <Modified>2023-03-14T04:25:25.618</Modified>
+      <Modified>2023-03-15T13:03:19.426</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
-      <Modified>2023-03-14T04:25:26.102</Modified>
+      <Modified>2023-03-15T13:03:19.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\NAudio.dll">
       <PackagePath>NAudio.dll</PackagePath>
-      <Modified>2023-03-14T04:25:26.529</Modified>
+      <Modified>2023-03-15T13:03:20.352</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\NAudio.Asio.dll">
       <PackagePath>NAudio.Asio.dll</PackagePath>
-      <Modified>2023-03-14T04:25:26.976</Modified>
+      <Modified>2023-03-15T13:03:20.839</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\NAudio.Core.dll">
       <PackagePath>NAudio.Core.dll</PackagePath>
-      <Modified>2023-03-14T04:25:27.596</Modified>
+      <Modified>2023-03-15T13:03:21.530</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\NAudio.Midi.dll">
       <PackagePath>NAudio.Midi.dll</PackagePath>
-      <Modified>2023-03-14T04:25:28.075</Modified>
+      <Modified>2023-03-15T13:03:22.065</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\NAudio.Wasapi.dll">
       <PackagePath>NAudio.Wasapi.dll</PackagePath>
-      <Modified>2023-03-14T04:25:28.652</Modified>
+      <Modified>2023-03-15T13:03:22.707</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\NAudio.WinForms.dll">
       <PackagePath>NAudio.WinForms.dll</PackagePath>
-      <Modified>2023-03-14T04:25:29.124</Modified>
+      <Modified>2023-03-15T13:03:23.256</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\NAudio.WinMM.dll">
       <PackagePath>NAudio.WinMM.dll</PackagePath>
-      <Modified>2023-03-14T04:25:29.624</Modified>
+      <Modified>2023-03-15T13:03:23.790</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\TagLibSharp.dll">
       <PackagePath>TagLibSharp.dll</PackagePath>
-      <Modified>2023-03-14T04:25:30.841</Modified>
+      <Modified>2023-03-15T13:03:25.093</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Disenchant.Music.dll">
       <PackagePath>Disenchant.Music.dll</PackagePath>
-      <Modified>2023-03-14T04:25:31.518</Modified>
+      <Modified>2023-03-15T13:03:25.987</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
-      <Modified>2023-03-14T04:26:01.919</Modified>
+      <Modified>2023-03-15T13:03:55.822</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
-      <Modified>2023-03-14T04:26:03.970</Modified>
+      <Modified>2023-03-15T13:03:57.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>

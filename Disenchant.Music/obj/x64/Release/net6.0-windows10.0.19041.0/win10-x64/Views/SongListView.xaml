@@ -17,11 +17,7 @@
               CacheMode="BitmapCache"
                                                                            
               IsItemClickEnabled="True" SelectionMode="None" >
-        <ListView.ItemContainerTransitions>
-            <TransitionCollection>
-                <EntranceThemeTransition IsStaggeringEnabled="True" />
-            </TransitionCollection>
-        </ListView.ItemContainerTransitions>
+
 
         <ListView.ItemTemplate>
             <DataTemplate                                  >

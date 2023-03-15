@@ -15,21 +15,26 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <!--<RowDefinition Height="20"></RowDefinition>-->
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="Transparent" BorderBrush="Transparent"
+                Click="{x:Bind localRoot:GlobalData.AudioPlayer.CoverBtnClickToDetail}">
+            <FontIcon Glyph="&#xE011;"></FontIcon>
+        </Button>
         
-        <Border Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600" CornerRadius="10">
+        <Border Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600" CornerRadius="10">
             <Image x:Name="ControllerCover"
                         VerticalAlignment="Center" HorizontalAlignment="Left" Height="600" Width="600" 
                    Source="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.Cover, Mode=OneWay}"></Image>
         </Border>
         <ScrollViewer x:Name="LyricViewer" 
-                      Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600"
+                      Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600"
                       VerticalScrollBarVisibility="Hidden">
 
 

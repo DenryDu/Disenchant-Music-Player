@@ -12,44 +12,44 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Height="130" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+    <Grid Height="152" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Center">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*" MinWidth="0"/>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*" MinWidth="0"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
 
         <!-- Row One Progress Bar -->
         <Grid Grid.Row="0" Grid.ColumnSpan="5">
             <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock x:ConnectionId='12' Grid.Row="0" Grid.Column="0" 
+            <TextBlock x:ConnectionId='13' Grid.Row="0" Grid.Column="0"  Margin="16 0 0 0"
                                                                                                                                                      
-                           VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"></TextBlock>
-            <Slider x:ConnectionId='13' Grid.Row="0" Grid.Column="1" x:Name="ProgressSlider" Orientation="Horizontal" VerticalAlignment="Center" Minimum="0" Maximum="100" Margin="20 0 8 0"
+                           VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="15"></TextBlock>
+            <Slider x:ConnectionId='14' Grid.Row="0" Grid.Column="1" x:Name="ProgressSlider" Orientation="Horizontal" VerticalAlignment="Center" Minimum="0" Maximum="100" Margin="16 0 0 0"
                                                                                                   ></Slider>
-            <TextBlock x:ConnectionId='14' Grid.Row="0" Grid.Column="2"
+            <TextBlock x:ConnectionId='15' Grid.Row="0" Grid.Column="2" Margin="16 0 16 0"
                                                                                                                                             
-                           VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="15"></TextBlock>
+                           VerticalAlignment="Center"  HorizontalAlignment="Right" FontSize="15"></TextBlock>
         </Grid>
 
         <!-- Cover -->
-        <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="10 0 10 10" Height="90" Width="90">
+        <Button x:ConnectionId='2' Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="14 8 14 16" Height="95" Width="95" Background="Transparent" BorderBrush="Transparent" Padding="0"                                                                        >
             <Border CornerRadius="10" Height="90" Width="90">
-                <Image x:ConnectionId='11' x:Name="ControllerCover"
-                        VerticalAlignment="Center" HorizontalAlignment="Left" Height="90" Width="90" 
+                <Image x:ConnectionId='12' x:Name="ControllerCover"
+                        VerticalAlignment="Center" HorizontalAlignment="Center" Height="90" Width="90" 
                                                                                                      ></Image>
             </Border>
         </Button>
@@ -57,8 +57,8 @@
 
         <!-- Info -->
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
-            <TextBlock x:ConnectionId='9'                                                                                  Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
-            <TextBlock x:ConnectionId='10'                                                                                               Margin="8,0,0,0" TextWrapping="NoWrap"/>
+            <TextBlock x:ConnectionId='10'                                                                                  Margin="8,0,0,5" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
+            <TextBlock x:ConnectionId='11'                                                                                               Margin="8,0,0,0" TextWrapping="NoWrap"/>
         </StackPanel>
 
 
@@ -76,7 +76,7 @@
 
             <!-- Prev -->
             <Grid Grid.Row="0"  Grid.Column="0">
-                <Button x:ConnectionId='8' Background="Transparent" BorderBrush="Transparent"
+                <Button x:ConnectionId='9' Background="Transparent" BorderBrush="Transparent"
                                                                                           >
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xe892;"></FontIcon>
                 </Button>
@@ -84,15 +84,15 @@
 
             <!-- Play/Pause -->
             <Grid Grid.Row="0"  Grid.Column="1">
-                <Button x:ConnectionId='6' x:Name="PlayButton"                                                                   Background="Transparent" BorderBrush="Transparent">
-                    <FontIcon x:ConnectionId='7' FontFamily="Segoe Fluent Icons" 
+                <Button x:ConnectionId='7' x:Name="PlayButton"                                                                   Background="Transparent" BorderBrush="Transparent">
+                    <FontIcon x:ConnectionId='8' FontFamily="Segoe Fluent Icons" 
                                                                                                                                                         ></FontIcon>
                 </Button>
             </Grid>
 
             <!-- Next -->
             <Grid Grid.Row="0"  Grid.Column="2">
-                <Button x:ConnectionId='5' Background="Transparent" BorderBrush="Transparent"
+                <Button x:ConnectionId='6' Background="Transparent" BorderBrush="Transparent"
                                                                                       >
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE893;"></FontIcon>
                 </Button>
@@ -117,7 +117,7 @@
                 <Button.Flyout>
                     <Flyout>
                         <StackPanel>
-                            <Slider x:ConnectionId='4' x:Name="VolumeSlider" 
+                            <Slider x:ConnectionId='5' x:Name="VolumeSlider" 
                                 Width="200" Minimum="0" Maximum="100"
                                                                                                             
                                                                                                      ></Slider>
@@ -125,16 +125,16 @@
                     </Flyout>
                 </Button.Flyout>
             </Button>
-            <Button x:ConnectionId='2' Grid.Row="0"  Grid.Column="1" Background="Transparent" BorderBrush="Transparent"
+            <Button x:ConnectionId='3' Grid.Row="0"  Grid.Column="1" Background="Transparent" BorderBrush="Transparent"
                                                                                         >
-                <FontIcon x:ConnectionId='3' FontFamily="Segoe Fluent Icons" 
+                <FontIcon x:ConnectionId='4' FontFamily="Segoe Fluent Icons" 
                                                                                                                                                       ></FontIcon>
             </Button>
             <!-- e8ed repeatonce -->
             <!-- e8ee repeatall -->
             <!--<Button Grid.Row="0"  Grid.Column="1">SoundEffect</Button>-->
-            <Button Grid.Row="0"  Grid.Column="2">Playlist</Button>
-            <Button Grid.Row="0"  Grid.Column="3">MoreInfo</Button>
+            <Button Grid.Row="0"  Grid.Column="2" Visibility="Collapsed">Playlist</Button>
+            <Button Grid.Row="0"  Grid.Column="3" Visibility="Collapsed">MoreInfo</Button>
 
         </Grid>
 

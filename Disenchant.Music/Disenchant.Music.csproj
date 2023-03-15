@@ -12,7 +12,9 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Views\AlbumDetailView.xaml" />
     <None Remove="Views\AlbumListView.xaml" />
+    <None Remove="Views\ArtistDetailView.xaml" />
     <None Remove="Views\ArtistListView.xaml" />
     <None Remove="Views\PlayListView.xaml" />
     <None Remove="Views\RootNavView.xaml" />
@@ -50,6 +52,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tutorials\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\ArtistDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\AlbumDetailView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\SongDetailView.xaml">

@@ -27,18 +27,18 @@ namespace Disenchant.Music.Models
         public StorageFolder Folder { get { return _folder; } set { _folder = value; OnPropertyChanged(nameof(Folder)); } }
 
         //维护一个专辑-CoverSet
-        private HashSet<AlbumInfo> _albums;
-        public HashSet<AlbumInfo> Albums { get { return _albums; } set { _albums = value; OnPropertyChanged(nameof(Albums)); } }
+        private Dictionary<string, AlbumInfo> _albums;
+        public Dictionary<string, AlbumInfo> Albums { get { return _albums; } set { _albums = value; OnPropertyChanged(nameof(Albums)); } }
 
-        private HashSet<ArtistInfo> _artists;
-        public HashSet<ArtistInfo> Artists { get { return _artists; } set { _artists = value; OnPropertyChanged(nameof(Artists)); } }
+        private Dictionary<string, ArtistInfo> _artists;
+        public Dictionary<string, ArtistInfo> Artists { get { return _artists; } set { _artists = value; OnPropertyChanged(nameof(Artists)); } }
 
         private ObservableCollection<MusicInfo> _musics;
         public ObservableCollection<MusicInfo> Musics { get { return _musics; } set { _musics = value; OnPropertyChanged(nameof(Musics)); } }
 
         // 资源字典：文件名-文件快速索引
-        private Dictionary<String, StorageFile> _dictionary;
-        public Dictionary<String, StorageFile> Dictionary { get { return _dictionary; } set { _dictionary = value; OnPropertyChanged(nameof(Dictionary)); } }
+        private Dictionary<string, StorageFile> _dictionary;
+        public Dictionary<string, StorageFile> Dictionary { get { return _dictionary; } set { _dictionary = value; OnPropertyChanged(nameof(Dictionary)); } }
 
         public async void InitMusics()
         {
@@ -53,7 +53,28 @@ namespace Disenchant.Music.Models
                 {
                     if (GlobalData.SupportedAudioTypes.Contains(fi.FileType.ToLower()))
                     {
-                        Musics.Add(new MusicInfo(fi.Path));
+                        MusicInfo music = new MusicInfo(fi.Path);
+                        Musics.Add(music);
+                        if (!Albums.ContainsKey(music.Album))
+                        {
+                            Albums[music.Album] = new AlbumInfo(music);
+                        }
+                        else
+                        {
+                            Albums[music.Album].Update(music);
+                        }
+
+                        foreach(string artist in music.Artists)
+                        {
+                            if (!Artists.ContainsKey(artist))
+                            {
+                                Artists[artist] = new ArtistInfo(music, artist);
+                            }
+                            else
+                            {
+                                Artists[artist].TotalNum++;
+                            }
+                        }
                         //Dictionary.Add(fi.Path, fi);
                     }
                 }
@@ -73,11 +94,40 @@ namespace Disenchant.Music.Models
         }
         */
 
+        public List<MusicBriefInfo> GetMusicBriefByAlbum(string name)
+        {
+            List<MusicBriefInfo> list = new List<MusicBriefInfo>();
+            foreach(MusicInfo music in Musics)
+            {
+                if(music.Album == name)
+                {
+                    list.Add(new MusicBriefInfo(music.Path, music.Title));
+                }
+            }
+            return list;
+        }
+
+        public List<MusicInfo> GetMusicsByArtist(string name)
+        {
+            List<MusicInfo> list = new List<MusicInfo>();
+            foreach (MusicInfo music in Musics)
+            {
+                foreach(string artist in music.Artists)
+                {
+                    if(artist == name)
+                    {
+                        list.Add(music);
+                    }
+                }
+            }
+            return list;
+        }
+        
         public MusicLibrary()
         {
             Musics = new ObservableCollection<MusicInfo>();
-            Artists = new HashSet<ArtistInfo>();
-            Albums = new HashSet<AlbumInfo>();
+            Artists = new Dictionary<string, ArtistInfo>();
+            Albums = new Dictionary<string, AlbumInfo>();
         }
         /// <summary>
         /// 公开静态方法

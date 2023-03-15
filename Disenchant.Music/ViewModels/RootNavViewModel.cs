@@ -10,7 +10,6 @@ namespace Disenchant.Music.ViewModels
 {
     internal class RootNavViewModel
     {
-        public static RootNavView RootNavView;
         // List of ValueTuple holding the Navigation Tag and the relative Navigation Page
         private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
         {
@@ -19,16 +18,18 @@ namespace Disenchant.Music.ViewModels
             ("artistlist", typeof(ArtistListView)),
             ("playlist", typeof(PlayListView)),
             ("settings", typeof(SettingsView)),
+            ("albumdetail", typeof(AlbumDetailView)),
+            ("artistdetail", typeof(ArtistDetailView)),
         };
         public RootNavViewModel()
         {
             if(GlobalData.RootNavStatus == null || GlobalData.RootNavStatus == "")
             {
-                RootNavView.GetFrame().Navigate(typeof(SongListView));
+                GlobalData.RootNavView.GetFrame().Navigate(typeof(SongListView));
             }
             else
             {
-                RootNavView.GetFrame().Navigate(_pages.FirstOrDefault(x => x.Tag.Equals(GlobalData.RootNavStatus)).Page);
+                GlobalData.RootNavView.GetFrame().Navigate(_pages.FirstOrDefault(x => x.Tag.Equals(GlobalData.RootNavStatus)).Page);
             }
         }
         // Navigation
@@ -63,12 +64,12 @@ namespace Disenchant.Music.ViewModels
             }
             // Get the page type before navigation so you can prevent duplicate
             // entries in the backstack.
-            var preNavPageType = RootNavView.GetFrame().CurrentSourcePageType;
+            var preNavPageType = GlobalData.RootNavView.GetFrame().CurrentSourcePageType;
 
             // Only navigate if the selected page isn't currently loaded.
             if (!(_page is null) && !Type.Equals(preNavPageType, _page))
             {
-                RootNavView.GetFrame().Navigate(_page, null, transitionInfo);
+                GlobalData.RootNavView.GetFrame().Navigate(_page, null, transitionInfo);
             }
         }
     }

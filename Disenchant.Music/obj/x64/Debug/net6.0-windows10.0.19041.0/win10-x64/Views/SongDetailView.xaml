@@ -15,31 +15,36 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <!--<RowDefinition Height="20"></RowDefinition>-->
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+
+        <Button x:ConnectionId='2' Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="Transparent" BorderBrush="Transparent"
+                                                                                       >
+            <FontIcon Glyph="&#xE011;"></FontIcon>
+        </Button>
         
-        <Border Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600" CornerRadius="10">
-            <Image x:ConnectionId='6' x:Name="ControllerCover"
+        <Border Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600" CornerRadius="10">
+            <Image x:ConnectionId='7' x:Name="ControllerCover"
                         VerticalAlignment="Center" HorizontalAlignment="Left" Height="600" Width="600" 
                                                                                                      ></Image>
         </Border>
-        <ScrollViewer x:ConnectionId='2' x:Name="LyricViewer" 
-                      Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600"
+        <ScrollViewer x:ConnectionId='3' x:Name="LyricViewer" 
+                      Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600"
                       VerticalScrollBarVisibility="Hidden">
 
 
-            <ListView x:ConnectionId='3' x:Name="LyricStackPanel"                                                                                  
+            <ListView x:ConnectionId='4' x:Name="LyricStackPanel"                                                                                  
               IsItemClickEnabled="True" SelectionMode="None" >
 
 
                 <ListView.ItemTemplate>
                     <DataTemplate                                   >
-                        <TextBlock x:ConnectionId='5' 
+                        <TextBlock x:ConnectionId='6' 
                                                    
                                                                                                                                                                     
                                                                                                                                                                     

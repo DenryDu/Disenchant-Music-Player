@@ -62,6 +62,9 @@ namespace Disenchant.Music.Models
             InitMediaPlayer();
         }
 
+        private string _playlistName;
+        public string PlayListName { get { return _playlistName; } set { _playlistName = value; OnPropertyChanged(nameof(PlayListName)); } }
+
         /// <summary>
         /// PlayList: List of Music Path
         /// </summary>
@@ -230,16 +233,15 @@ namespace Disenchant.Music.Models
                 //MediaPlayer.Volume
                 MediaPlayer.Volume = CurrentVolume / 100d;
                 positionUpdateTimer = ThreadPoolTimer.CreatePeriodicTimer(UpdatTimerHandler, TimeSpan.FromMilliseconds(100), UpdateTimerDestoyed);
-                //MediaPlayer.PlaybackSession.PlaybackStateChanged += PlaybackSession_PlaybackStateChanged;
+                MediaPlayer.PlaybackSession.PlaybackStateChanged += PlaybackSession_PlaybackStateChanged;
                 MediaPlayer.MediaEnded += OnPlaybackStopped;
             }
         }
-        /*
+        
         private void PlaybackSession_PlaybackStateChanged(MediaPlaybackSession sender, object args)
         {
             // TODO: When error, restore
-            
-            if (MediaPlayer != null)
+            try
             {
                 switch (MediaPlayer.PlaybackSession.PlaybackState)
                 {
@@ -250,18 +252,28 @@ namespace Disenchant.Music.Models
                     case MediaPlaybackState.Buffering:
                         break;
                     case MediaPlaybackState.Playing:
+                        PlayBarUI.DispatcherQueue.TryEnqueue(Microsoft.UI.Dispatching.DispatcherQueuePriority.Low, () =>
+                        {
+                            PlayState = 1;
+                        });
                         break;
-                    case MediaPlaybackState.Paused: 
+                    case MediaPlaybackState.Paused:
+                        PlayBarUI.DispatcherQueue.TryEnqueue(Microsoft.UI.Dispatching.DispatcherQueuePriority.Low, () =>
+                        {
+                            PlayState = 0;
+                        });
                         break;
-                default:
-                    break;
+                    default:
+                        break;
 
                 }
             }
+            catch { }
         }
-        */
-        internal void SetPlayList(List<MusicInfo> list)
+        
+        internal void SetPlayList(string name, List<MusicInfo> list)
         {
+            PlayListName = name;
             PlayList = new List<string>();
             foreach (MusicInfo info in list)
             {
@@ -271,7 +283,19 @@ namespace Disenchant.Music.Models
 
             // 生成Shuffle序列
             UpdateShuffle();
+        }
+        internal void SetPlayList(string name, List<MusicBriefInfo> list)
+        {
+            PlayListName = name;
+            PlayList = new List<string>();
+            foreach (MusicBriefInfo info in list)
+            {
+                PlayList.Add(info.Path);
+            }
+            PlayListLength = list.Count;
 
+            // 生成Shuffle序列
+            UpdateShuffle();
         }
         public void PlayListSongByPath(string path, bool forced = false)
         {
@@ -305,7 +329,6 @@ namespace Disenchant.Music.Models
         internal void Play()
         {
             MediaPlayer.Play();
-            PlayState = 1;
         }
         /// <summary>
         /// 暂停
@@ -313,7 +336,7 @@ namespace Disenchant.Music.Models
         internal void Pause()
         {
             MediaPlayer.Pause();
-            PlayState = 0;
+            //PlayState = 0;
         }
         /// <summary>
         /// 停止
@@ -406,15 +429,15 @@ namespace Disenchant.Music.Models
                 case 0:
                     int currentIdxInShuffle = ShuffleList.FindIndex(p => p == PlayListIdx);
                     // Shuffle
-                    PlayListSongByPath(PlayList[ShuffleList[(currentIdxInShuffle + PlayListLength - 1) % PlayListLength]]);
+                    PlayListSongByPath(PlayList[ShuffleList[(currentIdxInShuffle + PlayListLength - 1) % PlayListLength]], true);
                     return;
                 case 1:
                     // Repeat All
-                    PlayListSongByPath(PlayList[(PlayListIdx + PlayListLength - 1) % PlayListLength]);
+                    PlayListSongByPath(PlayList[(PlayListIdx + PlayListLength - 1) % PlayListLength], true);
                     return;
                 case 2:
                     // Repeat One
-                    PlayListSongByPath(PlayList[(PlayListIdx + PlayListLength - 1) % PlayListLength]);
+                    PlayListSongByPath(PlayList[(PlayListIdx + PlayListLength - 1) % PlayListLength], true);
                     return;
             }
         }
@@ -426,15 +449,15 @@ namespace Disenchant.Music.Models
                 case 0:
                     int currentIdxInShuffle = ShuffleList.FindIndex(p => p == PlayListIdx);
                     // Shuffle
-                    PlayListSongByPath(PlayList[ShuffleList[(currentIdxInShuffle + 1) % PlayListLength]]);
+                    PlayListSongByPath(PlayList[ShuffleList[(currentIdxInShuffle + 1) % PlayListLength]], true);
                     return;
                 case 1:
                     // Repeat All
-                    PlayListSongByPath(PlayList[(PlayListIdx + 1) % PlayListLength]);
+                    PlayListSongByPath(PlayList[(PlayListIdx + 1) % PlayListLength], true) ;
                     return;
                 case 2:
                     // Repeat One
-                    PlayListSongByPath(PlayList[(PlayListIdx + 1) % PlayListLength]);
+                    PlayListSongByPath(PlayList[(PlayListIdx + 1) % PlayListLength], true);
                     return;
             }
         }
@@ -467,9 +490,14 @@ namespace Disenchant.Music.Models
                 {
                     PlayBarUI.DispatcherQueue.TryEnqueue(Microsoft.UI.Dispatching.DispatcherQueuePriority.Low, () =>
                     {
-                        Current = MediaPlayer.PlaybackSession?.Position ?? TimeSpan.Zero;
-                        Total = MediaPlayer.PlaybackSession.NaturalDuration;
-                        CurrentPosition = 100 * (Current.TotalMilliseconds / Total.TotalMilliseconds);
+                        try
+                        {
+                            Current = MediaPlayer.PlaybackSession?.Position ?? TimeSpan.Zero;
+                            Total = MediaPlayer.PlaybackSession.NaturalDuration;
+                            CurrentPosition = 100 * (Current.TotalMilliseconds / Total.TotalMilliseconds);
+                        }
+                        catch { }
+
                     });
                     if(songDetailUI != null) {
                         songDetailUI.DispatcherQueue.TryEnqueue(Microsoft.UI.Dispatching.DispatcherQueuePriority.Low, () =>
@@ -581,11 +609,11 @@ namespace Disenchant.Music.Models
                             case 0:
                                 int currentIdxInShuffle = ShuffleList.FindIndex(p => p == PlayListIdx);
                                 // Shuffle
-                                PlayListSongByPath(PlayList[ShuffleList[(currentIdxInShuffle + 1) % PlayListLength]]);
+                                PlayListSongByPath(PlayList[ShuffleList[(currentIdxInShuffle + 1) % PlayListLength]], true);
                                 return;
                             case 1:
                                 // Repeat All
-                                PlayListSongByPath(PlayList[(PlayListIdx + 1) % PlayListLength]);
+                                PlayListSongByPath(PlayList[(PlayListIdx + 1) % PlayListLength], true);
                                 return;
                             case 2:
                                 // Repeat One

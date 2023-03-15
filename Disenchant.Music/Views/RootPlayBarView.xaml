@@ -22,7 +22,7 @@
             <ColumnDefinition Width="*" MinWidth="0"/>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*" MinWidth="0"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
 
         <!-- Row One Progress Bar -->
@@ -133,8 +133,8 @@
             <!-- e8ed repeatonce -->
             <!-- e8ee repeatall -->
             <!--<Button Grid.Row="0"  Grid.Column="1">SoundEffect</Button>-->
-            <Button Grid.Row="0"  Grid.Column="2">Playlist</Button>
-            <Button Grid.Row="0"  Grid.Column="3">MoreInfo</Button>
+            <Button Grid.Row="0"  Grid.Column="2" Visibility="Collapsed">Playlist</Button>
+            <Button Grid.Row="0"  Grid.Column="3" Visibility="Collapsed">MoreInfo</Button>
 
         </Grid>
 

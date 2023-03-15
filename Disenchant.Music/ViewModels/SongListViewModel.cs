@@ -26,39 +26,30 @@ namespace Disenchant.Music.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
         }
 
-
-
         public static RootPlayBarView RootPlayBarView;
 
         private ObservableCollection<MusicInfo> _songList;
         public ObservableCollection<MusicInfo> SongList { get { return _songList; } set { 
                 _songList = value;
-                if (IsChoosed)
-                {
-                    GlobalData.AudioPlayer.SetPlayList(SongList.ToList());
-                }
+                //if (GlobalData.AudioPlayer.PlayListName!="Songs:All")
+                //{
+                //    GlobalData.AudioPlayer.SetPlayList("Songs:All", SongList.ToList());
+                //}
                 OnPropertyChanged(nameof(SongList)); } }
 
-        /// <summary>
-        /// Songlist 是否被选为 PlayList
-        /// </summary>
-        private bool _isChoosed;
-        public bool IsChoosed { get { return _isChoosed; } set { _isChoosed = value; OnPropertyChanged(nameof(IsChoosed)); } }
         public SongListViewModel()
         {
             SongList = new ObservableCollection<MusicInfo>();
             SongList = GlobalData.MusicLibrary.Musics;
-            IsChoosed = false;
         }
 
         public void SonglistView_ItemClick(object sender, ItemClickEventArgs e)
         {
             MusicInfo musicInfo = e.ClickedItem as MusicInfo;
             // 如果未进歌单，则进歌单
-            if (!IsChoosed)
+            if (GlobalData.AudioPlayer.PlayListName != "Songs:All")
             {
-                GlobalData.AudioPlayer.SetPlayList(SongList.ToList());
-                IsChoosed = true;
+                GlobalData.AudioPlayer.SetPlayList("Songs:All", SongList.ToList());
             }
             GlobalData.AudioPlayer.UpdateShuffle();
             GlobalData.AudioPlayer.PlayListSongByPath(musicInfo.Path);

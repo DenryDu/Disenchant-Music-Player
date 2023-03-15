@@ -32,6 +32,10 @@ namespace Disenchant.Music.Models
         {
             List<LyricSlice> lyricSlices = new List<LyricSlice>();
 
+            if (lyric == null)
+            {
+                return new ObservableCollection<LyricSlice>();
+            }
             string[] lines = lyric.Split('\n');
             foreach (string line in lines)
             {

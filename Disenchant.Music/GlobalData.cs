@@ -1,6 +1,7 @@
 ﻿using Disenchant.Music.Helpers;
 using Disenchant.Music.Model;
 using Disenchant.Music.Models;
+using Disenchant.Music.Views;
 using Microsoft.UI.Xaml;
 using System;
 using System.Collections.Generic;
@@ -55,5 +56,10 @@ namespace Disenchant.Music
         public static bool IsDetail = false;
 
         public static string RootNavStatus;
+
+        internal static string SelectedAlbum;
+        internal static string SelectedArtist;
+
+        public static RootNavView RootNavView;
     }
 }

@@ -11,6 +11,12 @@
     <None Update="Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Views\ArtistDetailView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AlbumDetailView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\SongDetailView.xaml">
       <SubType>Designer</SubType>
     </Page>

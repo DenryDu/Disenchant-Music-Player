@@ -1,6 +1,8 @@
 App.xbf
 MainWindow.xbf
+Views\AlbumDetailView.xbf
 Views\AlbumListView.xbf
+Views\ArtistDetailView.xbf
 Views\ArtistListView.xbf
 Views\PlayListView.xbf
 Views\RootNavView.xbf

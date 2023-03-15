@@ -34,7 +34,7 @@ namespace Disenchant.Music.Views
         public RootNavView()
         {
             this.InitializeComponent();
-            RootNavViewModel.RootNavView = this;
+            GlobalData.RootNavView = this;
             rootNavViewModel = new RootNavViewModel();
         }
         public Frame GetFrame() { return ContentFrame; }

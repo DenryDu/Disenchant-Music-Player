@@ -6,12 +6,29 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Disenchant.Music.Views"
+    xmlns:localModel="using:Disenchant.Music.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <GridView
+        x:Name="AlbumsGridView"
+        ItemsSource="{x:Bind _albumListViewModel.AlbumList, Mode=OneWay}"
+        IsItemClickEnabled="True" SelectionMode="None"
+        ItemClick="AlbumsGridView_ItemClick">
 
-    </Grid>
+        <GridView.ItemTemplate>
+            <DataTemplate x:DataType="localModel:AlbumInfo">
+                <StackPanel Margin="15" Width="auto" Height="auto">
+                    <Border Grid.Column="0"  Width="150" Height="150" CornerRadius="10" Margin="0 0 0 10" x:Name="AlbumCover">
+                        <Image Stretch="UniformToFill" Source="{x:Bind Cover}" Width="150" Height="150"/>
+                    </Border>
+                    <TextBlock Text="{x:Bind Name}" FontSize="15" TextTrimming="CharacterEllipsis"></TextBlock>
+                    <TextBlock Text="{x:Bind GetCountAndYearStr(TotalNum,Year)}"></TextBlock>
+                </StackPanel>
+            </DataTemplate>
+        </GridView.ItemTemplate>
+    </GridView>
 </Page>
+

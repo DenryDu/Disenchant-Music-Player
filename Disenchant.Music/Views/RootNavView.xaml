@@ -32,6 +32,7 @@
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
 
+            
             <!--Albums-->
             <NavigationViewItem Content="Albums" Tag="albumlist">
                 <NavigationViewItem.Icon>
@@ -51,7 +52,7 @@
             </NavigationViewItem>
 
             <!--Playlist-->
-            <NavigationViewItem Content="Playlists" Tag="playlist">
+            <NavigationViewItem Content="Playlists" Tag="playlist" Visibility="Collapsed">
                 <NavigationViewItem.Icon>
                     <!--<FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xf168;"></FontIcon>-->
                     <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xf156;"></FontIcon>
