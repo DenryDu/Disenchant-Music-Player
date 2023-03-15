@@ -1,4 +1,4 @@
-# 离幻 UWP 音乐播放器
+[# 离幻 UWP 音乐播放器
 ### Disenchant Music Player
 
 ###### 结项日期：待定
@@ -96,6 +96,10 @@
 	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-55.png)
 - 2023/3/15-23:34: [WinUI3 C#](https://github.com/DenryDu/Disenchant-Music-Player/tree/WinUI3-CSharp) 小小修改了艺术家详情页，使得歌曲封面能够展现。同时，引进Acrylic样式（可以在设置中选择关闭或开启）
 	
-	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-27.png)
-	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-55.png)
-
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-30-13.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-28-34.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-28-46.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-29-09.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-29-46.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-30-57.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_23-31-12.png)
