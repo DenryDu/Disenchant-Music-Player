@@ -94,5 +94,8 @@
 	新增艺术家列表页、新增艺术家详情页，并做了左滑右滑的页面导航效果，以及两个页面间相同元素的连贯动画：
 	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-27.png)
 	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-55.png)
-
+- 2023/3/15-23:34: [WinUI3 C#](https://github.com/DenryDu/Disenchant-Music-Player/tree/WinUI3-CSharp) 小小修改了艺术家详情页，使得歌曲封面能够展现。同时，引进Acrylic样式（可以在设置中选择关闭或开启）
+	
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-27.png)
+	![](https://github.com/DenryDu/Disenchant-Music-Player/blob/main/Images/Snipaste_2023-03-15_21-07-55.png)
 
