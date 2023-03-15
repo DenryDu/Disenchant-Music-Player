@@ -8,21 +8,31 @@
     xmlns:local="using:Disenchant.Music.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
     <Grid Padding="10,10,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" FontWeight="Bold" Text="{x:Bind settingsViewModel.SelectFolderTitle}"></TextBlock>
-        <Grid  Grid.Row="1" VerticalAlignment="Top" Width="auto" >
-            <TextBlock  Text="{x:Bind settingsViewModel.SelectedFolderText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" TextWrapping="Wrap" FontSize="20" Margin="30,0,0,0"/>
-            <Button x:Name="PickFolderButton" Content="Pick folder" Click="{x:Bind settingsViewModel.PickFolderButton_Click}" Margin="10,0,120,0" HorizontalAlignment="Right"/>
-            <Button x:Name="CancelFolderButton" Content="Clear folder" Click="{x:Bind settingsViewModel.CancelFolderButton_Click}" Margin="10,0,10,0" HorizontalAlignment="Right"/>
-        </Grid>
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left" FontWeight="Bold" Text="{x:Bind settingsViewModel.SelectFolderTitle}"></TextBlock>
 
+        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="{x:Bind settingsViewModel.SelectedFolderText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" TextWrapping="Wrap" FontSize="20" Margin="30,0,0,0"/>
+        <Button Grid.Row="1" Grid.Column="4" x:Name="PickFolderButton" Content="Pick folder" Click="{x:Bind settingsViewModel.PickFolderButton_Click}" Margin="10,0,120,0" HorizontalAlignment="Right"/>
+        <Button Grid.Row="1" Grid.Column="4" x:Name="CancelFolderButton" Content="Clear folder" Click="{x:Bind settingsViewModel.CancelFolderButton_Click}" Margin="10,0,10,0" HorizontalAlignment="Right"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left" FontWeight="Bold" Text="{x:Bind settingsViewModel.SelectStyleTitle}"></TextBlock>
+        <ToggleSwitch Grid.Row="3" Grid.Column="0" OffContent="Off" OnContent="On" IsOn="{x:Bind settingsViewModel.IsAcrylic}" Toggled="{x:Bind settingsViewModel.ToggleSwitch_Toggled}"  Margin="30,0,0,0"></ToggleSwitch>
+        <TextBlock Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"  Text="{x:Bind settingsViewModel.SelectStyleDescription}"></TextBlock>
     </Grid>
 </Page>

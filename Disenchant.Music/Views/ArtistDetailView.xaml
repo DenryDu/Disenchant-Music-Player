@@ -9,8 +9,7 @@
     xmlns:localModel="using:Disenchant.Music.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -49,7 +48,19 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="localModel:MusicInfo">
-                    <TextBlock Text="{x:Bind Title, Mode=OneWay}" TextWrapping="NoWrap" Margin="0 0 0 0" FontSize="15"/>
+                    <Grid Height="60" Margin="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0"  Width="40" Height="40" CornerRadius="5">
+                            <Image Source="{x:Bind Cover}" Stretch="UniformToFill" x:Phase="2"/>
+                        </Border>
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                            <TextBlock Text="{x:Bind Title}" Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
+                            <TextBlock Text="{x:Bind Album}" Margin="8,0,0,0" TextWrapping="NoWrap" x:Phase="1"/>
+                        </StackPanel>
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

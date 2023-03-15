@@ -2,6 +2,7 @@
 using Disenchant.Music.Models;
 using Disenchant.Music.Views;
 using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,6 +41,11 @@ namespace Disenchant.Music.ViewModels
                     return "文件夹尚未指定";
                 }
             }) ?? "";
+            ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            IsAcrylic = (bool)localSettings.Values["IsAcrylic"];
+
+            SelectStyleTitle = "是否启用亚克力材质(Acrylic)";
+            SelectStyleDescription = "重启后生效";
         }
 
         // 选定文件夹路径
@@ -88,6 +94,31 @@ namespace Disenchant.Music.ViewModels
             StorageApplicationPermissions.FutureAccessList.Remove(GlobalData.MusicLibraryFolderToken);
             GlobalData.MusicLibrary = new MusicLibrary();
             SelectedFolderText = "文件夹尚未指定";
+        }
+        private bool _isAcrylic;
+        public bool IsAcrylic { get { return _isAcrylic; } set {  _isAcrylic = value; OnPropertyChanged(nameof(IsAcrylic));  } }
+        private string _selectStyleTitle;
+        public string SelectStyleTitle { get { return _selectStyleTitle; } set { _selectStyleTitle = value; OnPropertyChanged(nameof(SelectStyleTitle)); } }
+        private string _selectStyleDescription;
+        public string SelectStyleDescription { get { return _selectStyleDescription; } set { _selectStyleDescription = value; OnPropertyChanged(nameof(SelectStyleDescription)); } }
+        
+        public void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+            ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            ToggleSwitch toggleSwitch = sender as ToggleSwitch;
+            if (toggleSwitch != null)
+            {
+                if (toggleSwitch.IsOn == true)
+                {
+                    localSettings.Values["IsAcrylic"] = true; 
+                    IsAcrylic = true;
+                }
+                else
+                {
+                    localSettings.Values["IsAcrylic"] = false;
+                    IsAcrylic = false;
+                }
+            }
         }
 
     }

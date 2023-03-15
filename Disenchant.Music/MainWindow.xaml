@@ -12,7 +12,7 @@
     mc:Ignorable="d">
 
     <!-- RootGrid for MainWindow -->
-    <Grid x:Name="RootGrid" Height="auto" Width="auto"  MinWidth="300" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="RootGrid" Height="auto" Width="auto"  MinWidth="300">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>

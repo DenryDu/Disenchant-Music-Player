@@ -9,8 +9,7 @@
     xmlns:localModel="using:Disenchant.Music.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -30,7 +29,7 @@
         </Button>
         
         <Border Grid.Row="1" Grid.Column="0" CornerRadius="60"  Width="120" Height="120" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Image x:ConnectionId='8' x:Name="ArtistCover" Width="120" Height="120"
+            <Image x:ConnectionId='11' x:Name="ArtistCover" Width="120" Height="120"
                                                                                           Stretch="UniformToFill"/>
         </Border>
         <TextBlock x:ConnectionId='3' Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" 
@@ -49,7 +48,19 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate                                  >
-                    <TextBlock x:ConnectionId='7'                                    TextWrapping="NoWrap" Margin="0 0 0 0" FontSize="15"/>
+                    <Grid x:ConnectionId='7' Height="60" Margin="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0"  Width="40" Height="40" CornerRadius="5">
+                            <Image x:ConnectionId='10'                         Stretch="UniformToFill"            />
+                        </Border>
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                            <TextBlock x:ConnectionId='8'                       Margin="8,0,0,0" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
+                            <TextBlock x:ConnectionId='9'                       Margin="8,0,0,0" TextWrapping="NoWrap"            />
+                        </StackPanel>
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
