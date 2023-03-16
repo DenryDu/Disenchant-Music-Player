@@ -2,6 +2,7 @@
 using Disenchant.Music.Model;
 using Disenchant.Music.Models;
 using Disenchant.Music.Views;
+using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using System;
 using System.Collections.Generic;
@@ -61,5 +62,7 @@ namespace Disenchant.Music
         internal static string SelectedArtist;
 
         public static RootNavView RootNavView;
+
+        public static AppWindow AppWindow;
     }
 }

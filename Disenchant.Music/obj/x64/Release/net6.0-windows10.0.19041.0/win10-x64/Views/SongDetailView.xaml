@@ -1,7 +1,7 @@
-<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
 <!-- Licensed under the MIT License. -->
 
-<Page
+<Page x:ConnectionId='1'
     x:Class="Disenchant.Music.Views.SongDetailView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -15,8 +15,8 @@
     <Grid>
 
         <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="VisualStateGroup">
-                <VisualState x:Name="Narrow">
+            <VisualStateGroup x:ConnectionId='2' x:Name="VisualStateGroup">
+                <VisualState x:ConnectionId='3' x:Name="Narrow">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0"/>
                     </VisualState.StateTriggers>
@@ -37,10 +37,13 @@
                         <Setter Target="LyricViewer.(Grid.Column)" Value="0"></Setter>
                         <Setter Target="LyricViewer.(Grid.ColumnSpan)" Value="2"></Setter>
                         <Setter Target="LyricViewer.Width" Value="400"></Setter>
-                        <Setter Target="LyricViewer.Height" Value="60"></Setter>
+                        <Setter Target="LyricViewer.Height" Value="50"></Setter>
+
+                        <Setter Target="LyricSlice.FontSize" Value="10"></Setter>
+
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:Name="Middle">
+                <VisualState x:ConnectionId='4' x:Name="Middle">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="1000"/>
                     </VisualState.StateTriggers>
@@ -63,7 +66,7 @@
                         <Setter Target="LyricViewer.Height" Value="500"></Setter>
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:Name="Wide">
+                <VisualState x:ConnectionId='5' x:Name="Wide">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="1400"/>
                     </VisualState.StateTriggers>
@@ -102,36 +105,36 @@
         </Grid.ColumnDefinitions>
 
         
-        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="Transparent" BorderBrush="Transparent"
-                Click="{x:Bind localRoot:GlobalData.AudioPlayer.CoverBtnClickToDetail}">
+        <Button x:ConnectionId='6' Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="Transparent" BorderBrush="Transparent"
+                                                                                       >
             <FontIcon Glyph="&#xE011;"></FontIcon>
         </Button>
         
-        <Border x:Name="MusicCoverBox" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600" CornerRadius="10">
-            <Image x:Name="MusicCover"
+        <Border x:ConnectionId='7' x:Name="MusicCoverBox" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600" CornerRadius="10">
+            <Image x:ConnectionId='12' x:Name="MusicCover"
                         VerticalAlignment="Center" HorizontalAlignment="Left" Height="600" Width="600" 
-                   Source="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.Cover, Mode=OneWay}"></Image>
+                                                                                                     ></Image>
         </Border>
         
-        <ScrollViewer x:Name="LyricViewer" 
+        <ScrollViewer x:ConnectionId='8' x:Name="LyricViewer" 
                       Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600"
                       VerticalScrollBarVisibility="Hidden">
 
 
-            <ListView x:Name="LyricStackPanel" ItemsSource="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentLyric, Mode=OneWay}"
+            <ListView x:ConnectionId='9' x:Name="LyricStackPanel"                                                                                  
               IsItemClickEnabled="True" SelectionMode="None" >
 
 
                 <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="localModel:LyricSlice">
-                        <TextBlock 
+                    <DataTemplate                                   >
+                        <TextBlock x:ConnectionId='11' 
                             x:Name="LyricSlice"
-                            Text="{x:Bind Content}"
-                            FontSize="{x:Bind localRoot:GlobalData.AudioPlayer.GetLyricFont(Time, localRoot:GlobalData.AudioPlayer.CurrentLyricIndex), Mode=OneWay}"
-                            Margin="{x:Bind localRoot:GlobalData.AudioPlayer.GetLyricMargin(Time, localRoot:GlobalData.AudioPlayer.CurrentLyricIndex), Mode=OneWay}"
-                            Opacity="{x:Bind localRoot:GlobalData.AudioPlayer.GetLyricOpacity(Time, localRoot:GlobalData.AudioPlayer.CurrentLyricIndex), Mode=OneWay}"
+                                                   
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                      
                             TextWrapping="Wrap" 
-                            SizeChanged="TextBlock_SizeChanged"
+                                                               
                             ></TextBlock>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -140,3 +143,4 @@
         </ScrollViewer>
     </Grid>
 </Page>
+

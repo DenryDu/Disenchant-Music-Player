@@ -14,8 +14,9 @@
             
                 x:Name="RNav"
                 
-                PaneDisplayMode="Auto"
+                PaneDisplayMode="LeftCompact"
                 IsSettingsVisible="True"
+        IsBackButtonVisible="Collapsed"
                 ItemInvoked="{x:Bind rootNavViewModel.NavView_ItemInvoked}"
                 SelectedItem="DisenchantMusicPlayer.SonglistPage"
          >

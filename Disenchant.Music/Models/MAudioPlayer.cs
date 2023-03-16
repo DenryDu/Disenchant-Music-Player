@@ -525,14 +525,29 @@ namespace Disenchant.Music.Models
         {
             try
             {
-                if (itemTime == CurrentLyric[CurrentLyricIdx].Time)
+                if(GlobalData.AppWindow.Size.Width <= 1000)
                 {
-                    return 50d;
+                    if (itemTime == CurrentLyric[CurrentLyricIdx].Time)
+                    {
+                        return 24d;
+                    }
+                    else
+                    {
+                        return 16d;
+                    }
                 }
                 else
                 {
-                    return 20d;
+                    if (itemTime == CurrentLyric[CurrentLyricIdx].Time)
+                    {
+                        return 50d;
+                    }
+                    else
+                    {
+                        return 20d;
+                    }
                 }
+
             }
             catch
             {

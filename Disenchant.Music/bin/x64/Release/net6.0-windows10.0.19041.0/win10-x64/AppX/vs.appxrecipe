@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Release\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-03-15T15:27:18.603</Modified>
+      <Modified>2023-03-16T09:52:52.783</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Release\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-03-15T15:27:16.158</Modified>
+      <Modified>2023-03-16T09:52:50.793</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Release\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.runtimeconfig.json">
       <PackagePath>Disenchant.Music.runtimeconfig.json</PackagePath>
-      <Modified>2023-03-15T15:27:15.853</Modified>
+      <Modified>2023-03-16T01:22:43.127</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Disenchant.Music.exe</PackagePath>
-      <Modified>2023-03-15T15:27:15.186</Modified>
+      <Modified>2023-03-16T09:52:50.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\bin\x64\Release\net6.0-windows10.0.19041.0\win10-x64\Disenchant.Music.deps.json">
       <PackagePath>Disenchant.Music.deps.json</PackagePath>
-      <Modified>2023-03-15T15:27:15.686</Modified>
+      <Modified>2023-03-16T01:22:42.994</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.14\runtimes\win-x64\native\Microsoft.DiaSymReader.Native.amd64.dll">
       <PackagePath>Microsoft.DiaSymReader.Native.amd64.dll</PackagePath>
@@ -2139,7 +2139,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Disenchant.Music.dll">
       <PackagePath>Disenchant.Music.dll</PackagePath>
-      <Modified>2023-03-15T15:27:18.204</Modified>
+      <Modified>2023-03-16T09:52:52.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DenryDu\Documents\MyWork\WinUI3\Disenchant.Music\Disenchant.Music\obj\x64\Release\net6.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

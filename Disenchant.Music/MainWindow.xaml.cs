@@ -32,6 +32,9 @@ using Button = Microsoft.UI.Xaml.Controls.Button;
 using WinRT; // required to support Window.As<ICompositionSupportsSystemBackdrop>()
 using Disenchant.Music.Helpers;
 using Windows.Storage;
+using Windows.UI.ViewManagement;
+using Windows.UI.WindowManagement;
+using System.Diagnostics;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -47,6 +50,10 @@ namespace Disenchant.Music
         Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController m_acrylicController;
         Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration m_configurationSource;
 
+
+        //  
+        IntPtr hWnd = IntPtr.Zero;
+        private SUBCLASSPROC SubClassDelegate;
         public MainWindow()
         {
             this.InitializeComponent();
@@ -72,6 +79,54 @@ namespace Disenchant.Music
             mainViewModel = new MainViewModel();
             MainViewModel.MainWindow = this;
             GlobalData.MainWindow = this;
+
+   
+
+            // after this.InitializeComponent();  
+            hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+
+            SubClassDelegate = new SUBCLASSPROC(WindowSubClass);
+            bool bReturn = SetWindowSubclass(hWnd, SubClassDelegate, 0, 0);
+
+
+            // Retrieve the window handle (HWND) of the current (XAML) WinUI 3 window.
+            //var AnotherhWnd =
+            //    WinRT.Interop.WindowNative.GetWindowHandle(this);
+
+            // Retrieve the WindowId that corresponds to hWnd.
+            Microsoft.UI.WindowId windowId =
+                Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
+
+            // Lastly, retrieve the AppWindow for the current (XAML) WinUI 3 window.
+            GlobalData.AppWindow =
+                Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
+            /*
+            // Retrieve the window handle (HWND) of the current (XAML) WinUI 3 window.
+            var hWnd =
+                WinRT.Interop.WindowNative.GetWindowHandle(this);
+
+            // Retrieve the WindowId that corresponds to hWnd.
+            Microsoft.UI.WindowId windowId =
+                Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
+
+            // Lastly, retrieve the AppWindow for the current (XAML) WinUI 3 window.
+            Microsoft.UI.Windowing.AppWindow appWindow =
+                Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
+
+            
+            this.SizeChanged += (s, e) =>
+            {
+                if (e.Size.Height < 716 || e.Size.Width <424)
+                {
+                    appWindow.Resize(new Windows.Graphics.SizeInt32(Math.Max(716,(int)e.Size.Height), Math.Max(424,(int)e.Size.Width)));
+                }
+                //Debug.WriteLine(s);
+
+            };
+            */
+            //ApplicationView.PreferredLaunchViewSize = new Size(height: 716, width: 424);
+            //GlobalData.CurrentWindow.se
+            //view.SetPreferredMinSize(new Size { Width = 300, Height = 200 });
         }
 
         internal MainViewModel mainViewModel;
@@ -79,6 +134,8 @@ namespace Disenchant.Music
         {
             return RootNavFrame;
         }
+
+        //////////////////////////////////////     Use Acrylic    //////////////////////////////////////////////////////
 
 
         bool TrySetAcrylicBackdrop()
@@ -144,6 +201,52 @@ namespace Disenchant.Music
                 case ElementTheme.Light: m_configurationSource.Theme = Microsoft.UI.Composition.SystemBackdrops.SystemBackdropTheme.Light; break;
                 case ElementTheme.Default: m_configurationSource.Theme = Microsoft.UI.Composition.SystemBackdrops.SystemBackdropTheme.Default; break;
             }
+        }
+
+
+
+
+
+        /////////////////////////////////////////      Set MinSize    ////////////////////////////////////////////////////
+     
+  
+
+        //  
+        private int WindowSubClass(IntPtr hWnd, uint uMsg, IntPtr wParam, IntPtr lParam, IntPtr uIdSubclass, uint dwRefData)
+        {
+            switch (uMsg)
+            {
+                case WM_GETMINMAXINFO:
+                    {
+                        MINMAXINFO mmi = (MINMAXINFO)Marshal.PtrToStructure(lParam, typeof(MINMAXINFO));
+                        mmi.ptMinTrackSize.X = 444;
+                        mmi.ptMinTrackSize.Y = 726;
+                        Marshal.StructureToPtr(mmi, lParam, false);
+                        return 0;
+                    }
+                    break;
+            }
+            return DefSubclassProc(hWnd, uMsg, wParam, lParam);
+        }
+
+
+        public delegate int SUBCLASSPROC(IntPtr hWnd, uint uMsg, IntPtr wParam, IntPtr lParam, IntPtr uIdSubclass, uint dwRefData);
+
+        [DllImport("Comctl32.dll", SetLastError = true)]
+        public static extern bool SetWindowSubclass(IntPtr hWnd, SUBCLASSPROC pfnSubclass, uint uIdSubclass, uint dwRefData);
+
+        [DllImport("Comctl32.dll", SetLastError = true)]
+        public static extern int DefSubclassProc(IntPtr hWnd, uint uMsg, IntPtr wParam, IntPtr lParam);
+
+        public const int WM_GETMINMAXINFO = 0x0024;
+
+        public struct MINMAXINFO
+        {
+            public System.Drawing.Point ptReserved;
+            public System.Drawing.Point ptMaxSize;
+            public System.Drawing.Point ptMaxPosition;
+            public System.Drawing.Point ptMinTrackSize;
+            public System.Drawing.Point ptMaxTrackSize;
         }
     }
 }

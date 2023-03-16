@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TZn1GZMpJCnGcnzTReNWwex/HDOyUWdMp66Ul2ygeHsa9FBfWQcAlJlI1zphYnYp44XGlmaMnNi8/Vfg2nYz1A==",
+  "dgSpecHash": "ZA+EzVk0JCAwaR/iJS7sLAPjpZLRvawKcBtUfX1bFOJTAmyLSBjdmT0nvBMpgbbQzwPlFf6JnUuTOxune9N8bw==",
   "success": true,
   "projectFilePath": "C:\\Users\\DenryDu\\Documents\\MyWork\\WinUI3\\Disenchant.Music\\Disenchant.Music\\Disenchant.Music.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,6 @@
     "C:\\Users\\DenryDu\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\DenryDu\\.nuget\\packages\\taglibsharp\\2.3.0\\taglibsharp.2.3.0.nupkg.sha512",
     "C:\\Users\\DenryDu\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.14\\microsoft.netcore.app.runtime.win-x86.6.0.14.nupkg.sha512",
-    "C:\\Users\\DenryDu\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\6.0.14\\microsoft.netcore.app.crossgen2.win-x64.6.0.14.nupkg.sha512",
     "C:\\Users\\DenryDu\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.28\\microsoft.windows.sdk.net.ref.10.0.19041.28.nupkg.sha512",
     "C:\\Users\\DenryDu\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.14\\microsoft.aspnetcore.app.runtime.win-x86.6.0.14.nupkg.sha512",
     "C:\\Users\\DenryDu\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\6.0.14\\microsoft.netcore.app.runtime.win-arm64.6.0.14.nupkg.sha512",

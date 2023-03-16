@@ -53,14 +53,22 @@ namespace Disenchant.Music.Views
         private void TextBlock_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             TextBlock tbItem = (TextBlock)sender;
-            if (tbItem.FontSize == 50)
+            if (tbItem.FontSize == 50 || tbItem.FontSize == 24)
             {
                 var currentScrollPosition = LyricViewer.VerticalOffset;
                 var point = new Point(0, currentScrollPosition);
 
                 // 计算出目标位置并滚动
                 var targetPosition = tbItem.TransformToVisual(LyricViewer).TransformPoint(point);
-                LyricViewer.ScrollToVerticalOffset(targetPosition.Y - LyricViewer.Height / 2 + 40);
+                if(tbItem.FontSize == 24)
+                {
+                    LyricViewer.ScrollToVerticalOffset(targetPosition.Y);
+                }
+                else
+                {
+                    LyricViewer.ScrollToVerticalOffset(targetPosition.Y - LyricViewer.Height / 2 + 40);
+                }
+
             }
         }
     }

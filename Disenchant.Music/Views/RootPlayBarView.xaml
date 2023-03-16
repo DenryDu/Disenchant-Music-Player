@@ -56,8 +56,8 @@
 
         <!-- Info -->
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
-            <TextBlock Text="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.Title, Mode=OneWay}" Margin="8,0,0,5" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
-            <TextBlock Text="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.ArtistsAndAlbumStr, Mode=OneWay}" Margin="8,0,0,0" TextWrapping="NoWrap"/>
+            <TextBlock Text="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.Title, Mode=OneWay}" Margin="10,0,0,5" TextWrapping="NoWrap" FontWeight="Bold" FontSize="15"/>
+            <TextBlock Text="{x:Bind localRoot:GlobalData.AudioPlayer.CurrentMusic.ArtistsAndAlbumStr, Mode=OneWay}" Margin="10,0,0,0" TextWrapping="NoWrap"/>
         </StackPanel>
 
 

@@ -13,37 +13,119 @@
     mc:Ignorable="d">
 
     <Grid>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:ConnectionId='2' x:Name="VisualStateGroup">
+                <VisualState x:ConnectionId='3' x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <!-- Cover -->
+                        <Setter Target="MusicCoverBox.(Grid.ColumnSpan)" Value="2"></Setter>
+                        <Setter Target="MusicCoverBox.Height" Value="400"></Setter>
+                        <Setter Target="MusicCoverBox.Width" Value="400"></Setter>
+                        <Setter Target="MusicCoverBox.Width" Value="400"></Setter>
+                        <Setter Target="MusicCoverBox.CornerRadius" Value="8"></Setter>
+
+                        <Setter Target="MusicCover.Width" Value="400"></Setter>
+                        <Setter Target="MusicCover.Width" Value="400"></Setter>
+
+                        <!-- Lyric -->
+                        <Setter Target="LyricViewer.(Grid.Row)" Value="4"></Setter>
+                        <Setter Target="LyricViewer.(Grid.Column)" Value="0"></Setter>
+                        <Setter Target="LyricViewer.(Grid.ColumnSpan)" Value="2"></Setter>
+                        <Setter Target="LyricViewer.Width" Value="400"></Setter>
+                        <Setter Target="LyricViewer.Height" Value="60"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:ConnectionId='4' x:Name="Middle">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1000"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!-- Cover -->
+                        <Setter Target="MusicCoverBox.(Grid.ColumnSpan)" Value="1"></Setter>
+                        <Setter Target="MusicCoverBox.Height" Value="500"></Setter>
+                        <Setter Target="MusicCoverBox.Width" Value="500"></Setter>
+                        <Setter Target="MusicCoverBox.Width" Value="500"></Setter>
+                        <Setter Target="MusicCoverBox.CornerRadius" Value="10"></Setter>
+
+                        <Setter Target="MusicCover.Width" Value="500"></Setter>
+                        <Setter Target="MusicCover.Width" Value="500"></Setter>
+
+                        <!-- Lyric -->
+                        <Setter Target="LyricViewer.(Grid.Row)" Value="2"></Setter>
+                        <Setter Target="LyricViewer.(Grid.Column)" Value="1"></Setter>
+                        <Setter Target="LyricViewer.(Grid.ColumnSpan)" Value="1"></Setter>
+                        <Setter Target="LyricViewer.Width" Value="500"></Setter>
+                        <Setter Target="LyricViewer.Height" Value="500"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:ConnectionId='5' x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1400"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!-- Cover -->
+                        <Setter Target="MusicCoverBox.(Grid.ColumnSpan)" Value="1"></Setter>
+                        <Setter Target="MusicCoverBox.Height" Value="600"></Setter>
+                        <Setter Target="MusicCoverBox.Width" Value="600"></Setter>
+                        <Setter Target="MusicCoverBox.Width" Value="600"></Setter>
+                        <Setter Target="MusicCoverBox.CornerRadius" Value="10"></Setter>
+
+                        <Setter Target="MusicCover.Width" Value="600"></Setter>
+                        <Setter Target="MusicCover.Width" Value="600"></Setter>
+
+                        <!-- Lyric -->
+                        <Setter Target="LyricViewer.(Grid.Row)" Value="2"></Setter>
+                        <Setter Target="LyricViewer.(Grid.Column)" Value="1"></Setter>
+                        <Setter Target="LyricViewer.(Grid.ColumnSpan)" Value="1"></Setter>
+                        <Setter Target="LyricViewer.Width" Value="600"></Setter>
+                        <Setter Target="LyricViewer.Height" Value="600"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+              
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button x:ConnectionId='2' Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="Transparent" BorderBrush="Transparent"
+        
+        <Button x:ConnectionId='6' Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="Transparent" BorderBrush="Transparent"
                                                                                        >
             <FontIcon Glyph="&#xE011;"></FontIcon>
         </Button>
         
-        <Border Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600" CornerRadius="10">
-            <Image x:ConnectionId='7' x:Name="ControllerCover"
+        <Border x:ConnectionId='7' x:Name="MusicCoverBox" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600" CornerRadius="10">
+            <Image x:ConnectionId='12' x:Name="MusicCover"
                         VerticalAlignment="Center" HorizontalAlignment="Left" Height="600" Width="600" 
                                                                                                      ></Image>
         </Border>
-        <ScrollViewer x:ConnectionId='3' x:Name="LyricViewer" 
-                      Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600"
+        
+        <ScrollViewer x:ConnectionId='8' x:Name="LyricViewer" 
+                      Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600"
                       VerticalScrollBarVisibility="Hidden">
 
 
-            <ListView x:ConnectionId='4' x:Name="LyricStackPanel"                                                                                  
+            <ListView x:ConnectionId='9' x:Name="LyricStackPanel"                                                                                  
               IsItemClickEnabled="True" SelectionMode="None" >
 
 
                 <ListView.ItemTemplate>
                     <DataTemplate                                   >
-                        <TextBlock x:ConnectionId='6' 
+                        <TextBlock x:ConnectionId='11' 
+                            x:Name="LyricSlice"
                                                    
                                                                                                                                                                     
                                                                                                                                                                     
