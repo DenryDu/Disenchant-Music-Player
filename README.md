@@ -1,4 +1,4 @@
-[# 离幻 UWP 音乐播放器
+# 离幻 UWP 音乐播放器
 ### Disenchant Music Player
 
 ###### 结项日期：待定
